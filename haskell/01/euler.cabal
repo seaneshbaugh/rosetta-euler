@@ -1,0 +1,8 @@
+name:                euler
+version:             0.1.0.0
+build-type:          Simple
+cabal-version:       >=1.8
+
+executable euler
+  main-is:             euler.hs
+  build-depends:       base ==4.6.*

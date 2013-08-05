@@ -1,0 +1,11 @@
+cabal-dev/
+dist/
+obj/
+._*
+.DS_Store
+*.dSYM/
+*.beam
+*.class
+*.hi
+*.o
+*.so
