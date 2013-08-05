@@ -285,6 +285,35 @@ None.
 
     $ ./01
 
+### Prolog
+
+[The GNU Prolog web site](http://gprolog.univ-paris1.fr/)
+
+#### Target Version
+
+    $ gplc --version
+    Prolog compiler (GNU Prolog) 1.4.4
+    By Daniel Diaz
+    Copyright (C) 1999-2013 Daniel Diaz
+
+    GNU Prolog comes with ABSOLUTELY NO WARRANTY.
+    This is free software; see the source or the file
+    named COPYING for copying conditions.
+
+#### Additional Setup on OSX
+
+Install the `gnu-prolog` formula via Homebrew.
+
+    $ brew install gnu-prolog
+
+#### Building
+
+    $ gplc 01.pl
+
+#### Running
+
+    $ ./01
+
 ### Python
 
 [Python Programming Language](http://www.python.org/)
