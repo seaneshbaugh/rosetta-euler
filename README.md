@@ -15,6 +15,7 @@ Install [Homebrew](http://brew.sh/).
 ### C
 
 [ISO C Working Group](http://www.open-std.org/jtc1/sc22/wg14/)
+
 [Clang](http://clang.llvm.org/)
 
 #### Target Version
@@ -39,6 +40,7 @@ None.
 ### C++
 
 [ISO C++ Working Group](http://www.open-std.org/JTC1/SC22/WG21/)
+
 [Clang](http://clang.llvm.org/)
 
 #### Target Version
@@ -83,6 +85,7 @@ None.
 #### Additional Setup on OSX
 
 Install the `clisp` formula via Homebrew.
+
     $ brew install clisp
 
 #### Running
@@ -119,9 +122,11 @@ Install the `clojure` formula via Homebrew.
 #### Additional Setup on OSX
 
 Install the `erlang-r16` formula via Homebrew.
+
     $ brew install erlang-r16
 
 Install the `elixir` formula via Homebrew.
+
     $ brew install elixir
 
 #### Running
@@ -142,6 +147,7 @@ Install the `elixir` formula via Homebrew.
 #### Additional Setup on OSX
 
 Install the `erlang-r16` formula via Homebrew.
+
     $ brew install erlang-r16
 
 #### Running
@@ -160,15 +166,19 @@ Install the `erlang-r16` formula via Homebrew.
 #### Additional Setup on OSX
 
 Install the `go` formula via Homebrew.
+
     $ brew install go
 
 Create a directory for your `$GOPATH`
+
     $ mkdir ~/golang
 
 Ensure the following is in your `.bashrc` or `.zshrc`.
+
     export GOPATH="$HOME/golang"
 
 Either open up a new terminal or run the following:
+
     $ export GOPATH="$HOME/golang"
 
 #### Running
@@ -186,15 +196,18 @@ Either open up a new terminal or run the following:
 
 #### Additional Setup on OSX
 
-Install the `[haskell-platform](http://www.haskell.org/platform/)` formula via Homebrew.
+Install the `haskell-platform` formula via Homebrew.
+
     $ brew install haskell-platform
 
 Add `$HOME/.cabal/bin` to your PATH.
 
 Update cabal.
+
     $ cabal update
 
 Install the `[cabal-dev](http://hackage.haskell.org/package/cabal-dev)` package via cabal.
+
     $ cabal install cabal-dev
 
 #### Building
@@ -241,6 +254,7 @@ Install the `[cabal-dev](http://hackage.haskell.org/package/cabal-dev)` package 
 #### Additional Setup on OSX
 
 Install the `node` formula via Homebrew.
+
     $ brew install node
 
 #### Running
@@ -283,15 +297,19 @@ None.
 #### Additional Setup on OSX
 
 Install the `pyenv` formula via Homebrew.
+
     $ brew install pyenv
 
 Ensure the following is in your `.bashrc` or `.zshrc`.
+
     if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 Install Python 2.7.5.
+
     $ pyenv install 2.7.5
 
 Set the default Python.
+
     $ pyenv global 2.7.5
 
 #### Running
@@ -310,23 +328,29 @@ Set the default Python.
 #### Additional Setup on OSX
 
 Install [RVM](https://rvm.io/).
+
     $ curl -L https://get.rvm.io | bash
 
 Ensure the following is in your `.bashrc` or `.zshrc`.
+
     [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 Either open up a new terminal or run the following:
+
     $ source ~/.rvm/scripts/rvm
 
 Force RVM to use Homebrew for downloading necessary packages.
+
     $ rvm autolibs homebrew
 
 Install `ruby-2.0.0-p247`.
+
     $ rvm install ruby-2.0.0-p247
 
 It may be necessary to add `--verify-downloads 1` to the install command.
 
 Set the default Ruby.
+
     $ rvm --default use ruby-2.0.0-p247
 
 #### Running
@@ -345,6 +369,7 @@ Set the default Ruby.
 #### Additional Setup on OSX
 
 Install the `scala` formula via Homebrew.
+
     $ brew install scala
 
 #### Running
@@ -370,6 +395,7 @@ Install the `scala` formula via Homebrew.
 #### Additional Setup on OSX
 
 Install the `mit-scheme` formula via Homebrew.
+
     $ brew install mit-scheme
 
 #### Running
