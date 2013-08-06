@@ -141,11 +141,37 @@ Install the `clisp` formula via Homebrew.
 #### Additional Setup on OSX
 
 Install the `clojure` formula via Homebrew.
+
     $ brew install clojure
 
 #### Running
 
     $ clj 01.clj
+
+### D
+
+[D Programming Language](http://dlang.org/)
+
+#### Version
+
+    $ dmd
+    DMD64 D Compiler v2.063.2
+    Copyright (c) 1999-2013 by Digital Mars written by Walter Bright
+    Documentation: http://dlang.org/
+
+#### Additional Setup on OSX
+
+Install the `dmd` formula via Homebrew.
+
+    $ brew install dmd
+
+#### Building
+
+    $ dmd 01.d
+
+#### Running
+
+    $ ./01
 
 ### Elixir
 
