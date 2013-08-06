@@ -99,7 +99,7 @@ None.
 
     $ ./01
 
-### C/#
+### C&#35;
 
 [Mono](http://mono-project.com/)
 
