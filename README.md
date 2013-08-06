@@ -12,6 +12,43 @@ Install [Homebrew](http://brew.sh/).
 
 ## Languages
 
+### Algol 68
+
+[Algol 68 Genie](http://jmvdveer.home.xs4all.nl/)
+
+#### Target Version
+
+    $ a68g --version
+    Algol 68 Genie 2.7
+    Copyright (c) 2013 Marcel van der Veer <algol68g@xs4all.nl>.
+
+    This is free software covered by the GNU General Public License.
+    There is ABSOLUTELY NO WARRANTY for Algol 68 Genie;
+    not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    See the GNU General Public License for more details.
+
+    Please report bugs to Marcel van der Veer <algol68g@xs4all.nl>.
+
+    Compilation is supported.
+    Compilation is supported.
+    Parallel-clause is supported.
+    Curses is supported.
+    Regular expressions are supported.
+    TCP/IP is supported.
+    GNU libplot is not supported.
+    GNU Scientific Library is not supported.
+    PostgreSQL is supported.
+
+#### Additional Setup on OSX
+
+Install the `algol68` formula via Homebrew.
+
+    $ brew install algol68
+
+#### Running
+
+    $ a68g 01.a68
+
 ### C
 
 [ISO C Working Group](http://www.open-std.org/jtc1/sc22/wg14/)

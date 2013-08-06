@@ -1,0 +1,11 @@
+INT sum := 0;
+
+FOR i TO 1000 DO
+	IF i %* 3 = 0 THEN
+		sum +:= i
+	ELIF i %* 5 = 0 THEN
+		sum +:= i
+	FI
+OD;
+
+printf (($g(0)$, sum))
