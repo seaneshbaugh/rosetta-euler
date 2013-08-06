@@ -99,6 +99,27 @@ None.
 
     $ ./01
 
+### C#
+
+[Mono](http://mono-project.com/)
+
+#### Target Version
+
+    $ mcs --version
+    Mono C# compiler version 3.2.1.0
+
+#### Additional Setup on OSX
+
+Download and install the [Mono MDK](http://www.go-mono.com/mono-downloads/download.html).
+
+#### Building
+
+    $ mcs 01.cs
+
+#### Running
+
+    $ mono 01.exe
+
 ### Common Lisp
 
 [GNU CLISP](http://www.clisp.org/)
