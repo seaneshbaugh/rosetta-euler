@@ -2,6 +2,5 @@ CC=clang
 CFLAGS=-std=c11 -Wall -g
 
 clean:
-	rm -f 01
-	rm -rf 01.dSYM
-
+	rm -f 02
+	rm -rf 02.dSYM
