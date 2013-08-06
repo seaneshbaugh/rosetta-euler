@@ -101,6 +101,8 @@ None.
 
 ### C&#35;
 
+[Visual C&#35; Resources](http://msdn.microsoft.com/en-us/vstudio/hh341490.aspx)
+
 [Mono](http://mono-project.com/)
 
 #### Target Version
@@ -237,6 +239,30 @@ Install the `erlang-r16` formula via Homebrew.
 #### Running
 
     $ ./euler.erl
+
+### F&#35;
+
+[The F&#35; Software Foundation](http://fsharp.org/)
+
+[Mono](http://mono-project.com/)
+
+#### Target Version
+
+    $ fsharpc
+    F# Compiler for F# 3.0 (Open Source Edition)
+    Freely distributed under the Apache 2.0 Open Source License
+
+#### Additional Setup on OSX
+
+Download and install the [Mono MDK](http://www.go-mono.com/mono-downloads/download.html).
+
+#### Building
+
+    $ fsharpc 01.fs
+
+#### Running
+
+    $ mono 01.exe
 
 ### Go
 
