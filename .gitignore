@@ -6,6 +6,7 @@ obj/
 *.dSYM/
 *.beam
 *.class
+*.dump
 *.exe
 *.hi
 *.o
