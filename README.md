@@ -496,6 +496,30 @@ Set the default Ruby.
 
     $ ruby 01.rb
 
+### Rust
+
+[The Rust Programming Language](http://www.rust-lang.org/)
+
+#### Target Version
+
+    $ rust --version
+    rust 0.7
+    host: x86_64-apple-darwin
+
+#### Additional Setup on OSX
+
+Install the `rust` formula via Homebrew.
+
+    $ brew install rust
+
+#### Building
+
+    $ rustc 01.rs
+
+#### Running
+
+    $ ./01
+
 ### Scala
 
 [The Scala Programming Language](http://www.scala-lang.org/)
