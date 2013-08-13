@@ -295,6 +295,25 @@ Either open up a new terminal or run the following:
 
     $ go run 01.go
 
+### Groovy
+
+[Groovy](http://groovy.codehaus.org/)
+
+#### Target Version
+
+    $ groovy -v
+    Groovy Version: 2.1.6 JVM: 1.6.0_51 Vendor: Apple Inc. OS: Mac OS X
+
+#### Additional Setup on OSX
+
+Install the `groovy` formula via Homebrew.
+
+    $ brew install groovy
+
+#### Running
+
+    $ groovy 01.groovy
+
 ### Haskell
 
 [The Haskell Programming Language](http://www.haskell.org/haskellwiki/Haskell)
