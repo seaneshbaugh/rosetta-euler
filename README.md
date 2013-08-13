@@ -414,6 +414,25 @@ None.
 
     $ ./01
 
+### OCaml
+
+[OCaml](http://ocaml.org/)
+
+#### Target Version
+
+    $ ocaml -version
+    The OCaml toplevel, version 4.00.1
+
+#### Additional Setup on OSX
+
+Install the `ocaml` formula via Homebrew.
+
+    $ brew install ocaml
+
+#### Running
+
+    $ ocaml 01.ml
+
 ### Perl
 
 [The Perl Programming Language](http://www.perl.org/)
