@@ -4,6 +4,7 @@ obj/
 ._*
 .DS_Store
 *.dSYM/
+*.ali
 *.beam
 *.class
 *.dump

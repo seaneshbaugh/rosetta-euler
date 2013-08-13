@@ -12,6 +12,64 @@ Install [Homebrew](http://brew.sh/).
 
 ## Languages
 
+[Libre: Free Software and Open-Source Development with Ada](http://libre.adacore.com/)
+
+### Ada
+
+    $ gnat
+    GNAT GPL 2013 (20130314)
+    Copyright 1996-2013, Free Software Foundation, Inc.
+
+#### Additional Setup on OSX
+
+[Download GNAT GPL](http://libre.adacore.com/download/configurations).
+
+* Next to "Select your platform:" select "x86_64-darwin" and "2013".
+* Click "GNAT 2013".
+* Check "gnat-gpl-2013-x86_64-apple-darwin12.2.0-bin.tar.gz".
+* Click "Download Selected Files".
+
+Go to your Downloads directory.
+
+    $ cd ~/Downloads
+
+Extract the Zip archive.
+
+    $ unzip AdaCore-Download-2013-08-13_1613.zip
+
+Go to the directory containing the gzip archive.
+
+    $ cd x86_64-darwin/2013/gnatgpl
+
+Extract the gzip archive.
+
+    $ tar -xvzf gnat-gpl-2013-x86_64-apple-darwin12.2.0-bin.tar.gz
+
+Run the install script.
+
+    $ ./doinstall
+
+Answer the install script's questions. If you keep pressing enter and answering "Y" it will install GNAT in `/usr/local/gnat`.
+
+Add `/usr/local/gnat/bin` to your $PATH. For example, in your `~/.bashrc` or `~/.zshrc` add:
+
+    export PATH="/usr/local/gnat/bin:$PATH"
+
+Open a new terminal tab/window or reload your `~/.bashrc` or `~/.zshrc`.
+
+Remove the Zip archive and the extracted files.
+
+    $ cd ~/Downloads
+    $ rm -rf AdaCore-Download-2013-08-13_1613.zip x86_64-darwin
+
+#### Building
+
+    $ gnatmake euler.adb
+
+#### Running
+
+    $ ./euler
+
 ### Algol 68
 
 [Algol 68 Genie](http://jmvdveer.home.xs4all.nl/)
