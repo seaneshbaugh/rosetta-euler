@@ -395,6 +395,34 @@ None.
 
     $ ./01
 
+### Perl
+
+[The Perl Programming Language](http://www.perl.org/)
+
+#### Target Version
+
+    $ perl -v
+
+    This is perl 5, version 12, subversion 4 (v5.12.4) built for darwin-thread-multi-2level
+    (with 2 registered patches, see perl -V for more detail)
+
+    Copyright 1987-2010, Larry Wall
+
+    Perl may be copied only under the terms of either the Artistic License or the
+    GNU General Public License, which may be found in the Perl 5 source kit.
+
+    Complete documentation for Perl, including FAQ lists, should be found on
+    this system using "man perl" or "perldoc perl".  If you have access to the
+    Internet, point your browser at http://www.perl.org/, the Perl Home Page.
+
+#### Additional Setup on OSX
+
+None. This is the default version of Perl on OSX 10.8.4.
+
+#### Running
+
+    $ perl 01.pl
+
 ### Prolog
 
 [The GNU Prolog web site](http://gprolog.univ-paris1.fr/)
@@ -418,7 +446,7 @@ Install the `gnu-prolog` formula via Homebrew.
 
 #### Building
 
-    $ gplc 01.pl
+    $ gplc 01.pro
 
 #### Running
 
