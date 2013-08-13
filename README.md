@@ -448,14 +448,29 @@ Install the `node` formula via Homebrew.
 
     $ node 01.js
 
+### LUA
+
+[The Programming Language Lua](http://www.lua.org/)
+
+#### Target Version
+
+    $ lua -v
+    Lua 5.1.5  Copyright (C) 1994-2012 Lua.org, PUC-Rio
+
+#### Additional Setup on OSX
+
+Install the `lua` formula via Homebrew.
+
+    $ brew install lua
+
+#### Running
+
+    $ lua 01.lua
+
 ### Objective-C
 
 [Mac Developer Library](http://developer.apple.com/library/mac/navigation/)
 [Clang](http://clang.llvm.org/)
-
-#### Additional Setup on OSX
-
-None.
 
 #### Target Version
 
@@ -463,6 +478,10 @@ None.
     Apple LLVM version 4.2 (clang-425.0.28) (based on LLVM 3.2svn)
     Target: x86_64-apple-darwin12.4.0
     Thread model: posix
+
+#### Additional Setup on OSX
+
+None.
 
 #### Building
 
