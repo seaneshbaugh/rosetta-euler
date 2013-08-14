@@ -711,6 +711,7 @@ Install the `mit-scheme` formula via Homebrew.
 ### x86-64 Assembly
 
 [OSX Assembly Reference](https://developer.apple.com/library/mac/documentation/DeveloperTools/Reference/Assembler/000-Introduction/introduction.html)
+
 [Clang](http://clang.llvm.org/)
 
 #### Target Version
