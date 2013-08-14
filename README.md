@@ -448,7 +448,7 @@ Install the `node` formula via Homebrew.
 
     $ node 01.js
 
-### LUA
+### Lua
 
 [The Programming Language Lua](http://www.lua.org/)
 
@@ -707,3 +707,37 @@ Install the `mit-scheme` formula via Homebrew.
 #### Running
 
     $ scheme --load 01.scm
+
+### x86-64 Assembly
+
+[OSX Assembly Reference](https://developer.apple.com/library/mac/documentation/DeveloperTools/Reference/Assembler/000-Introduction/introduction.html)
+[Clang](http://clang.llvm.org/)
+
+#### Target Version
+
+    $ clang --version
+    Apple LLVM version 4.2 (clang-425.0.28) (based on LLVM 3.2svn)
+    Target: x86_64-apple-darwin12.4.0
+    Thread model: posix
+
+#### Additional Setup on OSX
+
+None.
+
+**Note: By its nature assembly is very architecture specific. The general logic should remain the same across different platforms, but it's entirely possible significant changes might be required depending on your setup.**
+
+#### C to Assembly
+
+The examples of assembly in this project are taken entirely or mostly from Clang's assembly output from the C examples.
+
+    $ clang -S -fno-asynchronous-unwind-tables 01.c
+
+Clang can output either AT&T or Intel assembly, but as far as I can figure it only supports AT&T syntax assembly for input. To see the Intel syntax assembly add `-mllvm --x86-asm-syntax=intel` after the `-S` option.
+
+#### Building
+
+    $ clang 01.s -o 01
+
+#### Running
+
+    $ ./01
