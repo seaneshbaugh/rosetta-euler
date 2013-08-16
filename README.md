@@ -12,9 +12,11 @@ Install [Homebrew](http://brew.sh/).
 
 ## Languages
 
+### Ada
+
 [Libre: Free Software and Open-Source Development with Ada](http://libre.adacore.com/)
 
-### Ada
+#### Target Version
 
     $ gnat
     GNAT GPL 2013 (20130314)
