@@ -21,10 +21,5 @@ x = <<-END.gsub(/^ {6}/, '').gsub("\n", '')
       71636269561882670428252483600823257530420752963450
     END
 
-products = []
+puts x.split(//).each_cons(5).map { |digits| digits.map { |digit| digit.to_i }.inject(:*) }.max
 
-x.split(//).each_cons(5) do |digits|
-  products << digits.map { |digit| digit.to_i }.inject(:*)
-end
-
-puts products.max
