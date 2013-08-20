@@ -1,57 +1,71 @@
-class Fixnum
-  def prime?
-    if !self.integer?
-      false
-    else
-      lower_primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+def sieve_of_atkin(limit)
+  primes = []
 
-      if lower_primes.include?(self)
-        return true
+  sieve = Array.new(limit) { false }
+
+  square_root_of_limit = Math.sqrt(limit).to_i
+
+  (1..square_root_of_limit).each do |x|
+    (1..square_root_of_limit).each do |y|
+      n = (4 * x * x) + (y * y)
+
+      if n <= limit && (n % 12 == 1 || n % 12 == 5)
+        sieve[n] = !sieve[n]
       end
 
-      lower_primes.each do |lower_prime|
-        if self % lower_prime == 0
-          return false
-        end
+      n = (3 * x * x) + (y * y)
+
+      if n <= limit && n % 12 == 7
+        sieve[n] = !sieve[n]
       end
 
-      upper_margin = Math.sqrt(self).to_i + 1
+      n = (3 * x * x) - (y * y)
 
-      current = 101
-
-      begin
-        if self % current == 0
-          return false
-        end
-
-        current += 2
-      end while current < upper_margin
-
-      true
+      if x > y && n <= limit && n % 12 == 11
+        sieve[n] = !sieve[n]
+      end
     end
   end
+
+  sieve[2] = true
+
+  sieve[3] = true
+
+  primes << 2
+
+  primes << 3
+
+  n = 5
+
+  while n <= square_root_of_limit do
+    if sieve[n]
+      i = n * n
+
+      while i < limit do
+        sieve[i] = false
+
+        i += n * n
+      end
+
+      primes << n
+    end
+
+    n += 2
+  end
+
+  while n < limit do
+    if sieve[n]
+      primes << n
+    end
+
+    n += 2
+  end
+
+  primes
 end
 
-n = 2
+n = 10001
 
-x = 3
+limit = ((n * Math.log(n)) + (n * (Math.log(Math.log(n))))).to_i
 
-last_prime = x
-
-begin
-  begin
-    is_prime = x.prime?
-
-    unless is_prime
-      x += 2
-    end
-  end while !is_prime
-
-  last_prime = x
-
-  x += 2
-
-  n += 1
-end while n < 10001
-
-puts last_prime
+puts sieve_of_atkin(limit)[n - 1]
