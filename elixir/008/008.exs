@@ -24,12 +24,12 @@ defmodule Euler do
   def digit_products(digit_lists), do: digit_lists |> Enum.map(fn digit_list -> digit_list |> Enum.reduce(1, &(&1 * &2)) end)
 
   def greatest_product_of_consecutive_digits(x, digits) when digits > 1 do
-    x |> Euler.mung
+    x |> mung
     |> Cons.each_cons(digits)
-    |> Euler.char_lists_to_strings
-    |> Euler.strings_to_codepoints
-    |> Euler.codepoints_to_digits
-    |> Euler.digit_products
+    |> char_lists_to_strings
+    |> strings_to_codepoints
+    |> codepoints_to_digits
+    |> digit_products
     |> Enum.max
   end
 end
