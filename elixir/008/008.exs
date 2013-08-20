@@ -22,6 +22,16 @@ defmodule Euler do
   def codepoints_to_digits(codepoint_lists), do: codepoint_lists |> Enum.map(fn codepoints -> codepoints |> Enum.map(&(String.to_integer(&1) |> elem(0))) end)
 
   def digit_products(digit_lists), do: digit_lists |> Enum.map(fn digit_list -> digit_list |> Enum.reduce(1, &(&1 * &2)) end)
+
+  def greatest_product_of_consecutive_digits(x, digits) when digits > 1 do
+    x |> Euler.mung
+    |> Cons.each_cons(digits)
+    |> Euler.char_lists_to_strings
+    |> Euler.strings_to_codepoints
+    |> Euler.codepoints_to_digits
+    |> Euler.digit_products
+    |> Enum.max
+  end
 end
 
 x = """
@@ -49,4 +59,4 @@ x = """
 
 #IO.puts :re.replace(x, '\n', '', [:global, {:return, :list}]) |> Cons.each_cons(5) |> Enum.map(&(String.from_char_list!(&1))) |> Enum.map(&(String.codepoints(&1))) |> Enum.map(fn x -> x |> Enum.map(&(String.to_integer(&1) |> elem(0))) |> Enum.reduce(1, &(&1 * &2)) end) |> Enum.sort |> List.last
 
-IO.puts x |> Euler.mung |> Cons.each_cons(5) |> Euler.char_lists_to_strings |> Euler.strings_to_codepoints |> Euler.codepoints_to_digits |> Euler.digit_products |> Enum.sort |> List.last
+IO.puts x |> Euler.greatest_product_of_consecutive_digits(5)
