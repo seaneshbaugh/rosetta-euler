@@ -509,6 +509,35 @@ Install the `node` formula via Homebrew.
 
     $ node 01.js
 
+### Julia
+
+[The Julia Language](http://julialang.org/)
+
+#### Target Version
+
+    $ julia -v
+    julia version 0.2.0
+
+#### Additional Setup on OSX
+
+The following instructions are from the readme at [staticfloat/homebrew-julia](https://github.com/staticfloat/homebrew-julia). Please verify they are the same before proceeding.
+
+Install the `gfortran` formula via Homebrew.
+
+    $ brew install gfortran
+
+Tap the `staticfloat/julia` keg.
+
+    $ brew tap staticfloat/julia
+
+Install the `julia` formula via Homebrew with the.
+
+    $ brew install --HEAD --64bit julia
+
+#### Running
+
+    $ julia 001.jl
+
 ### Lua
 
 [The Programming Language Lua](http://www.lua.org/)
