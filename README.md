@@ -300,6 +300,37 @@ Install the `erlang-r16` formula via Homebrew.
 
     $ ./euler.erl
 
+### Fortran
+
+[IOS/IEC JTC1/SC22/WG5 (Fortran)](http://www.nag.co.uk/sc22wg5/)
+
+[GNU Fortran](http://gcc.gnu.org/fortran/)
+
+#### Target Version
+
+    $ gfortran --version
+    GNU Fortran (GCC) 4.8.1
+    Copyright (C) 2013 Free Software Foundation, Inc.
+
+    GNU Fortran comes with NO WARRANTY, to the extent permitted by law.
+    You may redistribute copies of GNU Fortran
+    under the terms of the GNU General Public License.
+    For more information about these matters, see the file named COPYING
+
+#### Additional Setup on OSX
+
+Install the `gfortran` formula via Homebrew.
+
+    $ brew install gfortran
+
+#### Building
+
+    $ make 001
+
+#### Running
+
+    $ ./001
+
 ### F&#35;
 
 [The F&#35; Software Foundation](http://fsharp.org/)
@@ -460,6 +491,7 @@ Reset your Python.
 ### JavaScript
 
 [ECMAScript Language Specification](http://www.ecma-international.org/ecma-262/5.1/)
+
 [node.js](http://nodejs.org/)
 
 #### Target Version
@@ -499,6 +531,7 @@ Install the `lua` formula via Homebrew.
 ### Objective-C
 
 [Mac Developer Library](http://developer.apple.com/library/mac/navigation/)
+
 [Clang](http://clang.llvm.org/)
 
 #### Target Version
