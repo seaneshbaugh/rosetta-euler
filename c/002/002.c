@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
 
   euler2(&x, &y, &sum, 4000000);
 
-	printf("%d\n", sum);
+  printf("%d\n", sum);
 
-	return 0;
+  return 0;
 }
