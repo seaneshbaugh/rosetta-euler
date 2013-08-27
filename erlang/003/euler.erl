@@ -15,7 +15,7 @@ max_prime_factor(X) ->
       max_prime_factor(X, Guess)
   end.
 
-max_prime_factor(_, Guess) when Guess == 1 ->
+max_prime_factor(_X, Guess) when Guess == 1 ->
   1;
 max_prime_factor(X, Guess) when X rem Guess == 0 ->
   IsPrime = is_prime(Guess),
