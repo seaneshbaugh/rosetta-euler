@@ -2,16 +2,18 @@
   ([x]
     (if (or (< x 2) (and (= (mod x 2) 0) (not= x 2)))
       false
-      (if (< x 101)
-        (= true (some #(= x %) '(2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97)))
-        (if (= true (some #(= (mod x %) 0) '(2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97)))
-          false
-          (loop [guess 101 limit (Math/ceil (Math/sqrt x))]
-            (if (< limit guess)
-              true
-              (if (= (mod x guess) 0)
-                false
-                (recur (+ guess 2) limit)
+      (let [lower_primes '(2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97)]
+        (if (< x 101)
+          (= true (some #(= x %) lower_primes))
+          (if (= true (some #(= (mod x %) 0) lower_primes))
+            false
+            (loop [guess 101 limit (Math/ceil (Math/sqrt x))]
+              (if (< limit guess)
+                true
+                (if (= (mod x guess) 0)
+                  false
+                  (recur (+ guess 2) limit)
+                )
               )
             )
           )
