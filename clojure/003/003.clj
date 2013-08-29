@@ -23,15 +23,17 @@
 
 (defn max_prime_factor
   ([x]
-    (loop [guess (if (= (mod (Math/round (Math/sqrt x)) 2) 0) (+ (Math/round (Math/sqrt x)) 1) (Math/round (Math/sqrt x)))]
-      (if (= guess 1)
-        1
-        (if (= (mod x guess) 0)
-          (if (is_prime guess)
-            guess
+    (let [first_guess (Math/round (Math/sqrt x))]
+      (loop [guess (if (= (mod first_guess 2) 0) (+ first_guess 1) first_guess)]
+        (if (= guess 1)
+          1
+          (if (= (mod x guess) 0)
+            (if (is_prime guess)
+              guess
+              (recur (- guess 2))
+            )
             (recur (- guess 2))
           )
-          (recur (- guess 2))
         )
       )
     )
