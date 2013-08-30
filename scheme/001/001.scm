@@ -7,4 +7,4 @@
 
 (display (apply + (euler1 999)))
 
-(quit)
+(exit)

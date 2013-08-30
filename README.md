@@ -128,11 +128,11 @@ None.
 
 #### Building
 
-    $ make 01
+    $ make 001
 
 #### Running
 
-    $ ./01
+    $ ./001
 
 ### C++
 
@@ -153,11 +153,11 @@ None.
 
 #### Building
 
-    $ make 01
+    $ make 001
 
 #### Running
 
-    $ ./01
+    $ ./001
 
 ### C&#35;
 
@@ -229,7 +229,7 @@ Install the `clojure` formula via Homebrew.
 
 #### Running
 
-    $ clj 01.clj
+    $ clj 001.clj
 
 ### D
 
@@ -277,7 +277,7 @@ Install the `elixir` formula via Homebrew.
 
 #### Running
 
-    $ elixir 01.exs
+    $ elixir 001.exs
 
 ### Erlang
 
@@ -507,7 +507,7 @@ Install the `node` formula via Homebrew.
 
 #### Running
 
-    $ node 01.js
+    $ node 001.js
 
 ### Julia
 
@@ -728,7 +728,7 @@ Set the default Ruby.
 
 #### Running
 
-    $ ruby 01.rb
+    $ ruby 001.rb
 
 ### Rust
 
@@ -797,7 +797,7 @@ Install the `mit-scheme` formula via Homebrew.
 
 #### Running
 
-    $ scheme --load 01.scm
+    $ scheme --quiet --load 001.scm
 
 ### x86-64 Assembly
 
