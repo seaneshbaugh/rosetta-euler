@@ -210,7 +210,7 @@ Install the `clisp` formula via Homebrew.
 
 #### Running
 
-    $ clisp 01.lisp
+    $ clisp 001.lisp
 
 ### Clojure
 
