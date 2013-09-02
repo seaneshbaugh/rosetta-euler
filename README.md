@@ -384,7 +384,7 @@ Either open up a new terminal or run the following:
 
 #### Running
 
-    $ go run 01.go
+    $ go run 001.go
 
 ### Groovy
 
@@ -656,7 +656,7 @@ None. This is the default version of Perl on OSX 10.8.4.
 
 #### Running
 
-    $ perl 01.pl
+    $ perl 001.pl
 
 ### Prolog
 
