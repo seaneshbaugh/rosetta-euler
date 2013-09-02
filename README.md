@@ -557,6 +557,35 @@ Install the `lua` formula via Homebrew.
 
     $ lua 01.lua
 
+### Nimrod
+
+[Nimrod Programming Language](http://nimrod-code.org/)
+
+#### Target Version
+
+    $ /usr/local/Cellar/nimrod/0.9.2/libexec/bin/nimrod --version
+    Nimrod Compiler Version 0.9.2 (2013-05-20) [MacOSX: amd64]
+    Copyright (c) 2004-2013 by Andreas Rumpf
+
+#### Additional Setup on OSX
+
+Install the `nimrod` formula via Homebrew.
+
+    $ brew install nimrod
+
+Take note of the post install message:
+
+    The compiler will currently fail to find system.nim if called through a
+    symlink. To compile nim files, specify the full path to the compiler
+
+#### Building
+
+    $ /usr/local/Cellar/nimrod/0.9.2/libexec/bin/nimrod compile euler
+
+#### Running
+
+    $ ./euler
+
 ### Objective-C
 
 [Mac Developer Library](http://developer.apple.com/library/mac/navigation/)
