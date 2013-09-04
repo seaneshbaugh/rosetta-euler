@@ -1,0 +1,33 @@
+def divide(a, b)
+  raise ArgumentError unless a.integer? && b.integer?
+
+  raise ZeroDivisionError if b == 0
+
+  integer = a / b
+
+  r = a % b
+
+  seen = {}
+
+  seen[r] = 0
+
+  digits = []
+
+  while true
+    r *= 10
+
+    digits << r / b
+
+    r = r % b
+
+    if seen.has_key?(r)
+      w = seen[r]
+
+      return [integer, digits[0..(w - 1)], digits[w..(digits.length)]]
+    else
+      seen[r] = digits.length
+    end
+  end
+end
+
+puts (2..999).map { |d| [d, divide(1, d)[2].length] }.sort_by { |x| x[1] }.last[0]
