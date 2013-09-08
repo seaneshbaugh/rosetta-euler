@@ -263,7 +263,7 @@ Install the `dmd` formula via Homebrew.
 #### Target Version
 
     $ elixir --version
-    Elixir 0.10.1
+    Elixir 0.10.2
 
 #### Additional Setup on OSX
 
