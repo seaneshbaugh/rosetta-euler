@@ -14,6 +14,7 @@ defmodule Euler do
   defp max_prime_factor_guess(_, guess) when guess == 1 do
     1
   end
+
   defp max_prime_factor_guess(x, guess) when rem(x, guess) == 0 do
     if is_prime(guess) do
       guess
@@ -21,6 +22,7 @@ defmodule Euler do
       max_prime_factor_guess(x, guess - 2)
     end
   end
+
   defp max_prime_factor_guess(x, guess) do
     max_prime_factor_guess(x, guess - 2)
   end
@@ -28,9 +30,11 @@ defmodule Euler do
   def is_prime(x) when !is_integer(x) or x < 2 or rem(x, 2) == 0 do
     false
   end
+
   def is_prime(x) when x in @lower_primes do
     true
   end
+
   def is_prime(x) do
     if length(Enum.filter(@lower_primes, fn p -> rem(x, p) == 0 end)) != 0 do
       false
@@ -42,12 +46,14 @@ defmodule Euler do
   defp prime_guess(_, guess, limit) when guess > limit do
     true
   end
+
   defp prime_guess(x, guess, _) when rem(x, guess) == 0 do
     false
   end
+
   defp prime_guess(x, guess, limit) do
     prime_guess(x, guess + 2, limit)
   end
 end
 
-IO.puts Euler.max_prime_factor(600851475143)
+IO.puts Euler.max_prime_factor(600851475143) |> to_string

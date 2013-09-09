@@ -18,4 +18,6 @@ n = 10001
 
 limit = trunc((n * :math.log(n)) + (n * (:math.log(:math.log(n)))))
 
-IO.puts Euler.sieve_of_eratosthenes(limit) |> Enum.at(n - 1)
+IO.puts Euler.sieve_of_eratosthenes(limit)
+|> Enum.at(n - 1)
+|> to_string

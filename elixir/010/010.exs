@@ -14,4 +14,6 @@ defmodule Euler do
   end
 end
 
-IO.puts Euler.sieve_of_eratosthenes(2000000) |> Enum.reduce(0, &(&1 + &2))
+IO.puts Euler.sieve_of_eratosthenes(2000000)
+|> Enum.reduce(0, &(&1 + &2))
+|> to_string

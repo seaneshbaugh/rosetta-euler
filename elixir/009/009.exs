@@ -26,4 +26,6 @@ defmodule Euler do
   end
 end
 
-IO.puts Euler.pythagorean_triple_with_sum(1000) |> Enum.reduce(1, &(&1 * &2))
+IO.puts Euler.pythagorean_triple_with_sum(1000)
+|> Enum.reduce(1, &(&1 * &2))
+|> to_string

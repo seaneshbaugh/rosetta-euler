@@ -19,7 +19,7 @@ maximum_path_sum = Enum.reduce(numbers, [0], fn row, current_maxima ->
     if index == 0 do
       number + Enum.at(current_maxima, index)
     else
-      if index == (length(row) - 1) do
+      if index == length(row) - 1 do
         number + Enum.at(current_maxima, index - 1)
       else
         max(number + Enum.at(current_maxima, index - 1), number + Enum.at(current_maxima, index))
@@ -28,4 +28,4 @@ maximum_path_sum = Enum.reduce(numbers, [0], fn row, current_maxima ->
   end)
 end)
 
-IO.puts to_string(Enum.max(maximum_path_sum))
+IO.puts Enum.max(maximum_path_sum) |> to_string

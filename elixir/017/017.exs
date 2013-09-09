@@ -72,4 +72,9 @@ defmodule Euler do
   end
 end
 
-IO.puts 1..1000 |> Enum.map(fn x -> Euler.to_english(x) end) |> Enum.join |> :re.replace('\s|-', '', [:global, {:return, :list}]) |> length |> to_string
+IO.puts 1..1000
+|> Enum.map(fn x -> Euler.to_english(x) end)
+|> Enum.join
+|> :re.replace('\s|-', '', [:global, {:return, :list}])
+|> length
+|> to_string
