@@ -1,0 +1,27 @@
+FLEX [1 : 0] INT fibs;
+
+fibs := (0, 1);
+
+WHILE fibs[UPB fibs] + fibs[UPB fibs - 1] < 4000000 DO
+    FLEX [LWB fibs : UPB fibs + 1] INT updated_fibs;
+
+    updated_fibs[LWB fibs : UPB fibs] := fibs;
+
+    updated_fibs[UPB fibs + 1] := fibs[UPB fibs] + fibs[UPB fibs - 1];
+
+    fibs := updated_fibs
+OD;
+
+INT sum := 0;
+
+INT i := LWB fibs;
+
+WHILE i < UPB fibs + 1 DO
+    IF fibs[i] %* 2 = 0 THEN
+        sum +:= fibs[i]
+    FI;
+
+    i +:= 1
+OD;
+
+printf (($g(0)$, sum))
