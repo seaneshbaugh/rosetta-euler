@@ -250,11 +250,11 @@ Install the `dmd` formula via Homebrew.
 
 #### Building
 
-    $ dmd 01.d
+    $ dmd 001.d
 
 #### Running
 
-    $ ./01
+    $ ./001
 
 ### Elixir
 
