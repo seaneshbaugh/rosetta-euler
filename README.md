@@ -107,7 +107,7 @@ Install the `algol68` formula via Homebrew.
 
 #### Running
 
-    $ a68g 01.a68
+    $ a68g 001.a68
 
 ### C
 
@@ -176,11 +176,11 @@ Download and install the [Mono MDK](http://www.go-mono.com/mono-downloads/downlo
 
 #### Building
 
-    $ mcs 01.cs
+    $ mcs 001.cs
 
 #### Running
 
-    $ mono 01.exe
+    $ mono 001.exe
 
 ### Common Lisp
 
