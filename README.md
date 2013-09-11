@@ -555,7 +555,7 @@ Install the `lua` formula via Homebrew.
 
 #### Running
 
-    $ lua 01.lua
+    $ lua 001.lua
 
 ### Nimrod
 
