@@ -3,14 +3,14 @@ CC=clang
 FRAMEWORKS:= -framework Foundation
 LIBRARIES:= -lobjc
 
-SOURCE=01.m
+SOURCE=001.m
 
 CFLAGS=-Wall -Werror -g -v $(SOURCE)
 LDFLAGS=$(LIBRARIES) $(FRAMEWORKS)
-OUT=-o 01
+OUT=-o 001
 
 all:
 	$(CC) $(CFLAGS) $(LDFLAGS) $(OUT)
 
 clean:
-	rm -f 01
+	rm -f 001
