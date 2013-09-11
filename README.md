@@ -349,11 +349,11 @@ Download and install the [Mono MDK](http://www.go-mono.com/mono-downloads/downlo
 
 #### Building
 
-    $ fsharpc 01.fs
+    $ fsharpc 001.fs
 
 #### Running
 
-    $ mono 01.exe
+    $ mono 001.exe
 
 ### Go
 
