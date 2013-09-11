@@ -403,7 +403,7 @@ Install the `groovy` formula via Homebrew.
 
 #### Running
 
-    $ groovy 01.groovy
+    $ groovy 001.groovy
 
 ### Haskell
 
