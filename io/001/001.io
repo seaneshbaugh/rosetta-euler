@@ -1,11 +1,3 @@
-sum := 0
-
-for (i, 1, 999,
-  if (i % 3 == 0 or i % 5 == 0) then (
-    sum = sum + i
-  )
-)
-
-write(sum)
+write(Range 1 to(999) asList select(x, x % 3 == 0 or x % 5 == 0) reduce(sum, x, sum + x))
 
 write("\n")
