@@ -463,7 +463,7 @@ Reset your Python.
 
 #### Running
 
-    $ io 01.io
+    $ io 001.io
 
 ### Java
 
