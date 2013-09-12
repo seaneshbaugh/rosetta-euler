@@ -605,11 +605,11 @@ None.
 
 #### Building
 
-    $ make 01
+    $ make 001
 
 #### Running
 
-    $ ./01
+    $ ./001
 
 ### OCaml
 
