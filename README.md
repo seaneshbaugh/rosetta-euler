@@ -681,11 +681,11 @@ Install the `gnu-prolog` formula via Homebrew.
 
 #### Building
 
-    $ gplc 01.pro
+    $ gplc 001.pro
 
 #### Running
 
-    $ ./01
+    $ ./001
 
 ### Python
 
