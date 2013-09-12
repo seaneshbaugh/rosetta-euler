@@ -628,7 +628,7 @@ Install the `ocaml` formula via Homebrew.
 
 #### Running
 
-    $ ocaml 01.ml
+    $ ocaml 001.ml
 
 ### Perl
 
