@@ -777,11 +777,11 @@ Install the `rust` formula via Homebrew.
 
 #### Building
 
-    $ rustc 01.rs
+    $ rustc 001.rs
 
 #### Running
 
-    $ ./01
+    $ ./001
 
 ### Scala
 
