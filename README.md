@@ -716,7 +716,7 @@ Set the default Python.
 
 #### Running
 
-    $ python 01.py
+    $ python 001.py
 
 ### Ruby
 
