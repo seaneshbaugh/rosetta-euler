@@ -800,7 +800,7 @@ Install the `scala` formula via Homebrew.
 
 #### Running
 
-    $ scala 01.scala
+    $ scala 001.scala
 
 ### Scheme
 
