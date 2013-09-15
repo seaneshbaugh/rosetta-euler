@@ -851,14 +851,14 @@ None.
 
 The examples of assembly in this project are taken entirely or mostly from Clang's assembly output from the C examples.
 
-    $ clang -S -fno-asynchronous-unwind-tables 01.c
+    $ clang -S -fno-asynchronous-unwind-tables 001.c
 
 Clang can output either AT&T or Intel assembly, but as far as I can figure it only supports AT&T syntax assembly for input. To see the Intel syntax assembly add `-mllvm --x86-asm-syntax=intel` after the `-S` option.
 
 #### Building
 
-    $ clang 01.s -o 01
+    $ clang 001.s -o 001
 
 #### Running
 
-    $ ./01
+    $ ./001
