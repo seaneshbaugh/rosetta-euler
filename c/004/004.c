@@ -83,7 +83,6 @@ int comp (const void *a, const void *b) {
     return 0;
 }
 
-
 void initializeList(NumberList *list) {
   list->values = calloc(1024, sizeof(unsigned long long));
 
