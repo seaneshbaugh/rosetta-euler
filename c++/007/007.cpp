@@ -24,7 +24,7 @@ std::vector<unsigned long long> sieveOfAtkin(unsigned long long limit) {
   unsigned long long n;
 
   for (unsigned long long x = 1; x <= squareRootOfLimit; x++) {
-    for (unsigned long long y = 1; y < squareRootOfLimit; y++) {
+    for (unsigned long long y = 1; y <= squareRootOfLimit; y++) {
       n = (4 * x * x) + (y * y);
 
       if (n <= limit && (n % 12 == 1 || n % 12 == 5)) {
