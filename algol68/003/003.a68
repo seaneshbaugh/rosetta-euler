@@ -1,0 +1,53 @@
+PROC prime_factors = (LONG INT n) FLEX [] LONG INT: BEGIN
+    BOOL found := FALSE;
+
+    LONG INT v := 2;
+
+    LONG INT i := 2;
+
+    WHILE i < (n - 1) AND found EQ FALSE DO
+        IF n %* i EQ 0 THEN
+            found := TRUE;
+
+            v := i
+        FI;
+
+        i +:= 1
+    OD;
+
+    FLEX [1 : 1] LONG INT factors;
+
+    IF found EQ TRUE THEN
+        REF FLEX [] LONG INT additional_factors = LOC FLEX [1 : 0] LONG INT := prime_factors(n % v);
+
+        FLEX [1 : UPB additional_factors + 1] LONG INT updated_factors;
+
+        updated_factors[LWB updated_factors] := v;
+
+        updated_factors[LWB updated_factors + 1 : UPB updated_factors] := additional_factors;
+
+        factors := updated_factors
+    ELSE
+        factors [LWB factors] := n
+    FI;
+
+    factors
+END;
+
+BEGIN
+    REF FLEX [] LONG INT factors = LOC FLEX [1 : 0] LONG INT := prime_factors(600851475143);
+
+    INT i := LWB factors;
+
+    LONG INT max := factors[i];
+
+    WHILE i < UPB factors + 1 DO
+        IF factors[i] > max THEN
+            max := factors[i]
+        FI;
+
+        i +:= 1
+    OD;
+
+    printf (($g(0)$, max))
+END
