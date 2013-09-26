@@ -6,7 +6,23 @@ table.concat = function(t, u)
   return t
 end
 
-prime_factors = function(n)
+table.max = function(t)
+  if #t == 0 then
+    return nil
+  end
+
+  local m = t[1]
+
+  for i = 2, #t do
+    if t[i] > m then
+      m = t[i]
+    end
+  end
+
+  return m
+end
+
+function prime_factors(n)
   found = false
 
   v = 2
@@ -32,4 +48,4 @@ prime_factors = function(n)
   return factors
 end
 
-print(math.max(unpack(prime_factors(600851475143))))
+print(table.max(prime_factors(600851475143)))
