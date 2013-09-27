@@ -235,7 +235,7 @@ Install the `clojure` formula via Homebrew.
 
 [D Programming Language](http://dlang.org/)
 
-#### Version
+#### Target Version
 
     $ dmd
     DMD64 D Compiler v2.063.2
@@ -362,7 +362,7 @@ Download and install the [Mono MDK](http://www.go-mono.com/mono-downloads/downlo
 #### Target Version
 
     $ go version
-    go version go1.1.1 darwin/amd64
+    go version go1.1.2 darwin/amd64
 
 #### Additional Setup on OSX
 
@@ -393,7 +393,7 @@ Either open up a new terminal or run the following:
 #### Target Version
 
     $ groovy -v
-    Groovy Version: 2.1.6 JVM: 1.6.0_51 Vendor: Apple Inc. OS: Mac OS X
+    Groovy Version: 2.1.7 JVM: 1.6.0_51 Vendor: Apple Inc. OS: Mac OS X
 
 #### Additional Setup on OSX
 
@@ -497,7 +497,7 @@ Reset your Python.
 #### Target Version
 
     $ node --version
-    v0.10.15
+    v0.10.18
 
 #### Additional Setup on OSX
 
@@ -605,7 +605,7 @@ None.
 
 #### Building
 
-    $ make 001
+    $ make all
 
 #### Running
 
@@ -766,7 +766,7 @@ Set the default Ruby.
 #### Target Version
 
     $ rust --version
-    rust 0.7
+    rust 0.8
     host: x86_64-apple-darwin
 
 #### Additional Setup on OSX
