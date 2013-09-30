@@ -1,0 +1,36 @@
+(define (prime-factors x)
+  (let pf ((n x) (p 2))
+    (if (< n (* p p))
+      (list n)
+      (if (= (modulo n p) 0)
+        (cons p (pf (quotient n p) p))
+        (pf n (+ p 1))
+      )
+    )
+  )
+)
+
+(define (delete-first i l)
+  (cond ((null? l)
+    '())
+    ((eq? i (car l))
+      (cdr l))
+      (else
+        (cons (car l) (delete-first i (cdr l))
+      )
+    )
+  )
+)
+
+(define (overlap a b)
+  (sort (append a (let o ((x a) (y b))
+    (if (null? x)
+      y
+      (o (cdr x) (delete-first (car x) y))
+    )
+  )) <)
+)
+
+(display (reduce-left * 1 (reduce-left overlap '() (map prime-factors (iota 20 1)))))
+
+(exit)
