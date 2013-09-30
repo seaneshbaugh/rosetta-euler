@@ -1,0 +1,31 @@
+PROC reverse = (INT x) INT: BEGIN
+    INT n := x;
+
+    INT r := 0;
+
+    WHILE n /= 0 DO
+        r := r * 10 + (n %* 10);
+
+        n := n % 10
+    OD;
+
+    r
+END;
+
+BEGIN
+    INT max := 100 * 100;
+
+    FOR x FROM 100 TO 999 DO
+      FOR y FROM 100 TO 999 DO
+        INT p := x * y;
+
+        INT r = reverse(p);
+
+        IF p = r AND p > max THEN
+            max := p
+        FI
+      OD
+    OD;
+
+    printf (($g(0)$, max))
+END
