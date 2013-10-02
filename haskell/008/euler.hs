@@ -1,5 +1,4 @@
 import Data.List
-import Data.Char
 
 main :: IO ()
 
@@ -10,7 +9,7 @@ eachCons n l
   | n == 0 = []:[[] | _ <- l]
   | n  > 0 = consecutives
   where
-    sequences = map (`drop` l) [0..(n-1)]
+    sequences = map (`drop` l) [0..(n - 1)]
     consecutives = [y | y <- transpose sequences, length y == n]
 
 s :: [Char]
