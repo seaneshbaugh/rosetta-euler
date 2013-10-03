@@ -1,6 +1,6 @@
 "use strict";
 
-Number.prototype.primeFactors = function(n) {
+Number.prototype.primeFactors = function() {
   var v, i;
 
   v = null;
