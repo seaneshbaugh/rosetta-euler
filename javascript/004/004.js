@@ -1,9 +1,11 @@
+"use strict";
+
 var x, y, product, s, palindromes;
 
 palindromes = [];
 
-for (x = 100; x < 1000; x++) {
-  for (y = 100; y < 1000; y++) {
+for (x = 100; x < 1000; x += 1) {
+  for (y = 100; y < 1000; y += 1) {
     product = x * y;
 
     s = String(product);
