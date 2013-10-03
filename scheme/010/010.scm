@@ -14,6 +14,6 @@
     (let range ((v '()) (k (if (odd? limit) limit (- limit 1))))
       (if (< k 3) v (range (cons k v) (- k 2))))))
 
-(display (reduce-left + 1 (sieve-of-eratosthenes 2000000)))
+(display (reduce-left + 0 (sieve-of-eratosthenes 2000000)))
 
 (exit)
