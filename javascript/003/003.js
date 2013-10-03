@@ -1,10 +1,12 @@
-function primeFactors(n) {
+"use strict";
+
+Number.prototype.primeFactors = function(n) {
   var v, i;
 
   v = null;
 
-  for (i = 2; i < n - 1; i++) {
-    if (n % i == 0) {
+  for (i = 2; i < this - 1; i += 1) {
+    if (this % i === 0) {
       v = i;
 
       break;
@@ -12,10 +14,10 @@ function primeFactors(n) {
   }
 
   if (v) {
-    return [v].concat(primeFactors(Math.floor(n / v)));
+    return [v].concat(Math.floor(this / v).primeFactors());
   } else {
-    return [n];
+    return [this];
   }
 }
 
-console.log(Math.max.apply(null, primeFactors(600851475143)));
+console.log(Math.max.apply(null, (600851475143).primeFactors()));
