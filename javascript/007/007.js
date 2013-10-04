@@ -1,3 +1,7 @@
+"use strict";
+
+var n;
+
 function sieveOfAtkin(limit) {
   var primes, sieve, squareRootOfLimit, x, y, n, i;
 
@@ -5,29 +9,29 @@ function sieveOfAtkin(limit) {
 
   sieve = [];
 
-  for (x = 0; x < limit; x++) {
+  for (x = 0; x < limit; x += 1) {
     sieve.push(false);
   }
 
   squareRootOfLimit = Math.round(Math.sqrt(limit));
 
-  for (x = 1; x <= squareRootOfLimit; x++) {
-    for (y = 1; y <= squareRootOfLimit; y++) {
+  for (x = 1; x <= squareRootOfLimit; x += 1) {
+    for (y = 1; y <= squareRootOfLimit; y += 1) {
       n = (4 * x * x) + (y * y);
 
-      if (n <= limit && (n % 12 == 1 || n % 12 == 5)) {
+      if (n <= limit && (n % 12 === 1 || n % 12 === 5)) {
         sieve[n] = !sieve[n];
       }
 
       n = (3 * x * x) + (y * y);
 
-      if (n <= limit && n % 12 == 7) {
+      if (n <= limit && n % 12 === 7) {
         sieve[n] = !sieve[n];
       }
 
       n = (3 * x * x) - (y * y);
 
-      if (x > y && n <= limit && n % 12 == 11) {
+      if (x > y && n <= limit && n % 12 === 11) {
         sieve[n] = !sieve[n];
       }
     }
@@ -70,4 +74,6 @@ function sieveOfAtkin(limit) {
   return primes;
 }
 
-console.log(sieveOfAtkin(Math.round(((10001 * Math.log(10001)) + (10001 * (Math.log(Math.log(10001)))))))[10000]);
+n = 10001;
+
+console.log(sieveOfAtkin(Math.round(((n * Math.log(n)) + (n * (Math.log(Math.log(n)))))))[n - 1]);
