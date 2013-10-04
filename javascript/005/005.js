@@ -1,12 +1,14 @@
-var i, primeFactorLists, factors, sum;
+"use strict";
 
-function primeFactors(x) {
-  var i, v;
+var i, primeFactorLists;
+
+Number.prototype.primeFactors = function() {
+  var v, i;
 
   v = null;
 
-  for (i = 2; i < x - 1; i++) {
-    if (x % i == 0) {
+  for (i = 2; i < this - 1; i += 1) {
+    if (this % i === 0) {
       v = i;
 
       break;
@@ -14,48 +16,36 @@ function primeFactors(x) {
   }
 
   if (v) {
-    return [v].concat(primeFactors(x / v));
+    return [v].concat(Math.floor(this / v).primeFactors());
   } else {
-    return [x];
+    return [this];
   }
-}
+};
 
-function overlap(a, b) {
-  var i, index, result;
+Array.prototype.overlap = function(other) {
+  this.forEach(function(element) {
+    var index;
 
-  for (i = 0; i < b.length; i++) {
-    index = a.indexOf(b[i]);
+    index = other.indexOf(element);
 
     if (index !== -1) {
-      a = a.slice(0, index).concat(a.slice(index + 1));
+      other = other.slice(0, index).concat(other.slice(index + 1));
     }
-  }
-
-  result = a.concat(b);
-
-  result.sort(function(x, y) {
-      return x < y;
   });
 
-  return result;
-}
+  return other.concat(this).sort(function(x, y) {
+    return x < y;
+  });
+};
 
 primeFactorLists = [];
 
-for (i = 1; i <= 20; i++) {
-  primeFactorLists.push(primeFactors(i));
+for (i = 1; i <= 20; i += 1) {
+  primeFactorLists.push(i.primeFactors());
 }
 
-factors = [];
-
-for (i = 0; i < primeFactorLists.length; i++) {
-  factors = overlap(factors, primeFactorLists[i]);
-}
-
-product = 1;
-
-for (i = 0; i < factors.length; i++) {
-  product *= factors[i];
-}
-
-console.log(product);
+console.log(primeFactorLists.reduce(function(previousValue, currentValue) {
+  return previousValue.overlap(currentValue);
+}).reduce(function(previousValue, currentValue) {
+  return previousValue * currentValue;
+}));
