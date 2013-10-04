@@ -1,10 +1,12 @@
-var i, sumOfSquares, squareOfSums, sum;
+"use strict";
+
+var sumOfSquares, sum, i, squareOfSum;
 
 sumOfSquares = 0;
 
 sum = 0;
 
-for (i = 1; i <= 100; i++) {
+for (i = 1; i <= 100; i += 1) {
   sumOfSquares += (i * i);
 
   sum += i;
