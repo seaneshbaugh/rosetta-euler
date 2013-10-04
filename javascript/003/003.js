@@ -18,6 +18,6 @@ Number.prototype.primeFactors = function() {
   } else {
     return [this];
   }
-}
+};
 
 console.log(Math.max.apply(null, (600851475143).primeFactors()));
