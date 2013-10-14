@@ -7,8 +7,8 @@ def sieve_of_atkin(limit):
 
     square_root_of_limit = int(math.sqrt(limit))
 
-    for x in range(1, square_root_of_limit):
-        for y in range(1, square_root_of_limit):
+    for x in range(1, square_root_of_limit + 1):
+        for y in range(1, square_root_of_limit + 1):
             n = (4 * x * x) + (y * y)
 
             if n <= limit and (n % 12 == 1 or n % 12 == 5):
