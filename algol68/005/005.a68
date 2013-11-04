@@ -1,0 +1,113 @@
+PROC prime_factors = (LONG INT n) FLEX [] LONG INT: BEGIN
+    BOOL found := FALSE;
+
+    LONG INT v := 2;
+
+    LONG INT i := 2;
+
+    WHILE i < (n - 1) AND found EQ FALSE DO
+        IF n %* i EQ 0 THEN
+            found := TRUE;
+
+            v := i
+        FI;
+
+        i +:= 1
+    OD;
+
+    FLEX [1 : 1] LONG INT factors;
+
+    IF found EQ TRUE THEN
+        REF FLEX [] LONG INT additional_factors = LOC FLEX [1 : 0] LONG INT := prime_factors(n % v);
+
+        FLEX [1 : UPB additional_factors + 1] LONG INT updated_factors;
+
+        updated_factors[LWB updated_factors] := v;
+
+        updated_factors[LWB updated_factors + 1 : UPB updated_factors] := additional_factors;
+
+        factors := updated_factors
+    ELSE
+        factors [LWB factors] := n
+    FI;
+
+    factors
+END;
+
+PROC delete_first = (LONG INT n, FLEX [] LONG INT list) FLEX [] LONG INT: BEGIN
+    BOOL found := FALSE;
+
+    INT i := LWB list;
+
+    WHILE i < UPB list + 1 AND found EQ FALSE DO
+        IF list[i] EQ n THEN
+            found := TRUE
+        FI;
+
+        i +:= 1
+    OD;
+
+    i -:= 1;
+
+    IF found EQ TRUE THEN
+        FLEX [LWB list : UPB list - 1] LONG INT result;
+
+        result[LWB result : i - 1] := list[LWB list : i - 1];
+
+        result[i : UPB result] := list[i + 1 : UPB list];
+
+        result
+    ELSE
+        list
+    FI
+END;
+
+PROC overlap = (FLEX [] LONG INT a, FLEX [] LONG INT b) FLEX [] LONG INT: BEGIN
+    INT i := LWB b;
+
+    FLEX [LWB a : UPB a] LONG INT a_copy := a;
+
+    WHILE i < UPB b + 1 DO
+        REF FLEX [] LONG INT a_without_b_sub_i = LOC FLEX [1 : 0] LONG INT := delete_first(b[i], a_copy);
+
+        FLEX [1 : UPB a_without_b_sub_i] LONG INT updated_a;
+
+        updated_a[LWB updated_a : UPB updated_a] := a_without_b_sub_i;
+
+        a_copy := updated_a;
+
+        i +:= 1
+    OD;
+
+    FLEX [LWB a_copy : UPB a_copy + UPB b] LONG INT result;
+
+    result[LWB a_copy : UPB a_copy] := a_copy[LWB a_copy : UPB a_copy];
+
+    result[UPB a_copy + 1 : UPB a_copy + UPB b] := b[LWB b : UPB b];
+
+    result
+END;
+
+BEGIN
+    FLEX [1 : 20] FLEX [1 : 0] LONG INT factor_lists;
+
+    FOR i FROM 1 TO 20 DO
+        factor_lists[i] := prime_factors(i)
+    OD;
+
+    FLEX [1 : 0] LONG INT factors;
+
+    factors := ();
+
+    FOR i FROM 1 TO 20 DO
+        factors := overlap(factors, factor_lists[i])
+    OD;
+
+    LONG INT product := 1;
+
+    FOR i FROM LWB factors TO UPB factors DO
+        product *:= factors[i]
+    OD;
+
+    printf (($g(0)$, product))
+END
