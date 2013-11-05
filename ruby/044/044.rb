@@ -1,86 +1,67 @@
+require 'set'
+
 class Integer
   def pentagon
     (self * ((3 * self) - 1)) / 2
   end
 
-  # def tpentagon
-  #   ((27 * (self ** 2)) + (15 * self) + 2) / 2
-  # end
-
   def pentagonal?
-    n = ((Math.sqrt((24 * self) + 1) + 1) / 6)
+    if self > 0
+      n = (Math.sqrt((24.0 * self) + 1.0) + 1.0) / 6.0
 
-    if n.floor == n
-      n
+      if n.floor == n
+        n
+      else
+        false
+      end
     else
       false
     end
   end
 end
 
-pentagons = []
-
-n = 1
-
-loop do
-  break if n > 1000000
-
-  pentagons << n.pentagon
-
-  n += 1
-end
+pentagons = Set.new
 
 differences = []
 
-pentagons.each do |j|
-  pentagons.each do |k|
-    if (j + k).pentagonal? && (j - k).abs.pentagonal?
-      differences << (j - k).abs
+minimal_difference = 0
+
+pentagon = 0
+
+pentagon_index = 1
+
+loop do
+  previous_pentagon = pentagon
+
+  pentagon = pentagon_index.pentagon
+
+  delta = pentagon - previous_pentagon
+
+  if !differences.empty? && differences.first < delta
+    differences.delete_at(0)
+  end
+
+  break if minimal_difference != 0 && differences.empty?
+
+  differences.each do |difference|
+    if pentagons.include?(pentagon - difference) && ((2 * pentagon) - difference).pentagonal?
+      minimal_difference = difference
+
+      while differences.last >= minimal_difference
+        differences.pop
+      end
+
+      break
     end
   end
+
+  pentagons.add(pentagon)
+
+  if minimal_difference == 0
+    differences << pentagon
+  end
+
+  pentagon_index += 1
 end
 
-puts differences.min
-
-
-
-
-
-
-
-#
-# (1..100).each do |n|
-#   a = (3 * n) + 1
-#
-#   b = (n / 2) * ((9 * n) + 5)
-#
-#   c = ((9 * n * n) + (5 * n) + 2) / 2
-#
-#   puts [n, a, b, c, a.pentagon + b.pentagon, c.pentagon].inspect
-#
-#   d = (9 * n) + 3
-#
-#   e = ((3 * n) / 2) * ((27 * n) + 45)
-#
-#   f = ((27 * n * n) + (15 * n) + 2) / 2
-#
-#   puts [n, d, e, f, d.pentagon + e.pentagon, f.pentagon].inspect
-# end
-#
-#
-#
-#
-#
-#
-#
-#
-#
-# class Array
-#   def append_until(&block)
-#     self.each do
-#       result = block.yield(self)
-#
-#       self << result if result
-#     end
-#   end
-# end
+puts minimal_difference
