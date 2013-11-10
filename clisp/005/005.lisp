@@ -1,4 +1,4 @@
-(defun prime_factors (x)
+(defun prime-factors (x)
   (labels ((pf (n p)
     (if (< n (* p p))
       (list n)
@@ -27,4 +27,4 @@
   (reduce #'*
     (reduce  #'overlap
       (loop for i from 1 to 20
-        collect (prime_factors i)))))
+        collect (prime-factors i)))))
