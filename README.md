@@ -478,7 +478,7 @@ Reset your Python.
 
 #### Additional Setup on OSX
 
-    Most likely none.
+Most likely none.
 
 #### Building
 
