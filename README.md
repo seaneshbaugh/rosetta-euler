@@ -426,7 +426,7 @@ Update cabal.
 
     $ cabal update
 
-Install the `[cabal-dev](http://hackage.haskell.org/package/cabal-dev)` package via cabal.
+Install the [cabal-dev](http://hackage.haskell.org/package/cabal-dev) package via cabal.
 
     $ cabal install cabal-dev
 
