@@ -1,0 +1,15 @@
+LONG INT sum_of_squares := 0;
+
+LONG INT sum := 0;
+
+LONG INT square_of_sum := 0;
+
+FOR i FROM 1 TO 100 DO
+    sum_of_squares +:= i * i;
+
+    sum +:= i
+OD;
+
+square_of_sum := sum * sum;
+
+printf (($g(0)$, square_of_sum - sum_of_squares))
