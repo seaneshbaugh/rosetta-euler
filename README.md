@@ -724,8 +724,8 @@ Set the default Python.
 
 #### Target Version
 
-    $ ruby --version
-    ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-darwin11.4.2]
+    $ ruby -v
+    ruby 2.0.0p353 (2013-11-22 revision 43784) [x86_64-darwin13.0.0]
 
 #### Additional Setup on OSX
 
