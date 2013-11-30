@@ -745,15 +745,15 @@ Force RVM to use Homebrew for downloading necessary packages.
 
     $ rvm autolibs homebrew
 
-Install `ruby-2.0.0-p247`.
+Install `ruby-2.0.0-p353`.
 
-    $ rvm install ruby-2.0.0-p247
+    $ rvm install ruby-2.0.0-p353
 
 It may be necessary to add `--verify-downloads 1` to the install command.
 
 Set the default Ruby.
 
-    $ rvm --default use ruby-2.0.0-p247
+    $ rvm --default use ruby-2.0.0-p353
 
 #### Running
 
