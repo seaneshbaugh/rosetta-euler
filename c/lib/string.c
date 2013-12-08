@@ -317,6 +317,10 @@ String *stringDump(String *initialString) {
 }
 
 String *stringEmpty(String *initialString) {
+  initialString->data[0] = '\0';
+
+  initialString->length = 0;
+
   return initialString;
 }
 
@@ -519,7 +523,7 @@ String *stringSlice(const String *initialString, const long long start, const un
 
   if (start < initialString->length) {
     for (unsigned long long i = start; i < initialString->length && i < start + length; i++) {
-      stringAdd(result, initialString->date[i]);
+      stringAdd(result, initialString->data[i]);
     }
   }
 
@@ -542,9 +546,9 @@ String *stringSubstring(const String *initialString, const long long beginning, 
   String *result;
 
   if (beginning < end) {
-    reseult = stringSlice(initialString, beginning, end - beginning);
+    result = stringSlice(initialString, beginning, end - beginning);
   } else {
-    reseult = stringSlice(initialString, end, beginning - end);
+    result = stringSlice(initialString, end, beginning - end);
   }
 
   return result;
