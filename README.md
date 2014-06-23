@@ -101,9 +101,9 @@ Remove the Zip archive and the extracted files.
 
 #### Additional Setup on OSX
 
-Install the `algol68` formula via Homebrew.
+Install the `algol68g` formula via Homebrew.
 
-    $ brew install algol68
+    $ brew install algol68g
 
 #### Running
 
