@@ -79,7 +79,7 @@ Remove the Zip archive and the extracted files.
 #### Target Version
 
     $ a68g --version
-    Algol 68 Genie 2.7
+    Algol 68 Genie 2.8
     Copyright (c) 2013 Marcel van der Veer <algol68g@xs4all.nl>.
 
     This is free software covered by the GNU General Public License.
@@ -89,7 +89,6 @@ Remove the Zip archive and the extracted files.
 
     Please report bugs to Marcel van der Veer <algol68g@xs4all.nl>.
 
-    Compilation is supported.
     Compilation is supported.
     Parallel-clause is supported.
     Curses is supported.
