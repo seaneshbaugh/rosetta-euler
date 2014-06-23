@@ -267,9 +267,9 @@ Install the `dmd` formula via Homebrew.
 
 #### Additional Setup on OSX
 
-Install the `erlang-r16` formula via Homebrew.
+Install the `erlang` formula via Homebrew.
 
-    $ brew install erlang-r16
+    $ brew install erlang
 
 Install the `elixir` formula via Homebrew.
 
@@ -286,15 +286,15 @@ Install the `elixir` formula via Homebrew.
 #### Target Version
 
     $ erl
-    Erlang R16B01 (erts-5.10.2) [source] [64-bit] [smp:8:8] [async-threads:10] [hipe] [kernel-poll:false] [dtrace]
+    Erlang/OTP 17 [erts-6.0] [source] [64-bit] [smp:8:8] [async-threads:10] [hipe] [kernel-poll:false] [dtrace]
 
-    Eshell V5.10.2  (abort with ^G)
+    Eshell V6.0  (abort with ^G)
 
 #### Additional Setup on OSX
 
-Install the `erlang-r16` formula via Homebrew.
+Install the `erlang` formula via Homebrew.
 
-    $ brew install erlang-r16
+    $ brew install erlang
 
 #### Running
 
