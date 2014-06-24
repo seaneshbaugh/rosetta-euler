@@ -392,7 +392,7 @@ Either open up a new terminal or run the following:
 #### Target Version
 
     $ groovy -v
-    Groovy Version: 2.1.7 JVM: 1.6.0_51 Vendor: Apple Inc. OS: Mac OS X
+    Groovy Version: 2.3.3 JVM: 1.6.0_65 Vendor: Apple Inc. OS: Mac OS X
 
 #### Additional Setup on OSX
 
