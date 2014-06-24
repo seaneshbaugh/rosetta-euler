@@ -237,7 +237,7 @@ Install the `clojure` formula via Homebrew.
 #### Target Version
 
     $ dmd
-    DMD64 D Compiler v2.063.2
+    DMD64 D Compiler v2.065
     Copyright (c) 1999-2013 by Digital Mars written by Walter Bright
     Documentation: http://dlang.org/
 
