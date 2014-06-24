@@ -496,7 +496,7 @@ Most likely none.
 #### Target Version
 
     $ node --version
-    v0.10.22
+    v0.10.29
 
 #### Additional Setup on OSX
 
