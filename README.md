@@ -308,7 +308,7 @@ Install the `erlang` formula via Homebrew.
 #### Target Version
 
     $ gfortran --version
-    GNU Fortran (GCC) 4.8.1
+    GNU Fortran (Homebrew gcc 4.8.3_1) 4.8.3
     Copyright (C) 2013 Free Software Foundation, Inc.
 
     GNU Fortran comes with NO WARRANTY, to the extent permitted by law.
@@ -318,9 +318,9 @@ Install the `erlang` formula via Homebrew.
 
 #### Additional Setup on OSX
 
-Install the `gfortran` formula via Homebrew.
+Install the `gcc` formula via Homebrew.
 
-    $ brew install gfortran
+    $ brew install gcc
 
 #### Building
 
