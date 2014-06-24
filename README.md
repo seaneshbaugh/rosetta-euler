@@ -521,17 +521,21 @@ Install the `node` formula via Homebrew.
 
 The following instructions are from the readme at [staticfloat/homebrew-julia](https://github.com/staticfloat/homebrew-julia). Please verify they are the same before proceeding.
 
-Install the `gfortran` formula via Homebrew.
+Install the `gcc` formula via Homebrew.
 
-    $ brew install gfortran
+    $ brew install gcc
 
 Tap the `staticfloat/julia` keg.
 
     $ brew tap staticfloat/julia
 
-Install the `julia` formula via Homebrew with the.
+Tap the `homebrew/versions` keg.
 
-    $ brew install --HEAD --64bit julia
+    $ brew tap homebrew/versions
+
+Install the `julia` formula via Homebrew (optionally with the --64bit flag enabled).
+
+    $ brew install --64bit julia
 
 #### Running
 
