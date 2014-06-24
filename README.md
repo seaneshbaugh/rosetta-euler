@@ -117,8 +117,8 @@ Install the `algol68g` formula via Homebrew.
 #### Target Version
 
     $ clang --version
-    Apple LLVM version 4.2 (clang-425.0.28) (based on LLVM 3.2svn)
-    Target: x86_64-apple-darwin12.4.0
+    Apple LLVM version 5.1 (clang-503.0.40) (based on LLVM 3.4svn)
+    Target: x86_64-apple-darwin13.2.0
     Thread model: posix
 
 #### Additional Setup on OSX
