@@ -621,7 +621,7 @@ None.
 #### Target Version
 
     $ ocaml -version
-    The OCaml toplevel, version 4.00.1
+    The OCaml toplevel, version 4.01.0
 
 #### Additional Setup on OSX
 
