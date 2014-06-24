@@ -811,11 +811,11 @@ Install the `scala` formula via Homebrew.
 
     $ scheme --version
     MIT/GNU Scheme microcode 15.3
-    Copyright (C) 2011 Massachusetts Institute of Technology
+    Copyright (C) 2014 Massachusetts Institute of Technology
     This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-    Image saved on Friday August 2, 2013 at 10:31:03 PM
-      Release 9.1.1 || Microcode 15.3 || Runtime 15.7 || SF 4.41 || LIAR/C 4.118 || Edwin 3.116
+    Image saved on Friday May 23, 2014 at 5:50:11 PM
+      Release 9.2 || Microcode 15.3 || Runtime 15.7 || SF 4.41 || LIAR/C 4.118 || Edwin 3.116
 
     Moriturus te saluto.
 
