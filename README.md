@@ -142,8 +142,8 @@ None.
 #### Target Version
 
     $ clang --version
-    Apple LLVM version 4.2 (clang-425.0.28) (based on LLVM 3.2svn)
-    Target: x86_64-apple-darwin12.4.0
+    Apple LLVM version 5.1 (clang-503.0.40) (based on LLVM 3.4svn)
+    Target: x86_64-apple-darwin13.2.0
     Thread model: posix
 
 #### Additional Setup on OSX
@@ -594,8 +594,8 @@ Take note of the post install message:
 #### Target Version
 
     $ clang --version
-    Apple LLVM version 4.2 (clang-425.0.28) (based on LLVM 3.2svn)
-    Target: x86_64-apple-darwin12.4.0
+    Apple LLVM version 5.1 (clang-503.0.40) (based on LLVM 3.4svn)
+    Target: x86_64-apple-darwin13.2.0
     Thread model: posix
 
 #### Additional Setup on OSX
@@ -724,7 +724,7 @@ Set the default Python.
 #### Target Version
 
     $ ruby -v
-    ruby 2.0.0p353 (2013-11-22 revision 43784) [x86_64-darwin13.0.0]
+    ruby 2.1.2p95 (2014-05-08 revision 45877) [x86_64-darwin13.0]
 
 #### Additional Setup on OSX
 
@@ -744,15 +744,13 @@ Force RVM to use Homebrew for downloading necessary packages.
 
     $ rvm autolibs homebrew
 
-Install `ruby-2.0.0-p353`.
+Install `2.1.2`.
 
-    $ rvm install ruby-2.0.0-p353
-
-It may be necessary to add `--verify-downloads 1` to the install command.
+    $ rvm install 2.1.2
 
 Set the default Ruby.
 
-    $ rvm --default use ruby-2.0.0-p353
+    $ rvm --default use 2.1.2
 
 #### Running
 
@@ -836,8 +834,8 @@ Install the `mit-scheme` formula via Homebrew.
 #### Target Version
 
     $ clang --version
-    Apple LLVM version 4.2 (clang-425.0.28) (based on LLVM 3.2svn)
-    Target: x86_64-apple-darwin12.4.0
+    Apple LLVM version 5.1 (clang-503.0.40) (based on LLVM 3.4svn)
+    Target: x86_64-apple-darwin13.2.0
     Thread model: posix
 
 #### Additional Setup on OSX
