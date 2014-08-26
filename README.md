@@ -515,23 +515,15 @@ Install the `node` formula via Homebrew.
 #### Target Version
 
     $ julia -v
-    julia version 0.2.0
+    julia version 0.3.0
 
 #### Additional Setup on OSX
 
 The following instructions are from the readme at [staticfloat/homebrew-julia](https://github.com/staticfloat/homebrew-julia). Please verify they are the same before proceeding.
 
-Install the `gcc` formula via Homebrew.
-
-    $ brew install gcc
-
 Tap the `staticfloat/julia` keg.
 
     $ brew tap staticfloat/julia
-
-Tap the `homebrew/versions` keg.
-
-    $ brew tap homebrew/versions
 
 Install the `julia` formula via Homebrew (optionally with the --64bit flag enabled).
 

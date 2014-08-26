@@ -24,4 +24,4 @@ function prime_factors(n)
   factors
 end
 
-println(max(prime_factors(600851475143)))
+println(maximum(prime_factors(600851475143)))
