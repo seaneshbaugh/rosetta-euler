@@ -2,29 +2,29 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "number_list.h"
+#include "unsigned_long_long_array.h"
 
-void sieveOfAtkin(NumberList *primes, unsigned long long limit);
+void sieveOfAtkin(UnsignedLongLongArray *primes, unsigned long long limit);
 
 int main(int argc, char *argv[]) {
   unsigned long long n = 10001;
 
   unsigned long long limit = (unsigned long long)((n * log(n)) + (n * (log(log(n)))));
 
-  NumberList primes;
+  UnsignedLongLongArray primes;
 
-  initializeList(&primes);
+  UnsignedLongLongArrayInitialize(&primes);
 
   sieveOfAtkin(&primes, limit);
 
   printf("%llu\n", primes.values[n - 1]);
 
-  deinitializeList(&primes);
+  UnsignedLongLongArrayDeinitialize(&primes);
 
   return 0;
 }
 
-void sieveOfAtkin(NumberList *primes, unsigned long long limit) {
+void sieveOfAtkin(UnsignedLongLongArray *primes, unsigned long long limit) {
   bool *sieve = calloc(limit, sizeof(bool));
 
   unsigned long long squareRootOfLimit = (unsigned long long)sqrt(limit);
@@ -57,9 +57,9 @@ void sieveOfAtkin(NumberList *primes, unsigned long long limit) {
 
   sieve[3] = true;
 
-  push(primes, 2);
+  UnsignedLongLongArrayPush(primes, 2);
 
-  push(primes, 3);
+  UnsignedLongLongArrayPush(primes, 3);
 
   n = 5;
 
@@ -73,7 +73,7 @@ void sieveOfAtkin(NumberList *primes, unsigned long long limit) {
         i += n * n;
       }
 
-      push(primes, n);
+      UnsignedLongLongArrayPush(primes, n);
     }
 
     n += 2;
@@ -81,7 +81,7 @@ void sieveOfAtkin(NumberList *primes, unsigned long long limit) {
 
   while (n < limit) {
     if (sieve[n]) {
-      push(primes, n);
+      UnsignedLongLongArrayPush(primes, n);
     }
 
     n += 2;

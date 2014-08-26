@@ -2,27 +2,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "number_list.h"
+#include "unsigned_long_long_array.h"
 
-void primeFactors(unsigned long long n, NumberList *result);
+void primeFactors(unsigned long long n, UnsignedLongLongArray *result);
 
 int main(int argc, char *argv[]) {
-  NumberList primeFactorLists[20];
+  UnsignedLongLongArray primeFactorLists[20];
 
-  NumberList factors;
+  UnsignedLongLongArray factors;
 
-  initializeList(&factors);
+  UnsignedLongLongArrayInitialize(&factors);
 
   unsigned long long i;
 
   for (i = 1; i <= 20; i++) {
-    initializeList(&primeFactorLists[i - 1]);
+    UnsignedLongLongArrayInitialize(&primeFactorLists[i - 1]);
 
     primeFactors(i, &primeFactorLists[i - 1]);
 
-    overlap(&factors, &primeFactorLists[i - 1]);
+    UnsignedLongLongArrayOverlap(&factors, &primeFactorLists[i - 1]);
 
-    deinitializeList(&primeFactorLists[i - 1]);
+    UnsignedLongLongArrayDeinitialize(&primeFactorLists[i - 1]);
   }
 
   unsigned long long product = 1;
@@ -33,12 +33,12 @@ int main(int argc, char *argv[]) {
 
   printf("%llu\n", product);
 
-  deinitializeList(&factors);
+  UnsignedLongLongArrayDeinitialize(&factors);
 
   return 0;
 }
 
-void primeFactors(unsigned long long n, NumberList *result) {
+void primeFactors(unsigned long long n, UnsignedLongLongArray *result) {
   bool found = false;
 
   unsigned long long v = 2;
@@ -54,10 +54,10 @@ void primeFactors(unsigned long long n, NumberList *result) {
   }
 
   if (found) {
-    push(result, v);
+    UnsignedLongLongArrayPush(result, v);
 
     primeFactors(n / v, result);
   } else {
-    push(result, n);
+    UnsignedLongLongArrayPush(result, n);
   }
 }

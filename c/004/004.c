@@ -1,14 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "number_list.h"
+#include "unsigned_long_long_array.h"
 
+int ascendingCompare(const void *a, const void *b);
 void strrev(char *s);
 
 int main(int argc, char *argv[]) {
-  NumberList palindromes;
+  UnsignedLongLongArray palindromes;
 
-  initializeList(&palindromes);
+  UnsignedLongLongArrayInitialize(&palindromes);
 
   for (unsigned long long i = 100; i < 1000; i++) {
     for (unsigned long long j = 100; j < 1000; j++) {
@@ -25,16 +26,31 @@ int main(int argc, char *argv[]) {
       strrev(r);
 
       if (strcmp(s, r) == 0) {
-        push(&palindromes, product);
+        UnsignedLongLongArrayPush(&palindromes, product);
       }
     }
   }
 
-  sortAscending(&palindromes);
+  UnsignedLongLongArraySort(&palindromes, ascendingCompare);
 
   printf("%llu\n", palindromes.values[palindromes.length - 1]);
 
-  deinitializeList(&palindromes);
+  UnsignedLongLongArrayDeinitialize(&palindromes);
+
+  return 0;
+}
+
+int ascendingCompare(const void *a, const void *b) {
+  unsigned long long f = *((unsigned long long*)a);
+  unsigned long long s = *((unsigned long long*)b);
+
+  if (f > s) {
+    return  1;
+  }
+
+  if (f < s) {
+    return -1;
+  }
 
   return 0;
 }
