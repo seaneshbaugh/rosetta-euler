@@ -230,6 +230,35 @@ Install the `clojure` formula via Homebrew.
 
     $ clj 001.clj
 
+### Crystal
+
+[Crystal](hhttp://crystal-lang.org/)
+
+#### Target Version
+
+    $ crystal -v
+    Crystal 0.4.3 [f3f59b3] (Thu Aug 14 04:55:43 UTC 2014)
+
+#### Additional Setup on OSX
+
+The following instructions are from the readme at [manastech/crystal](https://github.com/manastech/crystal). Please verify they are the same before proceeding.
+
+Tap the `manastech/crystal` keg.
+
+    $ brew tap manastech/crystal
+
+Install the `crystal` formula via Homebrew.
+
+    $ brew install crystal
+
+#### Building
+
+    $ crystal 001.cr
+
+#### Running
+
+    $ ./001
+
 ### D
 
 [D Programming Language](http://dlang.org/)
