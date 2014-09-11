@@ -232,7 +232,7 @@ Install the `clojure` formula via Homebrew.
 
 ### Crystal
 
-[Crystal](hhttp://crystal-lang.org/)
+[Crystal](http://crystal-lang.org/)
 
 #### Target Version
 
