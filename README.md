@@ -10,6 +10,15 @@ Install the Command Line Tools in Xcode (Preferences > Downloads > Install butto
 
 Install [Homebrew](http://brew.sh/).
 
+## Rules
+
+I've imposed a few rules on myself for these problems:
+
+* No third party libraries except for Bignum libraries in languages that do no have them as part of the standard library.
+* No relying on implementation or compiler dependent behavior.
+* Each language's solutions should have formatting that is as close to its community's most widely followed idiomatic style as possible if one exists.
+* When applicable, all Makefiles should contain everything needed to compile its solution.
+
 ## Languages
 
 ### Ada

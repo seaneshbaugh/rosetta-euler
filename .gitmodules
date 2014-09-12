@@ -2,3 +2,7 @@
 	path = c/lib/generic_array
 	url = https://github.com/seaneshbaugh/generic_array.git
   ignore = dirty
+[submodule "javascript/lib/big.js"]
+	path = javascript/lib/big.js
+	url = git://github.com/MikeMcl/big.js.git
+	ignore = dirty
