@@ -23,6 +23,8 @@ int main(int argc, char *argv[]) {
 
   printf("%llu\n", product);
 
+  UnsignedLongLongArrayDeinitialize(&sides);
+
   return 0;
 }
 

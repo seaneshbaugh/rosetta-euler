@@ -2,6 +2,12 @@
 
 An attempt at a [chrestomathy](http://en.wikipedia.org/wiki/Chrestomathy) of solutions to problems from [Project Euler](http://projecteuler.net/). All included programs print out their result to standard output (when possible and applicable) and exit. In the future each example for each language will include built in tests to validate the result.
 
+## Initial Setup on All Systems
+
+Initialize all submodules.
+
+    $ git submodule update --init --recursive
+
 ## Initial Setup on OSX
 
 Install [Xcode](https://developer.apple.com/xcode/).
@@ -15,9 +21,11 @@ Install [Homebrew](http://brew.sh/).
 I've imposed a few rules on myself for these problems:
 
 * No third party libraries except for Bignum libraries in languages that do no have them as part of the standard library.
-* No relying on implementation or compiler dependent behavior.
+* No relying on implementation or compiler dependent behavior except to overcome memory or stack depth limitations.
 * Each language's solutions should have formatting that is as close to its community's most widely followed idiomatic style as possible if one exists.
 * When applicable, all Makefiles should contain everything needed to compile its solution.
+* In languages without Unicode encoded strings assume ASCII.
+* In languages with Unicode encoded strings pretend UTF-8 is ASCII.
 
 ## Languages
 
