@@ -73,11 +73,19 @@ int pythagoreanTripleWithSum(UnsignedLongLongArray* sides, unsigned long long su
 
           UnsignedLongLongArrayPush(sides, c);
 
+          UnsignedLongLongArrayDeinitialize(&ms);
+
+          UnsignedLongLongArrayDeinitialize(&ns);
+
           return 1;
         }
       }
     }
   }
+
+  UnsignedLongLongArrayDeinitialize(&ms);
+
+  UnsignedLongLongArrayDeinitialize(&ns);
 
   return 0;
 }
