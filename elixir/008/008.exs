@@ -1,5 +1,5 @@
 defmodule Cons do
-  def each_cons(list, n // 2) do
+  def each_cons(list, n \\ 2) do
     _each_cons(list, n, [])
   end
 
@@ -18,7 +18,7 @@ defmodule Euler do
   end
 
   def char_lists_to_strings(char_lists) do
-    char_lists |> Enum.map(&(String.from_char_list!(&1)))
+    char_lists |> Enum.map(&(to_string(&1)))
   end
 
   def strings_to_codepoints(strings) do
@@ -26,7 +26,7 @@ defmodule Euler do
   end
 
   def codepoints_to_digits(codepoint_lists) do
-    codepoint_lists |> Enum.map(fn codepoints -> codepoints |> Enum.map(&(String.to_integer(&1) |> elem(0))) end)
+    codepoint_lists |> Enum.map(fn codepoints -> codepoints |> Enum.map(&(String.to_integer(&1))) end)
   end
 
   def digit_products(digit_lists) do
