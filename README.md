@@ -140,7 +140,11 @@ Install the `algol68g` formula via Homebrew.
 
 #### Additional Setup on OSX
 
-None.
+Some solutions require [The GNU Multiple Precision Arithmetic Library](http://gmplib.org/) for big numbers.
+
+Install the `gmp` formula via Homebrew.
+
+    $ brew install gmp
 
 #### Building
 
