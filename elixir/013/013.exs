@@ -101,6 +101,5 @@ numbers = [37107287533902102798797998220837590246510135740250,
 
 IO.puts numbers
 |> Enum.reduce(0, &(&1 + &2))
-|> integer_to_list
-|> Enum.take(10)
-|> to_string
+|> Integer.to_string
+|> String.slice(0, 10)
