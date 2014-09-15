@@ -16,5 +16,5 @@ end
 
 IO.puts Euler.fibs_less_than(4000000)
 |> Enum.filter(fn x -> rem(x, 2) == 0 end)
-|> Enum.reduce(0, fn (x, sum) -> x + sum end)
+|> Enum.reduce(0, &(&1 + &2))
 |> to_string
