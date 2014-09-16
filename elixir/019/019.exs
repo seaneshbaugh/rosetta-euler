@@ -63,7 +63,7 @@ defmodule Euler do
       days_in_february = 28
     end
 
-    HashDict.new [{1, 31}, {2, days_in_february}, {3, 31}, {4, 30}, {5, 31}, {6, 30}, {7, 31}, {8, 31}, {9, 30}, {10, 31}, {11, 30}, {12, 31}]
+    Enum.into([{1, 31}, {2, days_in_february}, {3, 31}, {4, 30}, {5, 31}, {6, 30}, {7, 31}, {8, 31}, {9, 30}, {10, 31}, {11, 30}, {12, 31}], HashDict.new)
   end
 
   def floor(x) when is_number(x) and x < 0 do
