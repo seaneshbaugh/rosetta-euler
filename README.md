@@ -44,7 +44,7 @@ I've imposed a few rules on myself for these problems:
 [Download GNAT GPL](http://libre.adacore.com/download/configurations).
 
 * Next to "Select your platform:" select "x86-64 Mac OS X (64 bits)" and "GNAT GPL 2014".
-* Click "GNAT 2013".
+* Click "GNAT Ada GPL 2014".
 * Check "gnat-gpl-2014-x86_64-darwin-bin.tar.gz".
 * Click "Download Selected Files".
 
