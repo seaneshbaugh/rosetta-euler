@@ -36,33 +36,37 @@ I've imposed a few rules on myself for these problems:
 #### Target Version
 
     $ gnat
-    GNAT GPL 2013 (20130314)
-    Copyright 1996-2013, Free Software Foundation, Inc.
+    GNAT GPL 2014 (20140331)
+    Copyright 1996-2014, Free Software Foundation, Inc.
 
 #### Additional Setup on OSX
 
 [Download GNAT GPL](http://libre.adacore.com/download/configurations).
 
-* Next to "Select your platform:" select "x86_64-darwin" and "2013".
+* Next to "Select your platform:" select "x86-64 Mac OS X (64 bits)" and "GNAT GPL 2014".
 * Click "GNAT 2013".
-* Check "gnat-gpl-2013-x86_64-apple-darwin12.2.0-bin.tar.gz".
+* Check "gnat-gpl-2014-x86_64-darwin-bin.tar.gz".
 * Click "Download Selected Files".
 
 Go to your Downloads directory.
 
     $ cd ~/Downloads
 
-Extract the Zip archive.
+Extract the Zip archive (the file name will be timestamped with the time you downloaded it).
 
-    $ unzip AdaCore-Download-2013-08-13_1613.zip
+    $ unzip AdaCore-Download-201X-XX-XX_XXXX.zip
 
 Go to the directory containing the gzip archive.
 
-    $ cd x86_64-darwin/2013/gnatgpl
+    $ cd x86_64-darwin/adagpl-2014/gnatgpl
 
 Extract the gzip archive.
 
-    $ tar -xvzf gnat-gpl-2013-x86_64-apple-darwin12.2.0-bin.tar.gz
+    $ tar -xvzf gnat-gpl-2014-x86_64-darwin-bin.tar.gz
+
+Go to the directory containing the gzip archive contents.
+
+    $ cd gnat-gpl-2014-x86_64-darwin-bin
 
 Run the install script.
 
@@ -79,7 +83,7 @@ Open a new terminal tab/window or reload your `~/.bashrc` or `~/.zshrc`.
 Remove the Zip archive and the extracted files.
 
     $ cd ~/Downloads
-    $ rm -rf AdaCore-Download-2013-08-13_1613.zip x86_64-darwin
+    $ rm -rf AdaCore-Download-201X-XX-XX_XXXX.zip x86_64-darwin
 
 #### Building
 
