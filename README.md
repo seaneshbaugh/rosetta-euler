@@ -138,8 +138,8 @@ Install the `algol68g` formula via Homebrew.
 #### Target Version
 
     $ clang --version
-    Apple LLVM version 5.1 (clang-503.0.40) (based on LLVM 3.4svn)
-    Target: x86_64-apple-darwin13.2.0
+    Apple LLVM version 6.0 (clang-600.0.56) (based on LLVM 3.5svn)
+    Target: x86_64-apple-darwin14.0.0
     Thread model: posix
 
 #### Additional Setup on OSX
@@ -167,8 +167,8 @@ Install the `gmp` formula via Homebrew.
 #### Target Version
 
     $ clang --version
-    Apple LLVM version 5.1 (clang-503.0.40) (based on LLVM 3.4svn)
-    Target: x86_64-apple-darwin13.2.0
+    Apple LLVM version 6.0 (clang-600.0.56) (based on LLVM 3.5svn)
+    Target: x86_64-apple-darwin14.0.0
     Thread model: posix
 
 #### Additional Setup on OSX
@@ -644,8 +644,8 @@ Take note of the post install message:
 #### Target Version
 
     $ clang --version
-    Apple LLVM version 5.1 (clang-503.0.40) (based on LLVM 3.4svn)
-    Target: x86_64-apple-darwin13.2.0
+    Apple LLVM version 6.0 (clang-600.0.56) (based on LLVM 3.5svn)
+    Target: x86_64-apple-darwin14.0.0
     Thread model: posix
 
 #### Additional Setup on OSX
@@ -884,8 +884,8 @@ Install the `mit-scheme` formula via Homebrew.
 #### Target Version
 
     $ clang --version
-    Apple LLVM version 5.1 (clang-503.0.40) (based on LLVM 3.4svn)
-    Target: x86_64-apple-darwin13.2.0
+    Apple LLVM version 6.0 (clang-600.0.56) (based on LLVM 3.5svn)
+    Target: x86_64-apple-darwin14.0.0
     Thread model: posix
 
 #### Additional Setup on OSX
