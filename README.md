@@ -606,30 +606,27 @@ Install the `lua` formula via Homebrew.
 
     $ lua 001.lua
 
-### Nimrod
+### Nim
 
-[Nimrod Programming Language](http://nimrod-code.org/)
+[Nim Programming Language](http://nim-lang.org/)
 
 #### Target Version
 
-    $ /usr/local/Cellar/nimrod/0.9.2/libexec/bin/nimrod --version
-    Nimrod Compiler Version 0.9.2 (2013-05-20) [MacOSX: amd64]
-    Copyright (c) 2004-2013 by Andreas Rumpf
+    $ nim --version
+    Nim Compiler Version 0.10.2 (2014-12-29) [MacOSX: amd64]
+    Copyright (c) 2006-2014 by Andreas Rumpf
+
+    active boot switches: -d:release
 
 #### Additional Setup on OSX
 
-Install the `nimrod` formula via Homebrew.
+Install the `nim` formula via Homebrew.
 
-    $ brew install nimrod
-
-Take note of the post install message:
-
-    The compiler will currently fail to find system.nim if called through a
-    symlink. To compile nim files, specify the full path to the compiler
+    $ brew install nim
 
 #### Building
 
-    $ /usr/local/Cellar/nimrod/0.9.2/libexec/bin/nimrod compile euler
+    $ nim compile euler
 
 #### Running
 
