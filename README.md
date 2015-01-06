@@ -587,7 +587,7 @@ Install the `node` formula via Homebrew.
 #### Target Version
 
     $ julia -v
-    julia version 0.3.0
+    julia version 0.3.4
 
 #### Additional Setup on OSX
 
@@ -597,9 +597,9 @@ Tap the `staticfloat/julia` keg.
 
     $ brew tap staticfloat/julia
 
-Install the `julia` formula via Homebrew (optionally with the --64bit flag enabled).
+Install the `julia` formula via Homebrew.
 
-    $ brew install --64bit julia
+    $ brew install julia
 
 #### Running
 
