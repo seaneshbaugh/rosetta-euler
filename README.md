@@ -682,7 +682,7 @@ None.
 #### Target Version
 
     $ ocaml -version
-    The OCaml toplevel, version 4.01.0
+    The OCaml toplevel, version 4.02.1
 
 #### Additional Setup on OSX
 
