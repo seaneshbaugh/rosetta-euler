@@ -425,7 +425,7 @@ Download and install the [Mono MDK](http://www.mono-project.com/download/).
 #### Target Version
 
     $ go version
-    go version go1.3 darwin/amd64
+    go version go1.4 darwin/amd64
 
 #### Additional Setup on OSX
 
