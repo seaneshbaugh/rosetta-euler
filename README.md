@@ -187,16 +187,16 @@ None.
 
 [Visual C&#35; Resources](http://msdn.microsoft.com/en-us/vstudio/hh341490.aspx)
 
-[Mono](http://mono-project.com/)
+[Mono](http://www.mono-project.com/)
 
 #### Target Version
 
     $ mcs --version
-    Mono C# compiler version 3.2.1.0
+    Mono C# compiler version 3.10.0.0
 
 #### Additional Setup on OSX
 
-Download and install the [Mono MDK](http://www.go-mono.com/mono-downloads/download.html).
+Download and install the [Mono MDK](http://www.mono-project.com/download/).
 
 #### Building
 
@@ -240,20 +240,28 @@ Install the `clisp` formula via Homebrew.
 
 [Clojure](http://clojure.org/)
 
+[Leiningen](http://leiningen.org/)
+
 #### Target Version
 
-    $ clj
-    Clojure 1.5.1
+    $ lein version
+    Leiningen 2.5.0 on Java 1.6.0_65 Java HotSpot(TM) 64-Bit Server VM
+
+    $ lein repl
+    nREPL server started on port 49531 on host 127.0.0.1 - nrepl://127.0.0.1:49531
+    REPL-y 0.3.5, nREPL 0.2.6
+    Clojure 1.6.0
+    Java HotSpot(TM) 64-Bit Server VM 1.6.0_65-b14-466.1-11M4716
 
 #### Additional Setup on OSX
 
-Install the `clojure` formula via Homebrew.
+Install the `leiningen` formula via Homebrew.
 
-    $ brew install clojure
+    $ brew install leiningen
 
 #### Running
 
-    $ clj 001.clj
+    $ lein run
 
 ### Crystal
 
@@ -388,17 +396,19 @@ Install the `gcc` formula via Homebrew.
 
 [The F&#35; Software Foundation](http://fsharp.org/)
 
-[Mono](http://mono-project.com/)
+[Visual F&#35; Resources](http://msdn.microsoft.com/en-us/vstudio/hh388569.aspx)
+
+[Mono](http://www.mono-project.com/)
 
 #### Target Version
 
     $ fsharpc
-    F# Compiler for F# 3.0 (Open Source Edition)
+    F# Compiler for F# 3.1 (Open Source Edition)
     Freely distributed under the Apache 2.0 Open Source License
 
 #### Additional Setup on OSX
 
-Download and install the [Mono MDK](http://www.go-mono.com/mono-downloads/download.html).
+Download and install the [Mono MDK](http://www.mono-project.com/download/).
 
 #### Building
 
