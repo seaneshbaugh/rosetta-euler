@@ -269,8 +269,8 @@ Install the `leiningen` formula via Homebrew.
 
 #### Target Version
 
-    $ crystal -v
-    Crystal 0.4.3 [f3f59b3] (Thu Aug 14 04:55:43 UTC 2014)
+    $ crystal --version
+    Crystal 0.5.7 [2568f87] (Fri Jan  2 23:29:49 UTC 2015)
 
 #### Additional Setup on OSX
 
