@@ -544,8 +544,8 @@ Reset your Python.
 
     $ java -version
     java version "1.6.0_65"
-    Java(TM) SE Runtime Environment (build 1.6.0_65-b14-462-11M4609)
-    Java HotSpot(TM) 64-Bit Server VM (build 20.65-b04-462, mixed mode)
+    Java(TM) SE Runtime Environment (build 1.6.0_65-b14-466.1-11M4716)
+    Java HotSpot(TM) 64-Bit Server VM (build 20.65-b04-466.1, mixed mode)
 
 #### Additional Setup on OSX
 
