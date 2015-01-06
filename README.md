@@ -612,7 +612,7 @@ Install the `julia` formula via Homebrew.
 #### Target Version
 
     $ lua -v
-    Lua 5.1.5  Copyright (C) 1994-2012 Lua.org, PUC-Rio
+    Lua 5.2.3  Copyright (C) 1994-2013 Lua.org, PUC-Rio
 
 #### Additional Setup on OSX
 
