@@ -702,10 +702,10 @@ Install the `ocaml` formula via Homebrew.
 
     $ perl -v
 
-    This is perl 5, version 16, subversion 2 (v5.16.2) built for darwin-thread-multi-2level
-    (with 3 registered patches, see perl -V for more detail)
+    This is perl 5, version 18, subversion 2 (v5.18.2) built for darwin-thread-multi-2level
+    (with 2 registered patches, see perl -V for more detail)
 
-    Copyright 1987-2012, Larry Wall
+    Copyright 1987-2013, Larry Wall
 
     Perl may be copied only under the terms of either the Artistic License or the
     GNU General Public License, which may be found in the Perl 5 source kit.
@@ -716,7 +716,7 @@ Install the `ocaml` formula via Homebrew.
 
 #### Additional Setup on OSX
 
-None. This is the default version of Perl on OSX 10.9.
+None. This is the default version of Perl on OSX 10.10.
 
 #### Running
 
