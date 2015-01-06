@@ -475,13 +475,15 @@ Install the `groovy` formula via Homebrew.
 #### Target Version
 
     $ ghc --version
-    The Glorious Glasgow Haskell Compilation System, version 7.6.3
+    The Glorious Glasgow Haskell Compilation System, version 7.8.3
+
+    $ cabal --version
+    cabal-install version 1.18.0.5
+    using version 1.18.1.4 of the Cabal library
 
 #### Additional Setup on OSX
 
-Install the `haskell-platform` formula via Homebrew.
-
-    $ brew install haskell-platform
+Download and install [The Haskell Platform](https://www.haskell.org/platform/mac.html).
 
 Add `$HOME/.cabal/bin` to your PATH.
 
@@ -489,17 +491,23 @@ Update cabal.
 
     $ cabal update
 
-Install the [cabal-dev](http://hackage.haskell.org/package/cabal-dev) package via cabal.
+If `cabal update` says you need to, update `cabal-install`
 
-    $ cabal install cabal-dev
+    $ cabal install cabal-install
 
 #### Building
 
-    $ cabal-dev install
+Create a Cabal sandbox if you haven't already.
+
+    $ cabal sandbox init
+
+Compile the project and install it into the sandbox.
+
+    $ cabal install -j
 
 #### Running
 
-    $ ./cabal-dev/bin/euler
+    $ .cabal-sandbox/bin/euler
 
 ### Io
 

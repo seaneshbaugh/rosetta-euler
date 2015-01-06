@@ -1,9 +1,11 @@
-cabal-dev/
+cabal-dev
+.cabal-sandbox/
 dist/
 nimcache/
 obj/
 ._*
 .DS_Store
+cabal.sandbox.config
 *.dSYM/
 *.ali
 *.beam
