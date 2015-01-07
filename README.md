@@ -784,12 +784,12 @@ Set the default Python.
 
 ### Ruby
 
-[Ruby Programming Language](http://www.ruby-lang.org/en/)
+[Ruby Programming Language](https://www.ruby-lang.org/en/)
 
 #### Target Version
 
     $ ruby -v
-    ruby 2.1.2p95 (2014-05-08 revision 45877) [x86_64-darwin13.0]
+    ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14]
 
 #### Additional Setup on OSX
 
@@ -809,13 +809,13 @@ Force RVM to use Homebrew for downloading necessary packages.
 
     $ rvm autolibs homebrew
 
-Install `2.1.2`.
+Install `2.2.0`.
 
-    $ rvm install 2.1.2
+    $ rvm install 2.2.0
 
 Set the default Ruby.
 
-    $ rvm --default use 2.1.2
+    $ rvm --default use 2.2.0
 
 #### Running
 
