@@ -2,6 +2,40 @@
 
 An attempt at a [chrestomathy](http://en.wikipedia.org/wiki/Chrestomathy) of solutions to problems from [Project Euler](http://projecteuler.net/). All included programs print out their result to standard output (when possible and applicable) and exit. In the future each example for each language will include built in tests to validate the result.
 
+* [Ada](#ada)
+* [Algol 68](#algol-68)
+* [C](#c)
+* [C++](#c-1)
+* [C&#35;](#c-2)
+* [Common Lisp](#common-lips)
+* [Clojure](#clojure)
+* [Crystal](#crystal)
+* [D](#d)
+* [Elixir](#elixir)
+* [Erlang](#erlang)
+* [Fortran](#fortran)
+* [F&#35;](#f)
+* [Go](#go)
+* [Groovy](#groovy)
+* [Haskell](#haskell)
+* [Io](#io)
+* [Java](#java)
+* [JavaScript](#javascript)
+* [Julia](#julia)
+* [Lua](#lua)
+* [Nim](#nim)
+* [Objective-C](#objective-c)
+* [OCaml](#ocaml)
+* [Pascal](#pascal)
+* [Perl](#perl)
+* [Prolog](#prolog)
+* [Python](#python)
+* [Ruby](#ruby)
+* [Rust](#rust)
+* [Scala](#scala)
+* [Scheme](#scheme)
+* [x86-64 Assembly](#x86-64-assembly)
+
 ## Initial Setup on All Systems
 
 Initialize all submodules.
