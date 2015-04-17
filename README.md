@@ -694,6 +694,30 @@ Install the `ocaml` formula via Homebrew.
 
     $ ocaml 001.ml
 
+### Pascal
+
+[Free Pascal](http://www.freepascal.org/)
+
+#### Target Version
+
+    $ fpc
+    Free Pascal Compiler version 2.6.4 [2015/01/08] for x86_64
+    Copyright (c) 1993-2014 by Florian Klaempfl and others
+
+#### Additional Setup on OSX
+
+Install the `fpc` formula via Homebrew.
+
+    $ brew install fpc
+
+#### Building
+
+    $ fpc 001.pp
+
+#### Running
+
+    $ ./001
+
 ### Perl
 
 [The Perl Programming Language](http://www.perl.org/)
