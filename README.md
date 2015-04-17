@@ -265,7 +265,7 @@ Install the `gnu-cobol` formula via Homebrew.
 
 #### Building
 
-    $ cobc 001.cob
+    $ cobc -x 001.cob
 
 #### Running
 
