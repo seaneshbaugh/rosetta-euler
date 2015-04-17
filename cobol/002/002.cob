@@ -1,0 +1,36 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. euler.
+       *
+       ENVIRONMENT DIVISION.
+       CONFIGURATION SECTION.
+       SOURCE-COMPUTER. RM-COBOL.
+       OBJECT-COMPUTER. RM-COBOL.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 X PIC 9(7) VALUE 1.
+       01 Y PIC 9(7) VALUE 2.
+       01 Z PIC 9(7) VALUE 0.
+       01 TOTAL PIC 9(7) VALUE 2.
+       01 QUO PIC 9(7) VALUE 0.
+       01 REM PIC 9(7) VALUE 0.
+       PROCEDURE DIVISION.
+       MAIN-LOGIC SECTION.
+       BEGIN.
+       PERFORM UNTIL Z > 4000000
+           ADD X TO Y GIVING Z
+
+           DIVIDE 2 INTO Z GIVING QUO REMAINDER REM
+
+           IF REM = 0
+               THEN
+                   ADD Z TO TOTAL
+           END-IF
+
+           MOVE Y TO X
+
+           MOVE Z TO Y
+       END-PERFORM
+       DISPLAY TOTAL
+       STOP RUN.
+       MAIN-LOGIC-EXIT.
+       EXIT.
