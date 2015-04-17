@@ -7,6 +7,7 @@ An attempt at a [chrestomathy](http://en.wikipedia.org/wiki/Chrestomathy) of sol
 * [C](#c)
 * [C++](#c-1)
 * [C&#35;](#c-2)
+* [COBOL](#cobol)
 * [Common Lisp](#common-lips)
 * [Clojure](#clojure)
 * [Crystal](#crystal)
@@ -239,6 +240,36 @@ Download and install the [Mono MDK](http://www.mono-project.com/download/).
 #### Running
 
     $ mono 001.exe
+
+### COBOL
+
+[GnuCOBOL](http://sourceforge.net/projects/open-cobol/)
+
+#### Target Version
+
+    $ cobc --version
+    cobc (GNU Cobol) 1.1.0
+    Copyright (C) 2001,2002,2003,2004,2005,2006,2007 Keisuke Nishida
+    Copyright (C) 2006-2012 Roger While
+    This is free software; see the source for copying conditions.  There is NO
+    warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    Built     Jan 08 2015 12:54:42
+    Packaged  Jan 20 2014 07:40:53 UTC
+    C version "4.9.2"
+
+#### Additional Setup on OSX
+
+Install the `gnu-cobol` formula via Homebrew.
+
+    $ brew install gnu-coboll
+
+#### Building
+
+    $ cobc 001.cob
+
+#### Running
+
+    $ ./001
 
 ### Common Lisp
 
