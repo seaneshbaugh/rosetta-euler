@@ -1,40 +1,40 @@
 fn main() {
-    let mut factor_lists = ~[];
+    let mut factor_lists = vec![];
 
-    for i in range(1u64, 21u64) {
+    for i in 1u64..21u64 {
         factor_lists.push(prime_factors(i));
     }
 
-    let mut factors = ~[];
+    let mut factors = vec![];
 
     for factor_list in factor_lists.iter() {
         factors = overlap(factors.clone(), factor_list.clone());
     }
 
-    println(fmt!("%s", factors.iter().fold(1, |a, &b| a * b).to_str()));
+    println!("{}", factors.iter().fold(1, |a, &b| a * b));
 }
 
-fn prime_factors(n: u64) -> ~[u64] {
+fn prime_factors(n: u64) -> Vec<u64> {
     let mut found = false;
-    let mut v = 2;
-    let mut i = 2;
+    let mut v = 2u64;
+    let mut i = 2u64;
 
-    while i < n - 1 && !found {
-        if n % i == 0 {
+    while i < n - 1u64 && !found {
+        if n % i == 0u64 {
             v = i;
 
             found = true;
         }
 
-        i += 1;
+        i += 1u64;
     }
 
-    let mut factors = ~[];
+    let mut factors = vec![];
 
     if found {
         factors.push(v);
 
-        factors.push_all(prime_factors(n / v));
+        factors.extend(prime_factors(n / v));
     } else {
         factors.push(n);
     }
@@ -42,32 +42,32 @@ fn prime_factors(n: u64) -> ~[u64] {
     return factors;
 }
 
-fn remove_first<T:Eq + Clone>(i: &T, v: ~[T]) -> ~[T] {
-    let index = v.iter().position(|x| *x == *i);
+fn remove_first<T:Eq + Clone>(i: T, v: Vec<T>) -> Vec<T> {
+    let index = v.iter().position(|x| *x == i);
 
-    let mut result = ~[];
+    let mut result = vec![];
 
     if index != None {
         if index.unwrap() > 0 {
-            result.push_all(v.slice(0, index.unwrap()));
+            result.extend(v[0 .. index.unwrap()].to_vec());
         }
 
-        result.push_all(v.slice(index.unwrap() + 1, v.len()));
+        result.extend(v[index.unwrap() + 1 .. v.len()].to_vec());
     } else {
-        result.push_all(v);
+        result.extend(v);
     }
 
     return result;
 }
 
-fn overlap<T: Eq + Clone>(a: ~[T], b: ~[T]) -> ~[T] {
+fn overlap<T: Eq + Clone>(a: Vec<T>, b: Vec<T>) -> Vec<T> {
     let mut result = a;
 
     for n in b.iter() {
-        result = remove_first(n, result);
+        result = remove_first(n.clone(), result);
     }
 
-    result.push_all(b);
+    result.extend(b);
 
     return result;
 }

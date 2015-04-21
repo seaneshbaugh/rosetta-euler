@@ -916,9 +916,8 @@ Set the default Ruby.
 
 #### Target Version
 
-    $ rust --version
-    rust 0.8
-    host: x86_64-apple-darwin
+    $ rustc --version
+    rustc 1.0.0-beta (built 2015-04-04)
 
 #### Additional Setup on OSX
 

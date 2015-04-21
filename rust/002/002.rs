@@ -16,5 +16,5 @@ fn main() {
         k = i + j;
     }
 
-    println(fmt!("%d", sum));
+    println!("{}", sum);
 }

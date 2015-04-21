@@ -10,5 +10,5 @@ fn main() {
         i += 1;
     };
 
-    println(fmt!("%d", sum));
+    println!("{}", sum);
 }
