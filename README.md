@@ -35,6 +35,7 @@ An attempt at a [chrestomathy](http://en.wikipedia.org/wiki/Chrestomathy) of sol
 * [Rust](#rust)
 * [Scala](#scala)
 * [Scheme](#scheme)
+* [Swift](#swift)
 * [x86-64 Assembly](#x86-64-assembly)
 
 ## Initial Setup on All Systems
@@ -977,6 +978,24 @@ Install the `mit-scheme` formula via Homebrew.
 #### Running
 
     $ scheme --quiet --load 001.scm
+
+### Swift
+
+[Swift Overview](https://developer.apple.com/swift/)
+
+#### Target Version
+
+    $ swift --version
+    Apple Swift version 1.2 (swiftlang-602.0.49.3 clang-clang-602.0.49)
+    Target: x86_64-apple-darwin14.3.0
+
+#### Additional Setup on OSX
+
+None.
+
+#### Running
+
+    $ swift 001.swift
 
 ### x86-64 Assembly
 
