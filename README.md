@@ -396,9 +396,9 @@ Install the `dmd` formula via Homebrew.
 
 #### Additional Setup on OSX
 
-Tap the `brew tap homebrew/x11` keg.
+Tap the `homebrew/x11` keg.
 
-    $ brew tap brew tap homebrew/x11
+    $ brew tap homebrew/x11
 
 Install the `eiffelstudio` formula via Homebrew.
 
