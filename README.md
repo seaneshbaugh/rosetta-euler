@@ -12,6 +12,7 @@ An attempt at a [chrestomathy](http://en.wikipedia.org/wiki/Chrestomathy) of sol
 * [Clojure](#clojure)
 * [Crystal](#crystal)
 * [D](#d)
+* [Eiffel](#eiffel)
 * [Elixir](#elixir)
 * [Erlang](#erlang)
 * [Fortran](#fortran)
@@ -383,6 +384,35 @@ Install the `dmd` formula via Homebrew.
 #### Running
 
     $ ./001
+
+### Eiffel
+
+[Eiffel Software](https://www.eiffel.com/)
+
+#### Target Version
+
+    $ ec -version
+    ISE EiffelStudio version 14.05.9.5417 GPL Edition - macosx-x86-64
+
+#### Additional Setup on OSX
+
+Tap the `brew tap homebrew/x11` keg.
+
+    $ brew tap brew tap homebrew/x11
+
+Install the `eiffelstudio` formula via Homebrew.
+
+    $ brew install eiffelstudio
+
+#### Building
+
+    $ ec euler.e
+
+You may need to chmod the resulting executable so that it has execute permissions.
+
+#### Running
+
+    $ ./euler
 
 ### Elixir
 
@@ -1015,7 +1045,7 @@ Run the make install command.
 
     $ make install
 
-#### Compiling
+#### Building
 
     $ cim 001.sim
 
