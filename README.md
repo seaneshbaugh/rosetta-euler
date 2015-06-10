@@ -35,6 +35,7 @@ An attempt at a [chrestomathy](http://en.wikipedia.org/wiki/Chrestomathy) of sol
 * [Rust](#rust)
 * [Scala](#scala)
 * [Scheme](#scheme)
+* [Simula](#simula)
 * [Swift](#swift)
 * [x86-64 Assembly](#x86-64-assembly)
 
@@ -978,6 +979,49 @@ Install the `mit-scheme` formula via Homebrew.
 #### Running
 
     $ scheme --quiet --load 001.scm
+
+### Simula
+
+[GNU Cim](http://simula67.at.ifi.uio.no/cim.shtml)
+
+#### Target Version
+
+    $ cim --version
+    -i686-apple-darwin14.3.0
+
+#### Additional Setup on OSX
+
+Download the Cim source code.
+
+    $ wget http://simula67.at.ifi.uio.no/Cim/cim-3.37.tar.gz
+
+Unpack the Cim source code.
+
+    $ tar -xf cim-3.37.tar.gz
+
+Go to the Cim source code directory.
+
+    $ cd cim-3.37
+
+Run the configure command (note: I had to add an additional flag to make it work without errors).
+
+    $ CFLAGS='-O0 -m32 -Wno-return-type' ./configure
+
+Run the make command.
+
+    $ make
+
+Run the make install command.
+
+    $ make install
+
+#### Compiling
+
+    $ cim 001.sim
+
+#### Running
+
+    $ ./001
 
 ### Swift
 

@@ -1,0 +1,27 @@
+BEGIN
+   INTEGER i, sum;
+
+   sum:= 0;
+
+   FOR i:= 1 STEP 1 UNTIL 999 DO
+   BEGIN
+      INTEGER q3, r3, q5, r5;
+
+      q3:= i // 3;
+
+      r3:= i - (q3 * 3);
+
+      q5:= i // 5;
+
+      r5:= i - (q5 * 5);
+
+      IF r3 = 0 OR r5 = 0 THEN
+      BEGIN
+         sum:= sum + i;
+      END
+   END for i;
+
+   OutFix(sum, 0, 0);
+
+   OutImage;
+END;
