@@ -24,6 +24,7 @@ An attempt at a [chrestomathy](http://en.wikipedia.org/wiki/Chrestomathy) of sol
 * [Java](#java)
 * [JavaScript](#javascript)
 * [Julia](#julia)
+* [K](#k)
 * [Lua](#lua)
 * [Nim](#nim)
 * [Objective-C](#objective-c)
@@ -701,6 +702,40 @@ Install the `julia` formula via Homebrew.
 #### Running
 
     $ julia 001.jl
+
+### K
+
+[Kona](https://github.com/kevinlawler/kona)
+
+#### Target Version
+
+Taken from [k.c](https://github.com/kevinlawler/kona/blob/5daf44308bd8a25c42bbea5665f480b0be42345d/src/k.c).
+
+    //64-bit single-threaded implementation of K3.2.  Version is Kona 3.2.0
+
+#### Additional Setup on OSX
+
+The following instructions are from the readme at [kevinlawler/kona](https://github.com/kevinlawler/kona). Please verify they are the same before proceeding.
+
+Clone the Kona respository.
+
+    $ git clone https://github.com/kevinlawler/kona.git
+
+Go to the Kona source directory.
+
+    $ cd kona
+
+Run the `make` command.
+
+    $ make
+
+Run the `make install` command.
+
+    $ make install
+
+#### Running
+
+    $ k 001.k
 
 ### Lua
 
