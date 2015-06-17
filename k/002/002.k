@@ -10,9 +10,9 @@
 
 /   ~x!2                                Monadic not. Negates each element in the previous. In this case returns 1 if the element is divisible by 2 and 0 if not.
 
-/   &~x!2                               Monadic where. Gets the indices of the previous that are 1. In this case that is equivalent to the the indicies of the elements of the original list which are sivisible by 2.
+/   &~x!2                               Monadic where. Gets the indices of the previous that are 1. In this case that is equivalent to the the indices of the elements of the original list which are sivisible by 2.
 
-/   x@&~x!2                             Dyadic at. Returns the elements from x at the indicies from the previous. In other words get only the even elements from x.
+/   x@&~x!2                             Dyadic at. Returns the elements from x at the indices from the previous. In other words get only the even elements from x.
 
 /   {x@&~x!2}(4e6>+/-2#){x,+/-2#x}/1    Fibonnaci numbers below 4000000 filtered to be only the evens.
 
