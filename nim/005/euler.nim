@@ -46,9 +46,4 @@ factors = @[]
 for i in 1..20:
   factors = overlap(prime_factors(i), factors)
 
-var product = 1i64
-
-for i in factors:
-  product = product * i
-
-echo(product)
+echo(foldr(factors, a * b))
