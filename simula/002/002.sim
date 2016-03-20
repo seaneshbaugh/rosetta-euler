@@ -1,0 +1,33 @@
+BEGIN
+   INTEGER a, b, sum;
+
+   a := 0;
+
+   b := 1;
+
+   sum := 0;
+
+   WHILE a + b < 4000000 DO
+   BEGIN
+      INTEGER c, q, r;
+
+      c := a + b;
+
+      a := b;
+
+      b := c;
+
+      q := c // 2;
+
+      r := c - (q * 2);
+
+      IF r = 0 THEN
+      BEGIN
+         sum := sum + c;
+      END;
+   END;
+
+   OutFix(sum, 0, 0);
+
+   OutImage;
+END;
