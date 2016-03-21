@@ -8,11 +8,11 @@ defmodule Euler do
   end
 
   defp count_sundays(day_index, days_in_each_month, month) do
-    if day_index == 0 do
-      days = 1
-    else
-      days = 0
-    end
+    days =
+      case day_index do
+        0 -> 1
+        _ -> 0
+      end
 
     if month < 12 do
       days + count_sundays(rem(day_index + HashDict.get(days_in_each_month, month), 7), days_in_each_month, month + 1)
@@ -22,11 +22,11 @@ defmodule Euler do
   end
 
   def day_index_of_january_first(year) do
-    if (rem(year, 4) == 0 && rem(year, 100) != 0) || (rem(year, 400) == 0) do
-      days_from_january_first_to_april_fourth = 94
-    else
-      days_from_january_first_to_april_fourth = 93
-    end
+    days_from_january_first_to_april_fourth =
+      cond do
+        (rem(year, 4) == 0 && rem(year, 100) != 0) || (rem(year, 400) == 0) -> 94
+        true -> 93
+      end
 
     doomsday(year) - rem(days_from_january_first_to_april_fourth, 7)
   end
@@ -57,11 +57,11 @@ defmodule Euler do
   end
 
   defp days_in_each_month(year) when is_integer(year) do
-    if (rem(year, 4) == 0 && rem(year, 100) != 0) || (rem(year, 400) == 0) do
-      days_in_february = 29
-    else
-      days_in_february = 28
-    end
+    days_in_february =
+      cond do
+        (rem(year, 4) == 0 && rem(year, 100) != 0) || (rem(year, 400) == 0) -> 29
+        true -> 28
+      end
 
     Enum.into([{1, 31}, {2, days_in_february}, {3, 31}, {4, 30}, {5, 31}, {6, 30}, {7, 31}, {8, 31}, {9, 30}, {10, 31}, {11, 30}, {12, 31}], HashDict.new)
   end
