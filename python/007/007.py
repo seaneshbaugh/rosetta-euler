@@ -3,7 +3,7 @@ import math
 def sieve_of_atkin(limit):
     primes = []
 
-    sieve = [False] * limit
+    sieve = [False] * (limit + 1)
 
     square_root_of_limit = int(math.sqrt(limit))
 
