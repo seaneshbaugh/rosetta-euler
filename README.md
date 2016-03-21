@@ -984,7 +984,7 @@ Set the default Ruby.
 #### Target Version
 
     $ rustc --version
-    rustc 1.0.0-beta (built 2015-04-04)
+    rustc 1.6.0
 
 #### Additional Setup on OSX
 
