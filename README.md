@@ -1,6 +1,6 @@
 # Rosetta Euler
 
-An attempt at a [chrestomathy](http://en.wikipedia.org/wiki/Chrestomathy) of solutions to problems from [Project Euler](http://projecteuler.net/). All included programs print out their result to standard output (when possible and applicable) and exit. In the future each example for each language will include built in tests to validate the result.
+An attempt at a [chrestomathy](http://en.wikipedia.org/wiki/Chrestomathy) of solutions to problems from [Project Euler](http://projecteuler.net/). All included programs print out their result to standard output (when possible and applicable) and exit.
 
 * [Ada](#ada)
 * [Algol 68](#algol-68)
@@ -65,6 +65,12 @@ I've imposed a few rules on myself for these problems:
 * When applicable, all Makefiles should contain everything needed to compile its solution.
 * In languages without Unicode encoded strings assume ASCII.
 * In languages with Unicode encoded strings pretend UTF-8 is ASCII.
+
+## Tests
+
+The test suite can be run with `mix test`. Currently only some languages are supported. Eventually every language will have test coverage. For compiled languages the tests will attempt to compile the solution and then run the resulting executable. For interpreted languages (or languages like Elixir where the solutions are written as scripts rather than as complete applications) the tests will attempt to run the solution through interpreter. This is also a good way of checking ot make sure that your environment is set up correctly.
+
+All tests are written with [ExUnit](http://elixir-lang.org/docs/stable/ex_unit/ExUnit.html) and are located in `test/rosetta_euler`. Each language has a module for its tests. The `rosetta_euler_tests` macro provides an easy way of running a whole series of tests. It expects a range object and a block which contains the test code.
 
 ## Languages
 
