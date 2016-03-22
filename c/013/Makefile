@@ -6,7 +6,7 @@ TARGET_NAME=013
 SOURCE_FILES=\
 	$(TARGET_NAME).c
 
-INCLUDE_DIRECTORIES=
+INCLUDE_DIRECTORIES=-I/usr/local/include -L/usr/local/lib
 
 SYMBOLS=-lgmp
 

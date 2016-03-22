@@ -113,7 +113,7 @@ int main(int argc, char *argv[]) {
 
   mpz_t total;
 
-  mpz_init_set_str(total, "0", 10);
+  mpz_init_set_ui(total, 0);
 
   for (size_t i = 0; i < 100; i++) {
     mpz_add(total, total, numbers[i]);
@@ -124,6 +124,12 @@ int main(int argc, char *argv[]) {
   strncpy(firstTenDigits, mpz_get_str(NULL, 10, total), 10);
 
   printf("%s\n", firstTenDigits);
+
+  for (size_t i = 0; i < 100; i++) {
+    mpz_clear(numbers[i]);
+  }
+
+  mpz_clear(total);
 
   return 0;
 }
