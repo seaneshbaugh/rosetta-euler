@@ -18,39 +18,13 @@ fn main() {
              07198403850962455444362981230987879927244284909188\
              84580156166097919133875499200524063689912560717606\
              05886116467109405077541002256983155200055935729725\
-             71636269561882670428252483600823257530420752963450".to_string();
+             71636269561882670428252483600823257530420752963450";
 
-    let digits: Vec<char> = n.chars().collect();
+    let digits = n.chars().collect::<Vec<char>>();
 
-    let length = digits.len();
+    let products = digits.windows(5).map( |window|
+        window.iter().fold(1, |product, c|
+            product * (*c).to_digit(10).unwrap()));
 
-    let mut offset = 0;
-
-    let mut products: Vec<u32> = vec![];
-
-    while offset < length - 5 {
-        let mut i = 0;
-
-        let mut product = 1;
-
-        while i < 5 {
-            let digit = digits[offset + i].to_digit(10);
-
-            match digit {
-                Some(d) => product = product * d,
-                None => ()
-            }
-
-            i = i + 1;
-        }
-
-        products.push(product);
-
-        offset = offset + 1;
-    }
-
-    match products.iter().max() {
-        Some(m) => println!("{}", m),
-        None => ()
-    }
+    println!("{}", products.max().unwrap());
 }
