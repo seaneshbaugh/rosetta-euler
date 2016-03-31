@@ -13,7 +13,7 @@ def divide(a, b)
 
   digits = []
 
-  while true
+  loop do
     r *= 10
 
     digits << r / b
