@@ -3,7 +3,7 @@ def divide(a, b)
 
   raise ZeroDivisionError if b == 0
 
-  integer = a / b
+  q = a / b
 
   r = a % b
 
@@ -23,7 +23,7 @@ def divide(a, b)
     if seen.has_key?(r)
       w = seen[r]
 
-      return [integer, digits[0..(w - 1)], digits[w..(digits.length)]]
+      return [q, digits[0..(w - 1)], digits[w..(digits.length)]]
     else
       seen[r] = digits.length
     end
