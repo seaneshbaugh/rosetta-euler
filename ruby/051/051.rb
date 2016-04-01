@@ -1,7 +1,7 @@
 def sieve_of_atkin(limit)
   primes = []
 
-  sieve = Array.new(limit) { false }
+  sieve = Array.new(limit + 1) { false }
 
   square_root_of_limit = Math.sqrt(limit).to_i
 
@@ -45,13 +45,13 @@ def sieve_of_atkin(limit)
         sieve[i] = false
 
         i += n * n
-        end
-
-      primes << n
       end
 
-    n += 2
+      primes << n
     end
+
+    n += 2
+  end
 
   while n < limit do
     if sieve[n]
@@ -59,7 +59,7 @@ def sieve_of_atkin(limit)
     end
 
     n += 2
-    end
+  end
 
   primes
 end
