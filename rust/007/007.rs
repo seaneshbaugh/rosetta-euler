@@ -11,9 +11,9 @@ fn sieve_of_atkin(limit: u64) -> Vec<u64> {
 
     let mut sieve: Vec<bool> = Vec::new();
 
-    sieve.reserve(limit as usize+ 1);
+    sieve.reserve(limit as usize + 1);
 
-    while sieve.len() < limit as usize {
+    while sieve.len() < limit as usize + 1 {
         sieve.push(false);
     }
 
@@ -21,8 +21,8 @@ fn sieve_of_atkin(limit: u64) -> Vec<u64> {
 
     let mut n: u64;
 
-    for x in 1 .. square_root_of_limit {
-        for y in 1 .. square_root_of_limit {
+    for x in 1..(square_root_of_limit + 1) {
+        for y in 1..(square_root_of_limit + 1) {
             n = (4 * x * x) + (y * y);
 
             if n <= limit && (n % 12 == 1 || n % 12 == 5) {
