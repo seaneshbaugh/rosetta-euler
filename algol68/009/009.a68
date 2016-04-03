@@ -1,0 +1,45 @@
+PROC pythagorean_triple_with_sum = (INT sum) FLEX [] INT: BEGIN
+    FLEX [1 : 3] INT sides := (0, 0, 0);
+
+    INT m := 2;
+
+    BOOL found := FALSE;
+
+    WHILE m < sum AND found EQ FALSE DO
+        INT n := 1;
+
+        WHILE n < sum AND found EQ FALSE DO
+            IF m > n THEN
+                INT a := (m * m) - (n * n);
+
+                INT b := 2 * m * n;
+
+                INT c := (m * m) + (n * n);
+
+                IF (a + b + c EQ sum) AND ((a * a) + (b * b) EQ (c * c)) THEN
+                    sides[1 : 3] := (a, b, c);
+
+                    found := TRUE
+                FI
+            FI;
+
+            n +:= 1
+        OD;
+
+        m +:= 1
+    OD;
+
+    sides
+END;
+
+BEGIN
+    REF FLEX [] INT sides = LOC FLEX [1: 0] INT := pythagorean_triple_with_sum(1000);
+
+    INT product := 1;
+
+    FOR i FROM LWB sides TO UPB sides DO
+        product *:= sides[i]
+    OD;
+
+    printf(($g(0)$, product))
+END
