@@ -6,4 +6,4 @@ loop do
   fibonacci_numbers << fibonacci_numbers[-1] + fibonacci_numbers[-2]
 end
 
-puts fibonacci_numbers.select { |n| n.even? }.inject { |acc, i| acc + i }
+puts fibonacci_numbers.select { |n| n.even? }.reduce { |sum, i| sum + i }
