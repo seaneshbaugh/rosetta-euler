@@ -345,19 +345,13 @@ Install the `leiningen` formula via Homebrew.
 #### Target Version
 
     $ crystal --version
-    Crystal 0.5.7 [2568f87] (Fri Jan  2 23:29:49 UTC 2015)
+    Crystal 0.15.0 (Fri Apr  1 17:57:09 UTC 2016)
 
 #### Additional Setup on OSX
 
-The following instructions are from the readme at [manastech/crystal](https://github.com/manastech/crystal). Please verify they are the same before proceeding.
+Install the `crystal-lang` formula via Homebrew.
 
-Tap the `manastech/crystal` keg.
-
-    $ brew tap manastech/crystal
-
-Install the `crystal` formula via Homebrew.
-
-    $ brew install crystal
+    $ brew install crystal-lang
 
 #### Building
 
