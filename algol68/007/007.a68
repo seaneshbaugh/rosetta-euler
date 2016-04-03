@@ -1,0 +1,127 @@
+PROC sieve_of_atkin = (INT limit) FLEX [] INT: BEGIN
+    FLEX [1 : limit + 1] BOOL sieve;
+
+    FOR i FROM LWB sieve TO UPB sieve DO
+        sieve[i] := FALSE
+    OD;
+
+    INT square_root_of_limit := ENTIER sqrt(limit);
+
+    INT n;
+
+    FOR x FROM 1 TO square_root_of_limit DO
+        FOR y FROM 1 TO square_root_of_limit DO
+            n := (4 * x * x) + (y * y);
+
+            IF n <= limit AND (n %* 12 = 1 OR n %* 12 = 5) THEN
+                sieve[n] := NOT sieve[n]
+            FI;
+
+            n := (3 * x * x) + (y * y);
+
+            IF n <= limit AND n %* 12 = 7 THEN
+                sieve[n] := NOT sieve[n]
+            FI;
+
+            n := (3 * x * x) - (y * y);
+
+            IF x > y AND n <= limit AND n %* 12 = 11 THEN
+                sieve[n] := NOT sieve[n]
+            FI
+        OD
+    OD;
+
+    sieve[2] := TRUE;
+
+    sieve[3] := TRUE;
+
+    FLEX [1 : limit + 1] INT primes;
+
+    FOR i FROM LWB primes TO UPB primes DO
+        primes[i] := 0
+    OD;
+
+    primes[LWB primes] := 2;
+
+    primes[LWB primes + 1] := 3;
+
+    n := 5;
+
+    INT l := 2;
+
+    WHILE n <= square_root_of_limit DO
+        IF sieve[n] EQ TRUE THEN
+            INT i := n * n;
+
+            WHILE i < limit DO
+                sieve[i] := FALSE;
+
+                i +:= n * n
+            OD;
+
+            # The commented out code below is what I intended to do originally.
+              Unfortunately a68g kept running out of memory whenever it tried to reassign the primes array.
+              I suspect the runtime isn't deallocating the memory reserved by updated_primes, probably
+              because it waits until the function returns. I don't know. Either way, my current method of
+              creating a single primes array with a length equal to limit + 1 to which primes are added
+              and then creating a second result array that's a slice of the primes array up to the counter
+              "l" is a hack to get around this particular Algol 68 implementation's limitations. Ideally
+              I would use my original method of creating a new array, copying the old one via assignment,
+              appending the next prime, and then overwriting the old array. It's probably less efficient,
+              but it's much more straight forward in my opinion. #
+
+            #FLEX [LWB primes : UPB primes + 1] INT updated_primes;
+
+            updated_primes[LWB updated_primes : UPB updated_primes - 1] := primes;
+
+            updated_primes[UPB updated_primes] := n;
+
+            primes := updated_primes#
+
+            primes[LWB primes + l] := n;
+
+            l +:= 1
+        FI;
+
+        n +:= 2
+    OD;
+
+    WHILE n < limit DO
+        IF sieve[n] EQ TRUE THEN
+
+            #FLEX [LWB primes : UPB primes + 1] INT updated_primes;
+
+            updated_primes[LWB primes : UPB primes ] := primes;
+
+            updated_primes[UPB updated_primes] := n;
+
+            primes := updated_primes#
+
+            primes[LWB primes + l] := n;
+
+            l +:= 1
+        FI;
+
+        n +:= 2
+    OD;
+
+    FLEX [LWB primes : LWB primes + l - 1] INT result;
+
+    FOR i FROM LWB result TO UPB result DO
+        result[i] := primes[i]
+    OD;
+
+    result
+END;
+
+BEGIN
+    INT n := 10001;
+
+    INT limit;
+
+    limit := ENTIER ((n * ln(n)) + (n * ln(ln(n))));
+
+    REF FLEX [] INT primes = LOC FLEX [1 : 0] INT := sieve_of_atkin(limit);
+
+    printf(($g(0)$, primes[n]))
+END
