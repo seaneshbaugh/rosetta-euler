@@ -1,0 +1,99 @@
+PROC sieve_of_atkin = (INT limit) FLEX [] INT: BEGIN
+    FLEX [1 : limit + 1] BOOL sieve;
+
+    FOR i FROM LWB sieve TO UPB sieve DO
+        sieve[i] := FALSE
+    OD;
+
+    INT square_root_of_limit := ENTIER sqrt(limit);
+
+    INT n;
+
+    FOR x FROM 1 TO square_root_of_limit DO
+        FOR y FROM 1 TO square_root_of_limit DO
+            n := (4 * x * x) + (y * y);
+
+            IF n <= limit AND (n %* 12 = 1 OR n %* 12 = 5) THEN
+                sieve[n] := NOT sieve[n]
+            FI;
+
+            n := (3 * x * x) + (y * y);
+
+            IF n <= limit AND n %* 12 = 7 THEN
+                sieve[n] := NOT sieve[n]
+            FI;
+
+            n := (3 * x * x) - (y * y);
+
+            IF x > y AND n <= limit AND n %* 12 = 11 THEN
+                sieve[n] := NOT sieve[n]
+            FI
+        OD
+    OD;
+
+    sieve[2] := TRUE;
+
+    sieve[3] := TRUE;
+
+    FLEX [1 : limit + 1] INT primes;
+
+    FOR i FROM LWB primes TO UPB primes DO
+        primes[i] := 0
+    OD;
+
+    primes[LWB primes] := 2;
+
+    primes[LWB primes + 1] := 3;
+
+    n := 5;
+
+    INT l := 2;
+
+    WHILE n <= square_root_of_limit DO
+        IF sieve[n] EQ TRUE THEN
+            INT i := n * n;
+
+            WHILE i < limit DO
+                sieve[i] := FALSE;
+
+                i +:= n * n
+            OD;
+
+            primes[LWB primes + l] := n;
+
+            l +:= 1
+        FI;
+
+        n +:= 2
+    OD;
+
+    WHILE n < limit DO
+        IF sieve[n] EQ TRUE THEN
+            primes[LWB primes + l] := n;
+
+            l +:= 1
+        FI;
+
+        n +:= 2
+    OD;
+
+    FLEX [LWB primes : LWB primes + l - 1] INT result;
+
+    FOR i FROM LWB result TO UPB result DO
+        result[i] := primes[i]
+    OD;
+
+    result
+END;
+
+BEGIN
+    REF FLEX [] INT primes = LOC FLEX [1 : 0] INT := sieve_of_atkin(2000000);
+
+    LONG INT sum := 0;
+
+    FOR i FROM LWB primes TO UPB primes DO
+        sum +:= primes[i]
+    OD;
+
+    printf(($g(0)$, sum))
+END
