@@ -237,7 +237,7 @@ None.
 #### Target Version
 
     $ mcs --version
-    Mono C# compiler version 3.10.0.0
+    Mono C# compiler version 4.2.3.0
 
 #### Additional Setup on OSX
 
@@ -501,7 +501,7 @@ Install the `gcc` formula via Homebrew.
 #### Target Version
 
     $ fsharpc
-    F# Compiler for F# 3.1 (Open Source Edition)
+    F# Compiler for F# 4.0 (Open Source Edition)
     Freely distributed under the Apache 2.0 Open Source License
 
 #### Additional Setup on OSX
