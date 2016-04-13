@@ -1,0 +1,98 @@
+EXTERNAL CLASS Bignum;
+EXTERNAL CLASS BignumList;
+
+! BEGIN ;
+!    REF(Bignum) huge, big, result!!\ ;
+
+!    huge :- NEW Bignum("265")!!\ ;
+
+!    OutText("huge = ")!!\ ;
+!    huge.Print!!\ ;
+!    OutImage!!\ ;
+
+!    big :- NEW Bignum("14")!!\ ;
+
+!    OutText("big = ")!!\ ;
+!    big.Print!!\ ;
+!    OutImage!!\ ;
+
+!    result :- huge.Subtract(big)!!\ ;
+
+!    OutText("result = ")!!\ ;
+!    result.Print!!\ ;
+!    OutImage!!\ ;
+
+!    OutImage!!\ ;
+! END!!\ ;
+
+
+
+BEGIN
+   REF(BignumList) PROCEDURE prime_factors(n); REF(Bignum) n;
+   BEGIN
+      BOOLEAN found;
+      REF(Bignum) v, i;
+      REF(BignumList) result;
+
+      found := FALSE;
+
+      v :- NEW Bignum("2");
+
+      i :- NEW Bignum("2");
+
+      WHILE i.Compare(n) = -1 AND NOT found DO
+      BEGIN
+         REF(Bignum) r;
+
+         r :- n.Modulo(i);
+
+         IF r.Compare(NEW Bignum("0")) = 0 THEN
+         BEGIN
+            v :- i;
+
+            found := TRUE;
+         END;
+
+         i :- i.Add(NEW Bignum("1"));
+      END;
+
+      result :- NEW BignumList;
+
+      IF found THEN
+      BEGIN
+         result.Push(v);
+
+         result.Concat(prime_factors(n.Divide(v)));
+      END ELSE BEGIN
+         result.Push(n);
+      END;
+
+      prime_factors :- result;
+   END;
+
+   REF(BignumList) factors;
+
+   REF(BignumListNode) factor;
+
+   REF(Bignum) largest;
+
+   factors :- prime_factors(NEW Bignum("600851475143"));
+
+   factor :- factors.head;
+
+   largest :- factor.val;
+
+   WHILE factor =/= NONE DO
+   BEGIN
+      IF factor.val.Compare(largest) = 1 THEN
+      BEGIN
+         largest :- factor.val;
+      END;
+
+      factor :- factor.next;
+   END;
+
+   OutText(largest.ToString);
+
+   OutImage;
+END;
