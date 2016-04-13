@@ -1,32 +1,6 @@
 EXTERNAL CLASS Bignum;
 EXTERNAL CLASS BignumList;
 
-! BEGIN ;
-!    REF(Bignum) huge, big, result!!\ ;
-
-!    huge :- NEW Bignum("265")!!\ ;
-
-!    OutText("huge = ")!!\ ;
-!    huge.Print!!\ ;
-!    OutImage!!\ ;
-
-!    big :- NEW Bignum("14")!!\ ;
-
-!    OutText("big = ")!!\ ;
-!    big.Print!!\ ;
-!    OutImage!!\ ;
-
-!    result :- huge.Subtract(big)!!\ ;
-
-!    OutText("result = ")!!\ ;
-!    result.Print!!\ ;
-!    OutImage!!\ ;
-
-!    OutImage!!\ ;
-! END!!\ ;
-
-
-
 BEGIN
    REF(BignumList) PROCEDURE prime_factors(n); REF(Bignum) n;
    BEGIN
