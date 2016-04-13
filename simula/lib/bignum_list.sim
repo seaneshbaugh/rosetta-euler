@@ -1,0 +1,52 @@
+EXTERNAL CLASS Bignum;
+
+CLASS BignumListNode(val); REF(Bignum) val;
+BEGIN
+   REF(BignumListNode) next;
+END;
+
+CLASS BignumList;
+BEGIN
+   REF(BignumListNode) head, tail;
+
+   PROCEDURE Append(node); REF(BignumListNode) node;
+   BEGIN
+      IF head == NONE THEN
+      BEGIN
+         head :- tail :- node;
+      END ELSE BEGIN
+         tail.next :- node;
+
+         tail :- node
+      END
+   END;
+
+   PROCEDURE Concat(list); REF(BignumList) list;
+   BEGIN
+      tail.next :- list.head;
+
+      tail :- list.tail;
+   END;
+
+   PROCEDURE Prepend(node); REF(BignumListNode) node;
+   BEGIN
+      IF head == NONE THEN
+      BEGIN
+         head :- tail :- node;
+      END ELSE BEGIN
+         node.next :- head;
+
+         Head :- node;
+      END
+   END;
+
+   PROCEDURE Push(number); REF(Bignum) number;
+   BEGIN
+      Append(NEW BignumListNode(number));
+   END;
+
+   PROCEDURE Unshift(number); REF(Bignum) number;
+   BEGIN
+      Prepend(NEW BignumListNode(number));
+   END;
+END;
