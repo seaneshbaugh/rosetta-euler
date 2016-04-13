@@ -1,8 +1,12 @@
 [submodule "c/lib/generic_array"]
 	path = c/lib/generic_array
 	url = https://github.com/seaneshbaugh/generic_array.git
-  ignore = dirty
+        ignore = dirty
 [submodule "javascript/lib/big.js"]
 	path = javascript/lib/big.js
 	url = git://github.com/MikeMcl/big.js.git
 	ignore = dirty
+[submodule "simula/lib/bignum.sim"]
+	path = simula/lib/bignum.sim
+	url = git@github.com:seaneshbaugh/bignum.sim.git
+        ignore = dirty
