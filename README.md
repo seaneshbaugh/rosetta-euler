@@ -1082,7 +1082,7 @@ Run the make install command.
 
 #### Building
 
-    $ cim 001.sim
+    $ make
 
 #### Running
 
