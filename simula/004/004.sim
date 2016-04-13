@@ -1,0 +1,50 @@
+BEGIN
+   INTEGER PROCEDURE Reverse(x); INTEGER x;
+   BEGIN
+      INTEGER n, r;
+
+      n := x;
+
+      r := 0;
+
+      WHILE n <> 0 DO
+      BEGIN
+         INTEGER quo, rem;
+
+         quo := n // 10;
+
+         rem := n - (quo * 10);
+
+         r := r * 10 + rem;
+
+         n := quo;
+      END;
+
+      Reverse := r;
+   END;
+
+   INTEGER largest, x, y;
+
+   largest := 100 * 100;
+
+   FOR X := 100 STEP 1 UNTIL 999 DO
+   BEGIN
+      FOR y := 100 STEP 1 UNTIL 999 DO
+      BEGIN
+         INTEGER p, r;
+
+         p := x * y;
+
+         r := Reverse(p);
+
+         IF p = r AND p > largest THEN
+         BEGIN
+            largest := p;
+         END;
+      END;
+   END;
+
+   OutFix(largest, 0, 0);
+
+   OutImage;
+END;
