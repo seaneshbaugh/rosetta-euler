@@ -23,9 +23,89 @@ BEGIN
 
    PROCEDURE Concat(list); REF(BignumList) list;
    BEGIN
-      tail.next :- list.head;
+      IF tail =/= NONE THEN
+      BEGIN
+         tail.next :- list.head;
 
-      tail :- list.tail;
+         tail :- list.tail;
+      END ELSE BEGIN
+         Head :- list.Head;
+
+         tail :- list.Tail;
+      END;
+   END;
+
+   REF(BignumList) PROCEDURE Clone;
+   BEGIN
+      REF(BignumList) result;
+      REF(BignumListNode) next;
+
+      result :- NEW BignumList;
+
+      next :- Head;
+
+      WHILE next =/= NONE DO
+      BEGIN
+         REF(Bignum) cloned_val;
+
+         cloned_val :- NEW Bignum(next.val.ToString);
+
+         result.Push(cloned_val);
+
+         next :- next.Next;
+      END;
+
+      Clone :- result;
+   END;
+
+   PROCEDURE DeleteFirst(number); REF(Bignum) number;
+   BEGIN
+      REF(BignumListNode) previous, next;
+      BOOLEAN found;
+
+      previous :- NONE;
+
+      next :- Head;
+
+      found := FALSE;
+
+      WHILE next =/= NONE AND NOT found DO
+      BEGIN
+         IF next.val.compare(number) = 0 THEN
+         BEGIN
+            found := TRUE;
+         END ELSE BEGIN
+            previous :- next;
+
+            next :- next.Next;
+         END;
+      END;
+
+      IF found THEN
+      BEGIN
+         previous.Next :- next.Next;
+      END;
+   END;
+
+   REF(BignumList) PROCEDURE Overlap(list); REF(BignumList) list;
+   BEGIN
+      REF(BignumList) result;
+      REF(BignumListNode) next;
+
+      result :- Clone;
+
+      next :- list.Head;
+
+      WHILE next =/= NONE DO
+      BEGIN
+         result.DeleteFirst(next.val);
+
+         next :- next.Next;
+      END;
+
+      result.Concat(list);
+
+      Overlap :- result;
    END;
 
    PROCEDURE Prepend(node); REF(BignumListNode) node;
@@ -37,12 +117,76 @@ BEGIN
          node.next :- head;
 
          Head :- node;
-      END
+      END;
+   END;
+
+   REF(Bignum) PROCEDURE Product;
+   BEGIN
+      REF(Bignum) result;
+      REF(BignumListNode) node;
+
+      result :- NEW Bignum("1");
+
+      node :- Head;
+
+      WHILE node =/= NONE DO
+      BEGIN
+         result :- result.Multiply(node.Val);
+
+         node :- node.Next;
+      END;
+
+      Product :- result;
    END;
 
    PROCEDURE Push(number); REF(Bignum) number;
    BEGIN
       Append(NEW BignumListNode(number));
+   END;
+
+   REF(Bignum) PROCEDURE Sum;
+   BEGIN
+      REF(Bignum) result;
+      REF(BignumListNode) node;
+
+      result :- NEW Bignum("0");
+
+      node :- Head;
+
+      WHILE node =/= NONE DO
+      BEGIN
+         result :- result.Add(node.Val);
+
+         node :- node.Next;
+      END;
+
+      Sum :- result;
+   END;
+
+   TEXT PROCEDURE ToString;
+   BEGIN
+      TEXT result;
+      REF(BignumListNode) next;
+
+      result :- "";
+
+      next :- Head;
+
+      WHILE next =/= NONE DO
+      BEGIN
+         IF next =/= Head THEN
+         BEGIN
+            result :- result & ", " & next.val.ToString;
+         END ELSE BEGIN
+            result :- result & next.val.ToString;
+         END;
+
+         next :- next.Next;
+      END;
+
+      result :- "[" & result & "]";
+
+      ToString :- result;
    END;
 
    PROCEDURE Unshift(number); REF(Bignum) number;

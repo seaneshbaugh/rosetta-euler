@@ -1,0 +1,72 @@
+EXTERNAL CLASS Bignum;
+EXTERNAL CLASS BignumList;
+
+BEGIN
+   REF(BignumList) PROCEDURE prime_factors(n); REF(Bignum) n;
+   BEGIN
+      BOOLEAN found;
+      REF(Bignum) v, i;
+      REF(BignumList) result;
+
+      found := FALSE;
+
+      v :- NEW Bignum("2");
+
+      i :- NEW Bignum("2");
+
+      WHILE i.Compare(n) = -1 AND NOT found DO
+      BEGIN
+         REF(Bignum) r;
+
+         r :- n.Modulo(i);
+
+         IF r.Compare(NEW Bignum("0")) = 0 THEN
+         BEGIN
+            v :- i;
+
+            found := TRUE;
+         END;
+
+         i :- i.Add(NEW Bignum("1"));
+      END;
+
+      result :- NEW BignumList;
+
+      IF found THEN
+      BEGIN
+         result.Push(v);
+
+         result.Concat(prime_factors(n.Divide(v)));
+      END ELSE BEGIN
+         result.Push(n);
+      END;
+
+      prime_factors :- result;
+   END;
+
+   REF(BignumList) ARRAY factor_lists(1:20);
+   INTEGER i;
+   REF(BignumList) factors;
+
+   FOR i := 1 STEP 1 UNTIL 20 DO
+   BEGIN
+      TEXT c;
+
+      c :- Blanks(2);
+
+      c.PutInt(i);
+
+      factor_lists(i) :- prime_factors(NEW Bignum(c));
+   END;
+
+   factors :- NEW BignumList;
+
+   FOR i := 1 STEP 1 UNTIL 20 DO
+   BEGIN
+      factors :- factors.Overlap(factor_lists(i));
+   END;
+
+   OutText(factors.Product.ToString);
+
+   OutImage;
+END;
