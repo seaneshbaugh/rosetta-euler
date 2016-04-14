@@ -1,0 +1,22 @@
+BEGIN
+   INTEGER sum_of_squares, sum, square_of_sum, i;
+
+   sum_of_squares := 0;
+
+   sum := 0;
+
+   square_of_sum := 0;
+
+   FOR i := 1 STEP 1 UNTIL 100 DO
+   BEGIN
+      sum_of_squares := sum_of_squares + (i * i);
+
+      sum := sum + i;
+   END;
+
+   square_of_sum := sum * sum;
+
+   OutFix(square_of_sum - sum_of_squares, 0, 0);
+
+   OutImage;
+END;
