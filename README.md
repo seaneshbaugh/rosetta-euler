@@ -353,13 +353,9 @@ Install the `crystal-lang` formula via Homebrew.
 
     $ brew install crystal-lang
 
-#### Building
-
-    $ crystal 001.cr
-
 #### Running
 
-    $ ./001
+    $ crystal 001.cr
 
 ### D
 
