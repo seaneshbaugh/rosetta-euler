@@ -27,7 +27,7 @@ defmodule RosettaEuler.PrologTest do
 
   rosetta_euler_tests 1..3 do
     @tag test_number: test_number
-    test "Rust #" <> to_string(test_number), %{test_number: test_number} do
+    test "Prolog #" <> to_string(test_number), %{test_number: test_number} do
       answer = answer_for(test_number) <> "\n"
 
       {^answer, 0} = run_prolog_solution(test_number)
