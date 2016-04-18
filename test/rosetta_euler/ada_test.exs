@@ -16,7 +16,7 @@ defmodule RosettaEuler.AdaTest do
 
     path = Path.join("ada", name)
 
-    {_, 0} = System.cmd("gnatmake", ["euler.adb"], cd: path, stderr_to_stdout: true)
+    {_, 0} = System.cmd("gnatmake", ["-q", "euler.adb"], cd: path)
 
     {pwd, 0} = System.cmd("pwd", [], cd: path)
 
