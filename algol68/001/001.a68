@@ -1,6 +1,6 @@
 INT sum := 0;
 
-FOR i TO 1000 DO
+FOR i TO 999 DO
 	IF i %* 3 = 0 THEN
 		sum +:= i
 	ELIF i %* 5 = 0 THEN
