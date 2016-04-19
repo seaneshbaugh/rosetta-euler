@@ -25,6 +25,8 @@ program euler
     deallocate(updated_fibs)
   end do
 
+  sum = 0
+
   do i = 1, size(fibs)
     if ((mod(fibs(i), 2) == 0)) then
       sum = sum + fibs(i)
