@@ -1,7 +1,7 @@
 Code.require_file "../rosetta_euler_test.exs", __DIR__
 Code.require_file "../support/answers.exs", __DIR__
 
-defmodule RosettaEuler.JavascriptTest do
+defmodule RosettaEuler.JavaScriptTest do
   use ExUnit.Case, async: true
 
   import RosettaEuler.Test, only: [rosetta_euler_tests: 2]
