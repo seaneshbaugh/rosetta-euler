@@ -2,11 +2,11 @@ let rec range i j = if i > j then [] else i :: (range (i + 1) j)
 
 let reverse_string s =
   let l = String.length s in
-  let r = String.create l in
+  let r = Bytes.create l in
   let last = l - 1 in
   for i = 0 to last do
     let j = last - i in
-    r.[i] <- s.[j];
+    Bytes.set r i s.[j];
   done;
   (r)
 
