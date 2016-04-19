@@ -3,12 +3,8 @@ def pythagorean_triple_with_sum(sum)
     raise ArgumentError, 'The smallest possible sum of a pythagorean triple is 11.'
   end
 
-  ms = (2..sum).to_a
-
-  ns = (1..(sum - 1)).to_a
-
-  ms.each do |m|
-    ns.each do |n|
+  (2..sum).each do |m|
+    (1..(sum - 1)).each do |n|
       if m > n
         a = (m * m) - (n * n)
 
