@@ -13,4 +13,4 @@ let n = 10001
 
 let limit = int (round (((log (float n)) * (float n)) + ((log (log (float n))) * (float n))))
 
-printf "%A\n" (List.nth (sieveOfEratosthenes limit) (n - 1))
+printf "%A\n" (List.item (n - 1) (sieveOfEratosthenes limit))
