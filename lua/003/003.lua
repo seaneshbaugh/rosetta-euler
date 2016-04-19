@@ -1,7 +1,7 @@
 table.concat = function(t, u)
-  table.foreach(u, function(i, v)
+  for i, v in pairs(u) do
     table.insert(t, v)
-  end)
+  end
 
   return t
 end
