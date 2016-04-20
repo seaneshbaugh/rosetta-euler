@@ -1,5 +1,5 @@
 function each_cons(n, collection)
-  { collection[i:(i + n - 1)] for i = 1:(length(collection) - n + 1) }
+    [collection[i:(i + n - 1)] for i = 1:(length(collection) - n + 1)]
 end
 
 n = ["73167176531330624919225119674426574742355349194934",
@@ -23,4 +23,4 @@ n = ["73167176531330624919225119674426574742355349194934",
 "05886116467109405077541002256983155200055935729725",
 "71636269561882670428252483600823257530420752963450"]
 
-println(maximum(map(digits -> prod(map(digit -> int(digit), split(digits, ""))), each_cons(5, reduce(*, n)))))
+println(maximum(map(digits -> prod(map(digit -> parse(Int, digit), split(digits, ""))), each_cons(5, reduce(*, n)))))
