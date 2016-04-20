@@ -27,7 +27,7 @@ defmodule RosettaEuler.FSharpTest do
 
   rosetta_euler_tests 1..7 do
     @tag test_number: test_number
-    test "C# #" <> to_string(test_number), %{test_number: test_number} do
+    test "F# #" <> to_string(test_number), %{test_number: test_number} do
       answer = answer_for(test_number) <> "\n"
 
       {^answer, 0} = run_fsharp_solution(test_number)
