@@ -3,7 +3,7 @@ function sieve_of_atkin(limit)
 
   sieve = falses(limit)
 
-  square_root_of_limit = int(sqrt(limit))
+  square_root_of_limit = round(Int64, sqrt(limit))
 
   for x in 1:square_root_of_limit
     for y in 1:square_root_of_limit
@@ -66,6 +66,6 @@ end
 
 n = 10001
 
-limit = int((n * log(n)) + (n * (log(log(n)))))
+limit = round(Int64, (n * log(n)) + (n * (log(log(n)))))
 
 println(sieve_of_atkin(limit)[n])
