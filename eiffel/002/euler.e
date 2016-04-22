@@ -33,5 +33,4 @@ feature
 
             io.put_string(sum.out + "%N")
         end
-
 end
