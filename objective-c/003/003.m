@@ -18,7 +18,7 @@ int main(int argc, char * argv[]){
     }
   }
 
-  NSLog(@"%llu\n", max);
+  printf("%llu\n", max);
 
   [factors release];
 
