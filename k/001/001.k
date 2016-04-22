@@ -10,6 +10,12 @@
 
 /   +/&~&/(!1000)!/:3 5                 Dyadic plus applied over the previous list. Sums the elements in the list.
 
-+/&~&/(!1000)!/:3 5
+/   5:+/&~&/(!1000)!/:3 5               Monadic printed representation. Converts result to string.
+
+/   `0:5:+/&~&/(!1000)!/:3 5            Write to stdout.
+
+`0:5:+/&~&/(!1000)!/:3 5
+
+`0:"\n"
 
 _exit(0)
