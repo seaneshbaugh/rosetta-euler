@@ -40,7 +40,7 @@ int main(int argc, char * argv[]) {
     }
   }
 
-  NSLog(@"%d\n", max);
+  printf("%d\n", max);
 
   [palindromes release];
 
