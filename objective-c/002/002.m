@@ -19,7 +19,7 @@ int main(int argc, char * argv[]){
     sum += [[evens objectAtIndex: i] intValue];
   }
 
-  NSLog(@"%d\n", sum);
+  printf("%d\n", sum);
 
   [fibs release];
 
