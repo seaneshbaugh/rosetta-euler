@@ -18,6 +18,8 @@
 
 /   +/{x@&~x!2}(4e6>+/-2#){x,+/-2#x}/1  Dyadic plus applied over the previous list. Sums the elements in the list.
 
-+/{x@&~x!2}(4e6>+/-2#){x,+/-2#x}/1
+`0:5:+/{x@&~x!2}(4e6>+/-2#){x,+/-2#x}/1
+
+`0:"\n"
 
 _exit(0)
