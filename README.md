@@ -4,6 +4,7 @@ An attempt at a [chrestomathy](http://en.wikipedia.org/wiki/Chrestomathy) of sol
 
 * [Ada](#ada)
 * [Algol 68](#algol-68)
+* [BCPL](#bcpl)
 * [C](#c)
 * [C++](#c-1)
 * [C&#35;](#c-2)
@@ -173,6 +174,63 @@ Install the `algol68g` formula via Homebrew.
 #### Running
 
     $ a68g 001.a68
+
+### BCPL
+
+[BCPL](http://www.cl.cam.ac.uk/~mr10/BCPL.html)
+
+#### Target Version
+
+    $ cintsys
+    BCPL 32-bit Cintcode System (21 Oct 2015)
+
+#### Additional Setup on OSX
+
+Download the BCPL source code.
+
+    $ wget http://www.cl.cam.ac.uk/users/mr/BCPL/bcpl.tgz
+
+Unpack the BCPL source code.
+
+    $ tar -xf bcpl.tgz
+
+Go to the BCPL source code directory.
+
+    $ cd BCPL/cintcode
+
+Open up the `Makefile` in your preferred text editor and uncomment lines 190 and 191 so that they look like this:
+
+    CC = gcc -O4 -m32 -DforMacOSX
+    ENDER = litender
+
+Set the `BCPLROOT`, `PATH`, `BCPLPATH`, and `BCPLHDRS` environment variables. **Note: This step will need to be done every time you intend to use BCPL. Alternatively you can set this in your shell's initialization file.** The below commands assume you're still in the `BCPL/cintcode` directory.
+
+    $ EXPORT BCPLROOT=`pwd`
+    $ EXPORT PATH=$PATH:$BCPLROOT/bin
+    $ EXPORT BCPLPATH=$BCPLROOT/cin
+    $ EXPORT BCPLPATH=$BCPLROOT/g
+
+Run the make clean command.
+
+    $ make clean
+
+Run the make command.
+
+    $ make
+
+#### Running
+
+**See above note about environment variables.**
+
+    $ cintsys
+
+    BCPL 32-bit Cintcode System (21 Oct 2015)
+    0.000> c b euler
+    bcpl euler.b to euler hdrs BCPLHDRS t32
+
+    BCPL (10 Oct 2014) with simple floating point
+    Code size =    80 bytes of 32-bit little ender Cintcode
+    0.027> euler
 
 ### C
 
