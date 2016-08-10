@@ -3,14 +3,12 @@ defmodule Euler do
     fibs_less_than(n, [1, 0])
   end
 
-  def fibs_less_than(n, [h | t]) do
-    [a | _] = t
+  defp fibs_less_than(n, [h | [a | _] = t]) when a + h < n do
+    fibs_less_than(n, Enum.concat([a + h], [h | t]))
+  end
 
-    if a + h < n do
-      fibs_less_than(n, Enum.concat([a + h], [h | t]))
-    else
-      [h | t]
-    end
+  defp fibs_less_than(_, f) do
+    f
   end
 end
 
