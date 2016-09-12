@@ -69,7 +69,7 @@ I've imposed a few rules on myself for these problems:
 
 ## Tests
 
-The test suite can be run with `mix test`. Currently only some languages are supported. Eventually every language will have test coverage. For compiled languages the tests will attempt to compile the solution and then run the resulting executable. For interpreted languages (or languages like Elixir where the solutions are written as scripts rather than as complete applications) the tests will attempt to run the solution through interpreter. This is also a good way of checking ot make sure that your environment is set up correctly.
+The test suite can be run with `mix test`. Currently only some languages are supported. Eventually every language will have test coverage. For compiled languages the tests will attempt to compile the solution and then run the resulting executable. For interpreted languages (or languages like Elixir where the solutions are written as scripts rather than as complete applications) the tests will attempt to run the solution through the interpreter. This is also a good way of checking ot make sure that your environment is set up correctly.
 
 All tests are written with [ExUnit](http://elixir-lang.org/docs/stable/ex_unit/ExUnit.html) and are located in `test/rosetta_euler`. Each language has a module for its tests. The `rosetta_euler_tests` macro provides an easy way of running a whole series of tests. It expects a range object and a block which contains the test code.
 
@@ -82,37 +82,29 @@ All tests are written with [ExUnit](http://elixir-lang.org/docs/stable/ex_unit/E
 #### Target Version
 
     $ gnat
-    GNAT GPL 2014 (20140331)
-    Copyright 1996-2014, Free Software Foundation, Inc.
+    GNAT GPL 2016 (20160515-49)
+    Copyright 1996-2016, Free Software Foundation, Inc.
 
 #### Additional Setup on OSX
 
 [Download GNAT GPL](http://libre.adacore.com/download/configurations).
 
-* Next to "Select your platform:" select "x86-64 Mac OS X (64 bits)" and "GNAT GPL 2014".
-* Click "GNAT Ada GPL 2014".
-* Check "gnat-gpl-2014-x86_64-darwin-bin.tar.gz".
+* Next to "Select your platform:" select "x86-64 Mac OS X (64 bits)" and "GNAT GPL 2016".
+* Click "GNAT Ada GPL 2016".
+* Check "gnat-gpl-2016-x86_64-darwin-bin.tar.gz".
 * Click "Download Selected Files".
 
 Go to your Downloads directory.
 
     $ cd ~/Downloads
 
-Extract the Zip archive (the file name will be timestamped with the time you downloaded it).
-
-    $ unzip AdaCore-Download-201X-XX-XX_XXXX.zip
-
-Go to the directory containing the gzip archive.
-
-    $ cd x86_64-darwin/adagpl-2014/gnatgpl
-
 Extract the gzip archive.
 
-    $ tar -xvzf gnat-gpl-2014-x86_64-darwin-bin.tar.gz
+    $ tar -xvzf gnat-gpl-2016-x86_64-darwin-bin.tar.gz
 
 Go to the directory containing the gzip archive contents.
 
-    $ cd gnat-gpl-2014-x86_64-darwin-bin
+    $ cd gnat-gpl-2016-x86_64-darwin-bin
 
 Run the install script.
 
@@ -126,10 +118,10 @@ Add `/usr/local/gnat/bin` to your $PATH. For example, in your `~/.bashrc` or `~/
 
 Open a new terminal tab/window or reload your `~/.bashrc` or `~/.zshrc`.
 
-Remove the Zip archive and the extracted files.
+Remove the gzip archive and the extracted files.
 
     $ cd ~/Downloads
-    $ rm -rf AdaCore-Download-201X-XX-XX_XXXX.zip x86_64-darwin
+    $ rm -rf gnat-gpl-2016-x86_64-darwin-bin.tar.gz gnat-gpl-2016-x86_64-darwin-bin
 
 #### Building
 
