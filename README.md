@@ -138,8 +138,8 @@ Remove the gzip archive and the extracted files.
 #### Target Version
 
     $ a68g --version
-    Algol 68 Genie 2.8
-    Copyright (c) 2013 Marcel van der Veer <algol68g@xs4all.nl>.
+    Algol 68 Genie 2.8.3
+    Copyright 2016 Marcel van der Veer <algol68g@xs4all.nl>.
 
     This is free software covered by the GNU General Public License.
     There is ABSOLUTELY NO WARRANTY for Algol 68 Genie;
@@ -155,7 +155,7 @@ Remove the gzip archive and the extracted files.
     TCP/IP is supported.
     GNU libplot is not supported.
     GNU Scientific Library is not supported.
-    PostgreSQL is supported.
+    PostgreSQL is not supported.
 
 #### Additional Setup on OSX
 
