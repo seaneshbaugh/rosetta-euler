@@ -17,8 +17,9 @@ defmodule RosettaEuler.Algol68Test do
     System.cmd("a68g", ["algol68/" <> name <> "/" <> name <> ".a68"])
   end
 
-  rosetta_euler_tests 1..11 do
+  rosetta_euler_tests 1..12 do
     @tag test_number: test_number
+    @tag timeout: 120000
     test "Algol68 #" <> to_string(test_number), %{test_number: test_number} do
       answer = answer_for(test_number)
 

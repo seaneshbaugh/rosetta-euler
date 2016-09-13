@@ -1,0 +1,119 @@
+PROC prime_factors = (LONG INT n) FLEX [] LONG INT: BEGIN
+    BOOL found := FALSE;
+
+    LONG INT v := 2;
+
+    LONG INT i := 2;
+
+    WHILE i < (n - 1) AND found EQ FALSE DO
+        IF n %* i EQ 0 THEN
+            found := TRUE;
+
+            v := i
+        FI;
+
+        i +:= 1
+    OD;
+
+    FLEX [1 : 1] LONG INT factors;
+
+    IF found EQ TRUE THEN
+        REF FLEX [] LONG INT additional_factors = LOC FLEX [1 : 0] LONG INT := prime_factors(n % v);
+
+        FLEX [1 : UPB additional_factors + 1] LONG INT updated_factors;
+
+        updated_factors[LWB updated_factors] := v;
+
+        updated_factors[LWB updated_factors + 1 : UPB updated_factors] := additional_factors;
+
+        factors := updated_factors
+    ELSE
+        factors [LWB factors] := n
+    FI;
+
+    factors
+END;
+
+BEGIN
+    MODE NUMBER_COUNT = STRUCT(LONG INT key, LONG INT value);
+
+    LONG INT n := 1;
+
+    LONG INT number_of_divisors := 0;
+
+    LONG INT triangle_number := 1;
+
+    WHILE number_of_divisors < 500 DO
+        REF[]NUMBER_COUNT number_count_map_items := LOC[0]NUMBER_COUNT;
+
+        PROC number_count_map_find = (LONG INT number) REF LONG INT: BEGIN
+            REF LONG INT out;
+
+            BOOL found := FALSE;
+
+            FOR i FROM LWB key OF number_count_map_items TO UPB key OF number_count_map_items WHILE found EQ FALSE DO
+                IF number = key OF number_count_map_items[i] THEN
+                    out := value OF number_count_map_items[i];
+
+                    found := TRUE
+                FI
+            OD;
+
+            IF found EQ TRUE THEN
+                out
+            ELSE
+                NIL
+            FI
+        END;
+
+        PROC number_count_map = (LONG INT number) REF LONG INT: BEGIN
+            REF LONG INT out = number_count_map_find(number);
+
+            IF out :=: REF LONG INT(NIL) THEN
+                HEAP[UPB key OF number_count_map_items + 1]NUMBER_COUNT number_count_map append;
+
+                number_count_map append[:UPB key OF number_count_map_items] := number_count_map_items;
+
+                number_count_map_items := number_count_map append;
+
+                value OF (number_count_map_items[UPB value OF number_count_map_items] := (number, 1))
+            ELSE
+                out
+            FI
+        END;
+
+        triangle_number := 0;
+
+        LONG INT j := 1;
+
+        WHILE j < n DO
+            triangle_number := triangle_number + j;
+
+            j := j + 1
+        OD;
+
+        REF FLEX [] LONG INT factors = LOC FLEX [1 : 0] LONG INT := prime_factors(triangle_number);
+
+        FOR i FROM LWB factors TO UPB factors DO
+            REF LONG INT count := number_count_map_find(factors[i]);
+
+            IF count :=: REF LONG INT(NIL) THEN
+                number_count_map(factors[i]) := 2
+            ELSE
+                number_count_map(factors[i]) := count + 1
+            FI
+        OD;
+
+        number_of_divisors := 1;
+
+        FOR i FROM LWB number_count_map_items TO UPB number_count_map_items DO
+            NUMBER_COUNT number_count = number_count_map_items[i];
+
+            number_of_divisors := number_of_divisors * value OF number_count
+        OD;
+
+        n := n + 1
+    OD;
+
+    printf(($g(0)$, triangle_number))
+END
