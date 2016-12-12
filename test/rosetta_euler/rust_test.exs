@@ -16,16 +16,28 @@ defmodule RosettaEuler.RustTest do
 
     path = Path.join("rust", name)
 
-    {_, 0} = System.cmd("rustc", [name <> ".rs"], cd: path)
+    toml_file_path = Path.join(path, "Cargo.toml")
 
-    {pwd, 0} = System.cmd("pwd", [], cd: path)
+    if File.exists?(toml_file_path) do
+      {_, 0} = System.cmd("cargo", ["build"], cd: path)
 
-    executable_path = Path.join(String.strip(pwd), name)
+      {pwd, 0} = System.cmd("pwd", [], cd: path)
 
-    System.cmd(executable_path, [], cd: path)
+      executable_path = Path.join([String.strip(pwd), "target", "debug", "euler_" <> name])
+
+      System.cmd(executable_path, [], cd: path)
+    else
+      {_, 0} = System.cmd("rustc", [name <> ".rs"], cd: path)
+
+      {pwd, 0} = System.cmd("pwd", [], cd: path)
+
+      executable_path = Path.join(String.strip(pwd), name)
+
+      System.cmd(executable_path, [], cd: path)
+    end
   end
 
-  rosetta_euler_tests 1..12 do
+  rosetta_euler_tests 1..13 do
     @tag test_number: test_number
     test "Rust #" <> to_string(test_number), %{test_number: test_number} do
       answer = answer_for(test_number) <> "\n"
