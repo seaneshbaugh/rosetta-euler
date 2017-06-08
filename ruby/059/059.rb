@@ -36,7 +36,7 @@ class String
   end
 end
 
-contents = File.read('../../files/cipher1.txt').split(',').map { |c| c.to_i }
+contents = File.read(File.expand_path(File.join(__dir__, '..', '..', 'files', 'cipher1.txt'))).split(',').map { |c| c.to_i }
 
 decrypted_strings = ('aaa'..'zzz').to_a.map do |key|
   string = contents.repeating_key_xor_decrypt(key.split('').map { |c| c.ord }).map { |c| c.chr }.join('')

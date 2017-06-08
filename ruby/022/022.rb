@@ -1,4 +1,4 @@
-contents = File.read('../../files/names.txt')
+contents = File.read(File.expand_path(File.join(__dir__, '..', '..', 'files', 'names.txt')))
 
 names = contents.split(',').map { |name| name.gsub('"', '') }.sort
 

@@ -250,7 +250,7 @@ class Hand
   end
 end
 
-hands = File.readlines('../../files/poker.txt')
+hands = File.readlines(File.expand_path(File.join(__dir__, '..', '..', 'files', 'poker.txt')))
 
 player_1_wins = 0
 

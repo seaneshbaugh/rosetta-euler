@@ -8,7 +8,7 @@ class Array
   end
 end
 
-contents = File.read('../../files/words.txt')
+contents = File.read(File.expand_path(File.join(__dir__, '..', '..', 'files', 'words.txt')))
 
 words = contents.split(',').map { |name| name.gsub('"', '') }.sort
 
