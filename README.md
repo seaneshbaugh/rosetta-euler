@@ -949,6 +949,10 @@ Install the `gnu-prolog` formula via Homebrew.
 
     $ gplc 001.pro
 
+For some solutions (in particular #4) it may be necessary to increase the global and local stack sizes. This can be accomplished with the following environment variable arguments:
+
+    $ GLOBALSZ=300000 LOCALSZ=60000 gplc 001.pro
+
 #### Running
 
     $ ./001

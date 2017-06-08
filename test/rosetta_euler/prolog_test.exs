@@ -22,10 +22,10 @@ defmodule RosettaEuler.PrologTest do
 
     executable_path = Path.join(String.strip(pwd), name)
 
-    System.cmd(executable_path, [], cd: path)
+    System.cmd(executable_path, [], cd: path, env: [{"GLOBALSZ", "300000"}, {"LOCALSZ", "60000"}])
   end
 
-  rosetta_euler_tests 1..3 do
+  rosetta_euler_tests 1..4 do
     @tag test_number: test_number
     test "Prolog #" <> to_string(test_number), %{test_number: test_number} do
       answer = answer_for(test_number) <> "\n"
