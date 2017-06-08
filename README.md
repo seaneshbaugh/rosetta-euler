@@ -957,6 +957,10 @@ For some solutions (in particular #4) it may be necessary to increase the global
 
     $ ./001
 
+The same global and local stack size environment variable arguments can be used for the resulting executable as well:
+
+    $ GLOBALSZ=300000 LOCALSZ=60000 ./001
+
 ### Python
 
 [Python Programming Language](http://www.python.org/)
