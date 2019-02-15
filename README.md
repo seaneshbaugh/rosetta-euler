@@ -125,7 +125,7 @@ Delete the .app file, unmount the .dmg file, and delete it too.
 
 ### Algol 68
 
-[Algol 68 Genie](http://jmvdveer.home.xs4all.nl/)
+[Algol 68 Genie](https://jmvdveer.home.xs4all.nl/en.algol-68-genie.html)
 
 #### Target Version
 
