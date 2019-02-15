@@ -87,41 +87,33 @@ All tests are written with [ExUnit](http://elixir-lang.org/docs/stable/ex_unit/E
 
 #### Additional Setup on OSX
 
-[Download GNAT GPL](http://libre.adacore.com/download/configurations).
+[Download GNAT Community Edition](https://www.adacore.com/download).
 
-* Next to "Select your platform:" select "x86-64 Mac OS X (64 bits)" and "GNAT GPL 2016".
-* Click "GNAT Ada GPL 2016".
-* Check "gnat-gpl-2016-x86_64-darwin-bin.tar.gz".
-* Click "Download Selected Files".
+Under "x86 Mac OS X" click "gnat-community-2018-20180523-x86_64-darwin-bin.dmg" to download the .dmg file.
 
-Go to your Downloads directory.
+Open the .dmg file in Finder and copy "gnat-community-2018-20180523-x86_64-darwin-bin.app" to a directory (it does't matter where).
 
-    $ cd ~/Downloads
+Right click the .app file and then click "Open" when prompted by the security dialog.
 
-Extract the gzip archive.
+Click "Next".
 
-    $ tar -xvzf gnat-gpl-2016-x86_64-darwin-bin.tar.gz
+Select a directory to install GNAT Community. By default it will choose `~/opt/GNAT/2018`. Click "Next".
 
-Go to the directory containing the gzip archive contents.
+Leave all the checkboxes selected and click "Next".
 
-    $ cd gnat-gpl-2016-x86_64-darwin-bin
+Click "Next".
 
-Run the install script.
+Click "Install"
 
-    $ ./doinstall
+When the install is finished click "Next" and then click "Finish".
 
-Answer the install script's questions. If you keep pressing enter and answering "Y" it will install GNAT in `/usr/local/gnat`.
+Add `~/opt/GNAT/2018/bin` to your $PATH. For example, in your `~/.bashrc` or `~/.zshrc` add:
 
-Add `/usr/local/gnat/bin` to your $PATH. For example, in your `~/.bashrc` or `~/.zshrc` add:
-
-    export PATH="/usr/local/gnat/bin:$PATH"
+    export PATH="$HOME/opt/GNAT/2018/bin:$PATH"
 
 Open a new terminal tab/window or reload your `~/.bashrc` or `~/.zshrc`.
 
-Remove the gzip archive and the extracted files.
-
-    $ cd ~/Downloads
-    $ rm -rf gnat-gpl-2016-x86_64-darwin-bin.tar.gz gnat-gpl-2016-x86_64-darwin-bin
+Delete the .app file, unmount the .dmg file, and delete it too.
 
 #### Building
 
