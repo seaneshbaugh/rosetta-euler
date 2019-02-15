@@ -77,13 +77,13 @@ All tests are written with [ExUnit](http://elixir-lang.org/docs/stable/ex_unit/E
 
 ### Ada
 
-[Libre: Free Software and Open-Source Development with Ada](http://libre.adacore.com/)
+[Community - Adacore](https://www.adacore.com/community)
 
 #### Target Version
 
     $ gnat
-    GNAT GPL 2016 (20160515-49)
-    Copyright 1996-2016, Free Software Foundation, Inc.
+    GNAT Community 2018 (20180523-73)
+    Copyright 1996-2018, Free Software Foundation, Inc.
 
 #### Additional Setup on OSX
 
