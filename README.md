@@ -130,7 +130,7 @@ Delete the .app file, unmount the .dmg file, and delete it too.
 #### Target Version
 
     $ a68g --version
-    Algol 68 Genie 2.8.3
+    Algol 68 Genie 2.8.4
     Copyright 2016 Marcel van der Veer <algol68g@xs4all.nl>.
 
     This is free software covered by the GNU General Public License.
