@@ -994,13 +994,19 @@ Set the default Python.
 #### Target Version
 
     $ ruby -v
-    ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14]
+    ruby 2.6.1p33 (2019-01-30 revision 66950) [x86_64-darwin17]
 
 #### Additional Setup on OSX
 
+Install GPG2.
+
+    $ brew install gpg2
+
 Install [RVM](https://rvm.io/).
 
-    $ curl -L https://get.rvm.io | bash
+    $ gpg --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+    $ curl -sSL https://get.rvm.io | bash
 
 Ensure the following is in your `.bashrc` or `.zshrc`.
 
@@ -1014,13 +1020,13 @@ Force RVM to use Homebrew for downloading necessary packages.
 
     $ rvm autolibs homebrew
 
-Install `2.2.0`.
+Install `2.6.1`.
 
-    $ rvm install 2.2.0
+    $ rvm install 2.6.1
 
 Set the default Ruby.
 
-    $ rvm --default use 2.2.0
+    $ rvm --default use 2.6.1
 
 #### Running
 
