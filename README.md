@@ -225,9 +225,10 @@ Run the make command.
 #### Target Version
 
     $ clang --version
-    Apple LLVM version 6.0 (clang-600.0.56) (based on LLVM 3.5svn)
-    Target: x86_64-apple-darwin14.0.0
+    Apple LLVM version 10.0.0 (clang-1000.11.45.5)
+    Target: x86_64-apple-darwin17.7.0
     Thread model: posix
+    InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
 
 #### Additional Setup on OSX
 
@@ -253,10 +254,11 @@ Install the `gmp` formula via Homebrew.
 
 #### Target Version
 
-    $ clang --version
-    Apple LLVM version 6.0 (clang-600.0.56) (based on LLVM 3.5svn)
-    Target: x86_64-apple-darwin14.0.0
+    $ clang++ --version
+    Apple LLVM version 10.0.0 (clang-1000.11.45.5)
+    Target: x86_64-apple-darwin17.7.0
     Thread model: posix
+    InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
 
 #### Additional Setup on OSX
 
@@ -829,9 +831,10 @@ Install the `nim` formula via Homebrew.
 #### Target Version
 
     $ clang --version
-    Apple LLVM version 6.0 (clang-600.0.56) (based on LLVM 3.5svn)
-    Target: x86_64-apple-darwin14.0.0
+    Apple LLVM version 10.0.0 (clang-1000.11.45.5)
+    Target: x86_64-apple-darwin17.7.0
     Thread model: posix
+    InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
 
 #### Additional Setup on OSX
 
@@ -1141,8 +1144,8 @@ Run the make install command.
 #### Target Version
 
     $ swift --version
-    Apple Swift version 1.2 (swiftlang-602.0.49.3 clang-clang-602.0.49)
-    Target: x86_64-apple-darwin14.3.0
+    Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)
+    Target: x86_64-apple-darwin17.7.0
 
 #### Additional Setup on OSX
 
@@ -1161,9 +1164,10 @@ None.
 #### Target Version
 
     $ clang --version
-    Apple LLVM version 6.0 (clang-600.0.56) (based on LLVM 3.5svn)
-    Target: x86_64-apple-darwin14.0.0
+    Apple LLVM version 10.0.0 (clang-1000.11.45.5)
+    Target: x86_64-apple-darwin17.7.0
     Thread model: posix
+    InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
 
 #### Additional Setup on OSX
 
