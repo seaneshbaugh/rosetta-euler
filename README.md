@@ -274,22 +274,23 @@ None.
 
 ### C&#35;
 
-[Visual C&#35; Resources](http://msdn.microsoft.com/en-us/vstudio/hh341490.aspx)
+[C&#35; Guide](https://docs.microsoft.com/en-us/dotnet/csharp/)
 
-[Mono](http://www.mono-project.com/)
+[Mono](https://www.mono-project.com/)
 
 #### Target Version
 
-    $ mcs --version
-    Mono C# compiler version 4.2.3.0
+    $ csc
+    Microsoft (R) Visual C# Compiler version 2.8.2.62916 (2ad4aabc)
+    Copyright (C) Microsoft Corporation. All rights reserved.
 
 #### Additional Setup on OSX
 
-Download and install the [Mono MDK](http://www.mono-project.com/download/).
+Download and install the [Mono MDK](https://www.mono-project.com/download/stable/).
 
 #### Building
 
-    $ mcs 001.cs
+    $ csc 001.cs
 
 #### Running
 
@@ -532,21 +533,21 @@ Install the `gcc` formula via Homebrew.
 
 ### F&#35;
 
-[The F&#35; Software Foundation](http://fsharp.org/)
+[The F&#35; Software Foundation](https://fsharp.org/)
 
-[Visual F&#35; Resources](http://msdn.microsoft.com/en-us/vstudio/hh388569.aspx)
+[F&#35; Guide](https://docs.microsoft.com/en-us/dotnet/fsharp/)
 
-[Mono](http://www.mono-project.com/)
+[Mono](https://www.mono-project.com/)
 
 #### Target Version
 
     $ fsharpc
-    F# Compiler for F# 4.0 (Open Source Edition)
-    Freely distributed under the Apache 2.0 Open Source License
+    Microsoft (R) F# Compiler version 4.1
+    Copyright (c) Microsoft Corporation. All Rights Reserved.
 
 #### Additional Setup on OSX
 
-Download and install the [Mono MDK](http://www.mono-project.com/download/).
+Download and install the [Mono MDK](https://www.mono-project.com/download/stable/).
 
 #### Building
 
