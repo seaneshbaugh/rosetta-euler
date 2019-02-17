@@ -40,6 +40,7 @@ An attempt at a [chrestomathy](http://en.wikipedia.org/wiki/Chrestomathy) of sol
 * [Scheme](#scheme)
 * [Simula](#simula)
 * [Swift](#swift)
+* [Visual Basic](#visual-basic)
 * [x86-64 Assembly](#x86-64-assembly)
 
 ## Initial Setup on All Systems
@@ -1161,6 +1162,30 @@ None.
 #### Running
 
     $ swift 001.swift
+
+### Visual Basic
+
+[Visual Basic Guide](https://docs.microsoft.com/en-us/dotnet/visual-basic/)
+
+[Mono](https://www.mono-project.com/)
+
+#### Target Version
+
+    $ vbc
+    Microsoft (R) Visual Basic Compiler version 2.8.2.62916 (2ad4aabc)
+    Copyright (C) Microsoft Corporation. All rights reserved.
+
+#### Additional Setup on OSX
+
+Download and install the [Mono MDK](https://www.mono-project.com/download/stable/).
+
+#### Building
+
+    $ vbc 001.vb
+
+#### Running
+
+    $ mono 001.exe
 
 ### x86-64 Assembly
 
