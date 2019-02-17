@@ -9,7 +9,7 @@ An attempt at a [chrestomathy](http://en.wikipedia.org/wiki/Chrestomathy) of sol
 * [C++](#c-1)
 * [C&#35;](#c-2)
 * [COBOL](#cobol)
-* [Common Lisp](#common-lips)
+* [Common Lisp](#common-lisp)
 * [Clojure](#clojure)
 * [Crystal](#crystal)
 * [D](#d)
