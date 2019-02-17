@@ -1,11 +1,11 @@
-class Array
-  def append_until(&block)
-    self.each do
-      result = block.yield(self)
+fib = Enumerator.new do |y|
+  a = b = 1
 
-      self << result if result
-    end
+  loop do
+    y << a
+
+    a, b = b, a + b
   end
 end
 
-puts [0, 1].append_until { |s| s[-2] + s[-1] if s[-2] + s[-1] < 4000000 }.select { |n| n.even? }.inject(:+)
+puts fib.lazy.take_while { |i| i < 4000000 }.select(&:even?).inject(:+)
