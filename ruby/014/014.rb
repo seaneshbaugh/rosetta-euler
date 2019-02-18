@@ -24,4 +24,4 @@ chain_lengths = {}
   chain_lengths[start] = length
 end
 
-puts chain_lengths.sort_by { |start, length| length }.map{ |start, length| start}.last
+puts chain_lengths.sort_by { |_start, length| length }.map { |start, _length| start }.last
