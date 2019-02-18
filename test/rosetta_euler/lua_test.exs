@@ -12,12 +12,12 @@ defmodule RosettaEuler.LuaTest do
   end
 
   def run_lua_solution(number) do
-    name = number |> to_string |> String.rjust(3, ?0)
+    name = number |> to_string |> String.pad_leading(3, "0")
 
     System.cmd("lua", [name <> ".lua"], cd: Path.join("lua", name))
   end
 
-  rosetta_euler_tests 1..4 do
+  rosetta_euler_tests 1..6 do
     @tag test_number: test_number
     test "Lua #" <> to_string(test_number), %{test_number: test_number} do
       answer = answer_for(test_number) <> "\n"

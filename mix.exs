@@ -5,13 +5,13 @@ defmodule RosettaEuler.Mixfile do
     [app: :rosetta_euler,
      version: "0.0.1",
      elixir: "~> 1.0",
-     package: package,
+     package: package(),
      description: """
      Project for running Rosetta Euler tests.
      """,
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps]
+     deps: deps()]
   end
 
   def application do

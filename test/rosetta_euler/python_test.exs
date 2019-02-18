@@ -12,7 +12,7 @@ defmodule RosettaEuler.PythonTest do
   end
 
   def run_python_solution(number) do
-    name = number |> to_string |> String.rjust(3, ?0)
+    name = number |> to_string |> String.pad_leading(3, "0")
 
     System.cmd("python", ["python/" <> name <> "/" <> name <> ".py"])
   end

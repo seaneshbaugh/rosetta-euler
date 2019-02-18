@@ -12,7 +12,7 @@ defmodule RosettaEuler.HaskellTest do
   end
 
   def run_haskell_solution(number) do
-    name = number |> to_string |> String.rjust(3, ?0)
+    name = number |> to_string |> String.pad_leading(3, "0")
 
     path = Path.join("haskell", name)
 
@@ -22,7 +22,7 @@ defmodule RosettaEuler.HaskellTest do
 
     {pwd, 0} = System.cmd("pwd", [], cd: path)
 
-    executable_path = Path.join([String.strip(pwd), ".cabal-sandbox", "bin", "euler"])
+    executable_path = Path.join([String.trim(pwd), ".cabal-sandbox", "bin", "euler"])
 
     System.cmd(executable_path, [], cd: path)
   end

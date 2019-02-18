@@ -12,12 +12,12 @@ defmodule RosettaEuler.CommonLispTest do
   end
 
   def run_common_lisp_solution(number) do
-    name = number |> to_string |> String.rjust(3, ?0)
+    name = number |> to_string |> String.pad_leading(3, "0")
 
     System.cmd("clisp", ["clisp/" <> name <> "/" <> name <> ".lisp"])
   end
 
-  rosetta_euler_tests 1..10 do
+  rosetta_euler_tests 1..11 do
     @tag test_number: test_number
     test "Common Lisp #" <> to_string(test_number), %{test_number: test_number} do
       answer = "\n" <> answer_for(test_number) <> " \n"

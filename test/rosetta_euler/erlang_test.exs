@@ -12,7 +12,7 @@ defmodule RosettaEuler.ErlangTest do
   end
 
   def run_erlang_solution(number) do
-    name = number |> to_string |> String.rjust(3, ?0)
+    name = number |> to_string |> String.pad_leading(3, "0")
 
     System.cmd("escript", ["euler.erl"], cd: Path.join("erlang", name))
   end

@@ -12,7 +12,7 @@ defmodule RosettaEuler.NimTest do
   end
 
   def run_nim_solution(number) do
-    name = number |> to_string |> String.rjust(3, ?0)
+    name = number |> to_string |> String.pad_leading(3, "0")
 
     path = Path.join("nim", name)
 
@@ -20,12 +20,12 @@ defmodule RosettaEuler.NimTest do
 
     {pwd, 0} = System.cmd("pwd", [], cd: path)
 
-    executable_path = Path.join(String.strip(pwd), "euler")
+    executable_path = Path.join(String.trim(pwd), "euler")
 
     System.cmd(executable_path, [], cd: path)
   end
 
-  rosetta_euler_tests 1..5 do
+  rosetta_euler_tests 1..6 do
     @tag test_number: test_number
     test "Nim #" <> to_string(test_number), %{test_number: test_number} do
       answer = answer_for(test_number) <> "\n"

@@ -12,7 +12,7 @@ defmodule RosettaEuler.IoTest do
   end
 
   def run_io_solution(number) do
-    name = number |> to_string |> String.rjust(3, ?0)
+    name = number |> to_string |> String.pad_leading(3, "0")
 
     System.cmd("io", ["io/" <> name <> "/" <> name <> ".io"])
   end

@@ -12,7 +12,7 @@ defmodule RosettaEuler.ClojureTest do
   end
 
   def run_clojure_solution(number) do
-    name = number |> to_string |> String.rjust(3, ?0)
+    name = number |> to_string |> String.pad_leading(3, "0")
 
     System.cmd("lein", ["run"], cd: Path.join("clojure", name))
   end

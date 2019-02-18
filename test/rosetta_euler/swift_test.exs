@@ -12,7 +12,7 @@ defmodule RosettaEuler.SwiftTest do
   end
 
   def run_swift_solution(number) do
-    name = number |> to_string |> String.rjust(3, ?0)
+    name = number |> to_string |> String.pad_leading(3, ?0)
 
     System.cmd("swift", [name <> ".swift"], cd: Path.join("swift", name))
   end

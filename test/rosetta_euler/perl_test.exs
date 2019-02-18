@@ -12,7 +12,7 @@ defmodule RosettaEuler.PerlTest do
   end
 
   def run_perl_solution(number) do
-    name = number |> to_string |> String.rjust(3, ?0)
+    name = number |> to_string |> String.pad_leading(3, "0")
 
     System.cmd("perl", ["perl/" <> name <> "/" <> name <> ".pl"])
   end

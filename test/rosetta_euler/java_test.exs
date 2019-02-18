@@ -12,7 +12,7 @@ defmodule RosettaEuler.JavaTest do
   end
 
   def run_java_solution(number) do
-    name = number |> to_string |> String.rjust(3, ?0)
+    name = number |> to_string |> String.pad_leading(3, "0")
 
     path = Path.join("java", name)
 

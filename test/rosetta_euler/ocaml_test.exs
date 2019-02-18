@@ -12,7 +12,7 @@ defmodule RosettaEuler.OCamlTest do
   end
 
   def run_ocaml_solution(number) do
-    name = number |> to_string |> String.rjust(3, ?0)
+    name = number |> to_string |> String.pad_leading(3, "0")
 
     System.cmd("ocaml", [name <> ".ml"], cd: Path.join("ocaml", name))
   end

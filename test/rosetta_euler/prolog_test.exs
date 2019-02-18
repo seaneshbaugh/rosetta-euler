@@ -12,7 +12,7 @@ defmodule RosettaEuler.PrologTest do
   end
 
   def run_prolog_solution(number) do
-    name = number |> to_string |> String.rjust(3, ?0)
+    name = number |> to_string |> String.pad_leading(3, "0")
 
     path = Path.join("prolog", name)
 
@@ -20,7 +20,7 @@ defmodule RosettaEuler.PrologTest do
 
     {pwd, 0} = System.cmd("pwd", [], cd: path)
 
-    executable_path = Path.join(String.strip(pwd), name)
+    executable_path = Path.join(String.trim(pwd), name)
 
     System.cmd(executable_path, [], cd: path, env: [{"GLOBALSZ", "300000"}, {"LOCALSZ", "60000"}])
   end

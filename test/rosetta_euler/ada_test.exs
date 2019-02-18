@@ -12,7 +12,7 @@ defmodule RosettaEuler.AdaTest do
   end
 
   def run_ada_solution(number) do
-    name = number |> to_string |> String.rjust(3, ?0)
+    name = number |> to_string |> String.pad_leading(3, "0")
 
     path = Path.join("ada", name)
 
@@ -20,7 +20,7 @@ defmodule RosettaEuler.AdaTest do
 
     {pwd, 0} = System.cmd("pwd", [], cd: path)
 
-    executable_path = Path.join(String.strip(pwd), "euler")
+    executable_path = Path.join(String.trim(pwd), "euler")
 
     System.cmd(executable_path, [], cd: path)
   end

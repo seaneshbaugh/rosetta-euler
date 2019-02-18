@@ -12,7 +12,7 @@ defmodule RosettaEuler.RustTest do
   end
 
   def run_rust_solution(number) do
-    name = number |> to_string |> String.rjust(3, ?0)
+    name = number |> to_string |> String.pad_leading(3, "0")
 
     path = Path.join("rust", name)
 
@@ -23,7 +23,7 @@ defmodule RosettaEuler.RustTest do
 
       {pwd, 0} = System.cmd("pwd", [], cd: path)
 
-      executable_path = Path.join([String.strip(pwd), "target", "debug", "euler_" <> name])
+      executable_path = Path.join([String.trim(pwd), "target", "debug", "euler_" <> name])
 
       System.cmd(executable_path, [], cd: path)
     else
@@ -31,7 +31,7 @@ defmodule RosettaEuler.RustTest do
 
       {pwd, 0} = System.cmd("pwd", [], cd: path)
 
-      executable_path = Path.join(String.strip(pwd), name)
+      executable_path = Path.join(String.trim(pwd), name)
 
       System.cmd(executable_path, [], cd: path)
     end

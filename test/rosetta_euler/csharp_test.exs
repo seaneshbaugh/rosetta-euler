@@ -12,20 +12,20 @@ defmodule RosettaEuler.CSharpTest do
   end
 
   def run_csharp_solution(number) do
-    name = number |> to_string |> String.rjust(3, ?0)
+    name = number |> to_string |> String.pad_leading(3, "0")
 
     path = Path.join("csharp", name)
 
-    {_, 0} = System.cmd("mcs", [name <> ".cs"], cd: path)
+    {_, 0} = System.cmd("csc", [name <> ".cs"], cd: path)
 
     {pwd, 0} = System.cmd("pwd", [], cd: path)
 
-    executable_path = Path.join(String.strip(pwd), name <> ".exe")
+    executable_path = Path.join(String.trim(pwd), name <> ".exe")
 
     System.cmd("mono", [executable_path], cd: path)
   end
 
-  rosetta_euler_tests 1..10 do
+  rosetta_euler_tests 1..8 do
     @tag test_number: test_number
     test "C# #" <> to_string(test_number), %{test_number: test_number} do
       answer = answer_for(test_number) <> "\n"

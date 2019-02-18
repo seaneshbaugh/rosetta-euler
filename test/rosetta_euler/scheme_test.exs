@@ -12,7 +12,7 @@ defmodule RosettaEuler.SchemeTest do
   end
 
   def run_scheme_solution(number) do
-    name = number |> to_string |> String.rjust(3, ?0)
+    name = number |> to_string |> String.pad_leading(3, "0")
 
     "cd scheme/" <> name <> " && " <> "mit-scheme --quiet < " <> name <> ".scm"
     |> to_char_list

@@ -12,7 +12,7 @@ defmodule RosettaEuler.JuliaTest do
   end
 
   def run_julia_solution(number) do
-    name = number |> to_string |> String.rjust(3, ?0)
+    name = number |> to_string |> String.pad_leading(3, "0")
 
     System.cmd("julia", [name <> ".jl"], cd: Path.join("julia", name))
   end

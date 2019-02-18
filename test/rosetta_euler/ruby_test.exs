@@ -12,7 +12,7 @@ defmodule RosettaEuler.RubyTest do
   end
 
   def run_ruby_solution(number) do
-    name = number |> to_string |> String.rjust(3, ?0)
+    name = number |> to_string |> String.pad_leading(3, "0")
 
     System.cmd("ruby", ["ruby/" <> name <> "/" <> name <> ".rb"])
   end

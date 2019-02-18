@@ -12,7 +12,7 @@ defmodule RosettaEuler.GoTest do
   end
 
   def run_go_solution(number) do
-    name = number |> to_string |> String.rjust(3, ?0)
+    name = number |> to_string |> String.pad_leading(3, "0")
 
     System.cmd("go", ["run", name <> ".go"], cd: Path.join("go", name))
   end

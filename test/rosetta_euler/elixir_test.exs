@@ -12,12 +12,12 @@ defmodule RosettaEuler.ElixirTest do
   end
 
   def run_elixir_solution(number) do
-    name = number |> to_string |> String.rjust(3, ?0)
+    name = number |> to_string |> String.pad_leading(3, "0")
 
     System.cmd("elixir", [name <> ".exs"], cd: Path.join("elixir", name))
   end
 
-  rosetta_euler_tests 1..23 do
+  rosetta_euler_tests 1..27 do
     @tag test_number: test_number
     test "Elixir #" <> to_string(test_number), %{test_number: test_number} do
       answer = answer_for(test_number) <> "\n"
