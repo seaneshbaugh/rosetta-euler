@@ -1,13 +1,13 @@
 class Numeric
   def to_english
-    under_twenty = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
+    under_twenty = %w[zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen]
 
-    tens = ['twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
+    tens = %w[twenty thirty forty fifty sixty seventy eighty ninety]
 
-    denom = ['thousand', 'million', 'billion', 'trillion', 'quadrillion', 'quintillion', 'sextillion', 'septillion', 'octillion', 'nonillion', 'decillion', 'undecillion', 'duodecillion', 'tredecillion', 'quattuordecillion', 'sexdecillion', 'septendecillion', 'octodecillion', 'novemdecillion', 'vigintillion']
+    denom = %w[thousand million billion trillion quadrillion quintillion sextillion septillion octillion nonillion decillion undecillion duodecillion tredecillion quattuordecillion sexdecillion septendecillion octodecillion novemdecillion vigintillion]
 
     if self < 0
-      "negative #{((-self).to_engish)}"
+      "negative #{(-self).to_engish}"
     elsif self < 20
       under_twenty[self]
     elsif self < 100
@@ -18,17 +18,15 @@ class Numeric
 
         val = 20 + 10 * v
 
-        if val + 10 > self
-          if self % 10 != 0
-            result = "#{cap}-#{under_twenty[self % 10]}"
+        next unless val + 10 > self
 
-            break
-          else
-            result = cap
+        result = if self % 10 != 0
+                   "#{cap}-#{under_twenty[self % 10]}"
+                 else
+                   cap
+                 end
 
-            break
-          end
-        end
+        break
       end
 
       result
@@ -42,46 +40,40 @@ class Numeric
       if rem > 0
         result = "#{under_twenty[rem]} hundred"
 
-        if mod > 0
-          result += " and "
-        end
+        result += ' and ' if mod > 0
       end
 
-      if mod > 0
-        result = result + mod.to_english
-      end
+      result += mod.to_english if mod > 0
 
       result
-    elsif self < 10 ** 66
+    elsif self < 10**66
       result = ''
 
       denom.length.times do |v|
         didx = v - 1
 
-        dval = 1000 ** v
+        dval = 1000**v
 
-        if dval > self
-          mod = 1000 ** didx
+        next unless dval > self
 
-          l = self / mod
+        mod = 1000**didx
 
-          r = self - (l * mod)
+        l = self / mod
 
-          result = "#{l.to_english} #{denom[didx - 1]}"
+        r = self - (l * mod)
 
-          if r > 0
-            result += ", #{r.to_english}"
-          end
+        result = "#{l.to_english} #{denom[didx - 1]}"
 
-          return result
-        end
+        result += ", #{r.to_english}" if r > 0
+
+        return result
       end
 
       result
     else
-      self.to_s
+      to_s
     end
   end
 end
 
-puts (1..1000).map { |i| i.to_english }.inject(:+).gsub(/\s|-/, '').length
+puts (1..1000).map(&:to_english).inject(:+).gsub(/\s|-/, '').length
