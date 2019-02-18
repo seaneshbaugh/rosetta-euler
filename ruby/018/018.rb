@@ -1,3 +1,4 @@
+# rubocop:disable Layout/ExtraSpacing, Layout/SpaceInsideArrayLiteralBrackets
 numbers = [[75],
            [95, 64],
            [17, 47, 82],
@@ -13,6 +14,7 @@ numbers = [[75],
            [91, 71, 52, 38, 17, 14, 91, 43, 58, 50, 27, 29, 48],
            [63, 66,  4, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31],
            [ 4, 62, 98, 27, 23,  9, 70, 98, 73, 93, 38, 53, 60,  4, 23]]
+# rubocop:enable Layout/ExtraSpacing, Layout/SpaceInsideArrayLiteralBrackets
 
 maximum_path_sum = numbers.inject([0]) do |current_maxima, row|
   row.each_with_index.map do |number, index|
