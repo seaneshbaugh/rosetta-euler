@@ -4,7 +4,7 @@ defmodule Euler do
 
     r = rem(a, b)
 
-    seen = Dict.put(%{}, r, 0)
+    seen = Map.put(%{}, r, 0)
 
     digits = []
 
@@ -18,12 +18,12 @@ defmodule Euler do
 
     r = rem(r, b)
 
-    if Dict.has_key?(seen, r) do
+    if Map.has_key?(seen, r) do
       w = seen[r]
 
       [q, Enum.slice(digits, 0..(w - 1)), Enum.slice(digits, w..length(digits))]
     else
-      divide(b, q, r, Dict.put(seen, r, length(digits)), digits)
+      divide(b, q, r, Map.put(seen, r, length(digits)), digits)
     end
   end
 end
