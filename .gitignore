@@ -19,3 +19,4 @@ cabal.sandbox.config
 .#*
 /_build
 .crystal
+FSharp.Core.dll
