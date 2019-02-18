@@ -317,7 +317,7 @@ Download and install the [Mono MDK](https://www.mono-project.com/download/stable
 
 Install the `gnu-cobol` formula via Homebrew.
 
-    $ brew install gnu-coboll
+    $ brew install gnu-cobol
 
 #### Building
 
