@@ -1,3 +1,4 @@
+# rubocop:disable Layout/ExtraSpacing, Layout/SpaceInsideArrayLiteralBrackets
 grid = [[ 8,  2, 22, 97, 38, 15,  0, 40,  0, 75,  4,  5,  7, 78, 52, 12, 50, 77, 91,  8],
         [49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48,  4, 56, 62,  0],
         [81, 49, 31, 73, 55, 79, 14, 29, 93, 71, 40, 67, 53, 88, 30,  3, 49, 13, 36, 65],
@@ -14,35 +15,26 @@ grid = [[ 8,  2, 22, 97, 38, 15,  0, 40,  0, 75,  4,  5,  7, 78, 52, 12, 50, 77,
         [19, 80, 81, 68,  5, 94, 47, 69, 28, 73, 92, 13, 86, 52, 17, 77,  4, 89, 55, 40],
         [ 4, 52,  8, 83, 97, 35, 99, 16,  7, 97, 57, 32, 16, 26, 26, 79, 33, 27, 98, 66],
         [88, 36, 68, 87, 57, 62, 20, 72,  3, 46, 33, 67, 46, 55, 12, 32, 63, 93, 53, 69],
-        [04, 42, 16, 73, 38, 25, 39, 11, 24, 94, 72, 18,  8, 46, 29, 32, 40, 62, 76, 36],
+        [ 4, 42, 16, 73, 38, 25, 39, 11, 24, 94, 72, 18,  8, 46, 29, 32, 40, 62, 76, 36],
         [20, 69, 36, 41, 72, 30, 23, 88, 34, 62, 99, 69, 82, 67, 59, 85, 74,  4, 36, 16],
         [20, 73, 35, 29, 78, 31, 90,  1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57,  5, 54],
         [ 1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52,  1, 89, 19, 67, 48]]
+# rubocop:enable Layout/ExtraSpacing, Layout/SpaceInsideArrayLiteralBrackets
 
 products = []
 
 20.times do |x|
   20.times do |y|
-    if x + 3 < 20
-      products << grid[x][y] * grid[x + 1][y] * grid[x + 2][y] * grid[x + 3][y]
-    end
+    products << grid[x][y] * grid[x + 1][y] * grid[x + 2][y] * grid[x + 3][y] if x + 3 < 20
 
-    if y + 3 < 20
-      products << grid[x][y] * grid[x][y + 1] * grid[x][y + 2] * grid[x][y + 3]
-    end
+    products << grid[x][y] * grid[x][y + 1] * grid[x][y + 2] * grid[x][y + 3] if y + 3 < 20
 
-    if x + 3 < 20 && y + 3 < 20
-      products << grid[x][y] * grid[x + 1][y + 1] * grid[x + 2][y + 2] * grid[x + 3][y + 3]
-    end
+    products << grid[x][y] * grid[x + 1][y + 1] * grid[x + 2][y + 2] * grid[x + 3][y + 3] if x + 3 < 20 && y + 3 < 20
 
-    if x - 3 > 0 && y + 3 < 20
-      products << grid[x][y] * grid[x - 1][y + 1] * grid[x - 2][y + 2] * grid[x - 3][y + 3]
-    end
+    products << grid[x][y] * grid[x - 1][y + 1] * grid[x - 2][y + 2] * grid[x - 3][y + 3] if x - 3 > 0 && y + 3 < 20
 
-    if x + 3 < 20 && y - 3 > 0
-      products << grid[x][y] * grid[x + 1][y - 1] * grid[x + 2][y - 2] * grid[x + 3][y - 3]
-    end
+    products << grid[x][y] * grid[x + 1][y - 1] * grid[x + 2][y - 2] * grid[x + 3][y - 3] if x + 3 < 20 && y - 3 > 0
   end
 end
 
-puts products.sort.last
+puts products.max
