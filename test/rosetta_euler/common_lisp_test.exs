@@ -14,7 +14,7 @@ defmodule RosettaEuler.CommonLispTest do
   def run_common_lisp_solution(number) do
     name = number |> to_string |> String.pad_leading(3, "0")
 
-    System.cmd("clisp", ["clisp/" <> name <> "/" <> name <> ".lisp"])
+    System.cmd("clisp", ["common-lisp/" <> name <> "/" <> name <> ".lisp"])
   end
 
   rosetta_euler_tests 1..13 do
