@@ -221,7 +221,7 @@ Run the make command.
 
 [ISO C Working Group](http://www.open-std.org/jtc1/sc22/wg14/)
 
-[Clang](http://clang.llvm.org/)
+[Clang](https://clang.llvm.org/)
 
 #### Target Version
 
@@ -251,7 +251,7 @@ Install the `gmp` formula via Homebrew.
 
 [ISO C++ Working Group](http://www.open-std.org/JTC1/SC22/WG21/)
 
-[Clang](http://clang.llvm.org/)
+[Clang](https://clang.llvm.org/)
 
 #### Target Version
 
@@ -834,7 +834,7 @@ Install the `nim` formula via Homebrew.
 
 [Mac Developer Library](http://developer.apple.com/library/mac/navigation/)
 
-[Clang](http://clang.llvm.org/)
+[Clang](https://clang.llvm.org/)
 
 #### Target Version
 
@@ -1197,7 +1197,7 @@ Download and install the [Mono MDK](https://www.mono-project.com/download/stable
 
 [OSX Assembly Reference](https://developer.apple.com/library/mac/documentation/DeveloperTools/Reference/Assembler/000-Introduction/introduction.html)
 
-[Clang](http://clang.llvm.org/)
+[Clang](https://clang.llvm.org/)
 
 #### Target Version
 
