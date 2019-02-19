@@ -413,9 +413,12 @@ Install the `crystal-lang` formula via Homebrew.
 #### Target Version
 
     $ dmd
-    DMD64 D Compiler v2.066
-    Copyright (c) 1999-2014 by Digital Mars written by Walter Bright
-    Documentation: http://dlang.org/
+    DMD64 D Compiler v2.084.1
+
+    Copyright (C) 1999-2018 by The D Language Foundation, All Rights Reserved written by Walter Bright
+
+    Documentation: https://dlang.org/
+    Config file: /usr/local/etc/dmd.conf
 
 #### Additional Setup on OSX
 
