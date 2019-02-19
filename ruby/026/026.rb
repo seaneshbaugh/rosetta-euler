@@ -20,7 +20,7 @@ def divide(a, b)
 
     r = r % b
 
-    if seen.has_key?(r)
+    if seen.key?(r)
       w = seen[r]
 
       return [q, digits[0..(w - 1)], digits[w..(digits.length)]]
@@ -30,4 +30,4 @@ def divide(a, b)
   end
 end
 
-puts (2..999).map { |d| [d, divide(1, d)[2].length] }.sort_by { |x| x[1] }.last[0]
+puts (2..999).map { |d| [d, divide(1, d)[2].length] }.max_by { |x| x[1] }[0]
