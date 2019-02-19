@@ -1,35 +1,29 @@
 class Array
   def nth_permutation(n)
-    if n > (1..self.length).inject(:*)
-      raise ArgumentError
-    end
+    raise ArgumentError if n > (1..length).inject(:*)
 
-    if block_given?
-      sorted = self.sort do |x, y|
-        yield x, y
-      end
-    else
-      sorted = self.sort
-    end
+    sorted = if block_given?
+               sort do |x, y|
+                 yield x, y
+               end
+             else
+               sort
+             end
 
-    sorted_with_indices = {}
-
-    sorted.each_with_index { |element, index| sorted_with_indices[index] = element }
+    sorted_with_indices = sorted.map.with_index { |element, index| [index, element] }.to_h
 
     result = []
 
-    while sorted_with_indices.length > 0
+    until sorted_with_indices.empty?
       m = 0
 
-      if sorted_with_indices.length > 1
-        f = (1..(sorted_with_indices.length - 1)).inject(:*)
-      else
-        f = 1
-      end
+      f = if sorted_with_indices.length > 1
+            (1..(sorted_with_indices.length - 1)).inject(:*)
+          else
+            1
+          end
 
-      while m * f < n
-        m += 1
-      end
+      m += 1 while m * f < n
 
       m -= 1
 
@@ -39,11 +33,7 @@ class Array
 
       n -= m * f
 
-      remapped = sorted_with_indices.map { |k, v| v }
-
-      sorted_with_indices = {}
-
-      remapped.each_with_index { |element, index| sorted_with_indices[index] = element }
+      sorted_with_indices = sorted_with_indices.values.map.with_index { |element, index| [index, element] }.to_h
     end
 
     result
