@@ -1,5 +1,5 @@
 def combos(n, c)
-  if c.length < 1 || n < 0
+  if c.empty? || n < 0
     0
   elsif n == 0
     1
