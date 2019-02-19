@@ -299,19 +299,20 @@ Download and install the [Mono MDK](https://www.mono-project.com/download/stable
 
 ### COBOL
 
-[GnuCOBOL](http://sourceforge.net/projects/open-cobol/)
+[GnuCOBOL](https://open-cobol.sourceforge.io/)
 
 #### Target Version
 
     $ cobc --version
-    cobc (GNU Cobol) 1.1.0
-    Copyright (C) 2001,2002,2003,2004,2005,2006,2007 Keisuke Nishida
-    Copyright (C) 2006-2012 Roger While
+    cobc (GnuCOBOL) 2.2.0
+    Copyright (C) 2017 Free Software Foundation, Inc.
+    License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
     This is free software; see the source for copying conditions.  There is NO
     warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-    Built     Jan 08 2015 12:54:42
-    Packaged  Jan 20 2014 07:40:53 UTC
-    C version "4.9.2"
+    Written by Keisuke Nishida, Roger While, Ron Norman, Simon Sobisch, Edward Hart
+    Built     Jun 15 2018 08:49:34
+    Packaged  Sep 06 2017 18:48:43 UTC
+    C version "4.2.1 Compatible Apple LLVM 9.1.0 (clang-902.0.39.2)"
 
 #### Additional Setup on OSX
 
