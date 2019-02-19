@@ -335,15 +335,15 @@ Install the `gnu-cobol` formula via Homebrew.
 
     $ clisp --version
     GNU CLISP 2.49 (2010-07-07) (built on - [-.-.-.-])
-    Software: GNU C 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2335.15.00)
-    /usr/bin/llvm-gcc -m64 -w -pipe -march=core2 -msse4 -W -Wswitch -Wcomment -Wpointer-arith -Wimplicit -Wreturn-type -Wmissing-declarations -Wno-sign-compare -Wno-format-nonliteral -O -falign-functions=4 -DUNIX_BINARY_DISTRIB -DENABLE_UNICODE -DDYNAMIC_MODULES -DNO_GETTEXT -I.  -w -pipe -march=core2 -msse4 -L/usr/local/Cellar/readline/6.2.2/lib  -lreadline -lncurses  -liconv -lsigsegv libgnu_cl.a -L/usr/X11/lib -R/usr/X11/lib
+    Software: GNU C 4.2.1 Compatible Apple LLVM 10.0.0 (clang-1000.11.45.5)
+    clang -m64 -g -O2 -W -Wswitch -Wcomment -Wpointer-arith -Wimplicit -Wreturn-type -Wmissing-declarations -O -DUNIX_BINARY_DISTRIB -DENABLE_UNICODE -DDYNAMIC_MODULES -DNO_GETTEXT -I.   -lreadline -lncurses  -liconv -lsigsegv libgnu_cl.a -L/usr/X11/lib
     SAFETY=0 HEAPCODES STANDARD_HEAPCODES WIDE_HARD GENERATIONAL_GC SPVW_BLOCKS SPVW_MIXED TRIVIALMAP_MEMORY
-    libsigsegv 2.10
+    libsigsegv 2.12
     libiconv 1.11
-    libreadline 6.2
+    libreadline 8.0
     Features: (REGEXP SYSCALLS I18N LOOP COMPILER CLOS MOP CLISP ANSI-CL COMMON-LISP LISP=CL INTERPRETER SOCKETS GENERIC-STREAMS LOGICAL-PATHNAMES SCREEN UNICODE BASE-CHAR=CHARACTER WORD-SIZE=64 UNIX MACOS)
     C Modules: (clisp i18n syscalls regexp)
-    Installation directory: /usr/local/Cellar/clisp/2.49/lib/clisp-2.49/
+    Installation directory: /usr/local/Cellar/clisp/2.49_2/lib/clisp-2.49/
     User language: ENGLISH
     Machine: X86_64 (X86_64) - [-.-.-.-]
 
