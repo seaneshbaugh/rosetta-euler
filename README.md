@@ -408,7 +408,7 @@ Install the `crystal-lang` formula via Homebrew.
 
 ### D
 
-[D Programming Language](http://dlang.org/)
+[D Programming Language](https://dlang.org/)
 
 #### Target Version
 
