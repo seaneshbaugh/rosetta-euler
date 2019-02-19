@@ -17,7 +17,7 @@ defmodule RosettaEuler.CommonLispTest do
     System.cmd("clisp", ["clisp/" <> name <> "/" <> name <> ".lisp"])
   end
 
-  rosetta_euler_tests 1..11 do
+  rosetta_euler_tests 1..13 do
     @tag test_number: test_number
     test "Common Lisp #" <> to_string(test_number), %{test_number: test_number} do
       answer = "\n" <> answer_for(test_number) <> " \n"
