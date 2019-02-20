@@ -360,20 +360,20 @@ Install the `clisp` formula via Homebrew.
 
 ### Clojure
 
-[Clojure](http://clojure.org/)
+[Clojure](https://clojure.org/)
 
-[Leiningen](http://leiningen.org/)
+[Leiningen](https://leiningen.org/)
 
 #### Target Version
 
     $ lein version
-    Leiningen 2.5.0 on Java 1.6.0_65 Java HotSpot(TM) 64-Bit Server VM
+    Leiningen 2.9.0 on Java 1.8.0_77 Java HotSpot(TM) 64-Bit Server VM
 
     $ lein repl
-    nREPL server started on port 49531 on host 127.0.0.1 - nrepl://127.0.0.1:49531
-    REPL-y 0.3.5, nREPL 0.2.6
-    Clojure 1.6.0
-    Java HotSpot(TM) 64-Bit Server VM 1.6.0_65-b14-466.1-11M4716
+    nREPL server started on port 52830 on host 127.0.0.1 - nrepl://127.0.0.1:52830
+    REPL-y 0.4.3, nREPL 0.6.0
+    Clojure 1.10.0
+    Java HotSpot(TM) 64-Bit Server VM 1.8.0_77-b03
 
 #### Additional Setup on OSX
 
