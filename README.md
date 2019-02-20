@@ -442,7 +442,7 @@ Install the `dmd` formula via Homebrew.
 #### Target Version
 
     $ ec -version
-    ISE EiffelStudio version 14.05.9.5417 GPL Edition - macosx-x86-64
+    ISE EiffelStudio version 17.01.9.9700 GPL Edition - macosx-x86-64
 
 #### Additional Setup on OSX
 
