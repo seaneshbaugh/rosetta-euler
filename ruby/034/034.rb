@@ -1,4 +1,4 @@
-digit_factorials = (0..9).inject({}) { |memo, digit| memo[digit] = digit != 0 ? (1..digit).inject(:*) : 1; memo }
+digit_factorials = [[0, 1]].concat((1..9).map { |digit| [digit, (1..digit).inject(:*)] }).to_h
 
 limit = digit_factorials[9] * (digit_factorials[9].to_s.split('').length + 1)
 
