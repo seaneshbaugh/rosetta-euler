@@ -16,15 +16,9 @@ defmodule RosettaEuler.HaskellTest do
 
     path = Path.join("haskell", name)
 
-    {_, 0} = System.cmd("cabal", ["sandbox", "init"], cd: path)
+    {_, 0} = System.cmd("stack", ["--install-ghc", "build"], cd: path)
 
-    {_, 0} = System.cmd("cabal", ["install", "-j"], cd: path)
-
-    {pwd, 0} = System.cmd("pwd", [], cd: path)
-
-    executable_path = Path.join([String.trim(pwd), ".cabal-sandbox", "bin", "euler"])
-
-    System.cmd(executable_path, [], cd: path)
+    System.cmd("stack", ["exec", "euler"], cd: path)
   end
 
   rosetta_euler_tests 1..16 do
