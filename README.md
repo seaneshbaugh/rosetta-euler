@@ -491,14 +491,14 @@ Install the `elixir` formula via Homebrew.
 
 ### Erlang
 
-[Erlang Programming Language](http://www.erlang.org/)
+[Erlang Programming Language](https://www.erlang.org/)
 
 #### Target Version
 
     $ erl
-    Erlang/OTP 17 [erts-6.3] [source] [64-bit] [smp:8:8] [async-threads:10] [hipe] [kernel-poll:false] [dtrace]
+    Erlang/OTP 21 [erts-10.2.4] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1] [hipe]
 
-    Eshell V6.3  (abort with ^G)
+    Eshell V10.2.4  (abort with ^G)
 
 #### Additional Setup on OSX
 
