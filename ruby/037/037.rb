@@ -2,38 +2,32 @@ class Integer
   def prime?
     lower_primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101]
 
-    if self < 2
-      return false
-    end
+    return false if self < 2
 
-    if lower_primes.include?(self)
-      return true
-    end
+    return true if lower_primes.include?(self)
 
     lower_primes.each do |lower_prime|
-      if self % lower_prime == 0
-        return false
-      end
+      return false if self % lower_prime == 0
     end
 
     upper_margin = Math.sqrt(self).to_i + 1
 
-    current = 101
+    current = 103
 
-    begin
-      if self % current == 0
-        return false
-      end
+    loop do
+      return false if self % current == 0
 
       current += 2
-    end while current < upper_margin
+
+      break unless current < upper_margin
+    end
 
     true
   end
 
   def truncatable_prime?
-    if self.prime?
-      digits = self.to_s.split('')
+    if prime?
+      digits = to_s.split('')
 
       (digits.length - 1).times do
         digits = digits[0..-2]
@@ -41,7 +35,7 @@ class Integer
         return false unless digits.join.to_i.prime?
       end
 
-      digits = self.to_s.split('')
+      digits = to_s.split('')
 
       (digits.length - 1).times do
         digits = digits[1..digits.length]
@@ -67,21 +61,15 @@ def sieve_of_atkin(limit)
     (1..square_root_of_limit).each do |y|
       n = (4 * x * x) + (y * y)
 
-      if n <= limit && (n % 12 == 1 || n % 12 == 5)
-        sieve[n] = !sieve[n]
-      end
+      sieve[n] = !sieve[n] if n <= limit && (n % 12 == 1 || n % 12 == 5)
 
       n = (3 * x * x) + (y * y)
 
-      if n <= limit && n % 12 == 7
-        sieve[n] = !sieve[n]
-      end
+      sieve[n] = !sieve[n] if n <= limit && n % 12 == 7
 
       n = (3 * x * x) - (y * y)
 
-      if x > y && n <= limit && n % 12 == 11
-        sieve[n] = !sieve[n]
-      end
+      sieve[n] = !sieve[n] if x > y && n <= limit && n % 12 == 11
     end
   end
 
@@ -95,11 +83,11 @@ def sieve_of_atkin(limit)
 
   n = 5
 
-  while n <= square_root_of_limit do
+  while n <= square_root_of_limit
     if sieve[n]
       i = n * n
 
-      while i < limit do
+      while i < limit
         sieve[i] = false
 
         i += n * n
@@ -111,10 +99,8 @@ def sieve_of_atkin(limit)
     n += 2
   end
 
-  while n < limit do
-    if sieve[n]
-      primes << n
-    end
+  while n < limit
+    primes << n if sieve[n]
 
     n += 2
   end
@@ -122,4 +108,4 @@ def sieve_of_atkin(limit)
   primes
 end
 
-puts sieve_of_atkin(799997).select { |x| x.truncatable_prime? && x > 10 }.inject(:+)
+puts sieve_of_atkin(799997).select { |x| x > 10 && x.truncatable_prime? }.inject(:+)
