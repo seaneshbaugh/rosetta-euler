@@ -512,20 +512,17 @@ Install the `erlang` formula via Homebrew.
 
 ### Fortran
 
-[IOS/IEC JTC1/SC22/WG5 (Fortran)](http://www.nag.co.uk/sc22wg5/)
+[WG5 Fortran Standards Home](https://wg5-fortran.org/)
 
-[GNU Fortran](http://gcc.gnu.org/fortran/)
+[GNU Fortran](https://gcc.gnu.org/fortran/)
 
 #### Target Version
 
     $ gfortran --version
-    GNU Fortran (Homebrew gcc 4.9.2_1) 4.9.2
-    Copyright (C) 2014 Free Software Foundation, Inc.
-
-    GNU Fortran comes with NO WARRANTY, to the extent permitted by law.
-    You may redistribute copies of GNU Fortran
-    under the terms of the GNU General Public License.
-    For more information about these matters, see the file named COPYING
+    GNU Fortran (Homebrew GCC 8.2.0) 8.2.0
+    Copyright (C) 2018 Free Software Foundation, Inc.
+    This is free software; see the source for copying conditions.  There is NO
+    warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 #### Additional Setup on OSX
 
