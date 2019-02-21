@@ -1,27 +1,21 @@
 pandigitals = []
 
-x = 1
-
-while x < 10000
+(1..9999).each do |x|
   d = [1, 2]
 
   y = 2
 
   p = []
 
-  while p.join.length < 9
-    p = d.map { |d| x * d }
+  while p.length < 9
+    p = d.map { |e| x * e }
 
-    if p.join.split('').sort.join == '123456789'
-      pandigitals << p.join.to_i
-    end
+    pandigitals << p.join.to_i if p.join.split('').sort.join == '123456789'
 
     y += 1
 
     d << y
   end
-
-  x += 1
 end
 
 puts pandigitals.max
