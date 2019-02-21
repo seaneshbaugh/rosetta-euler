@@ -466,12 +466,14 @@ You may need to chmod the resulting executable so that it has execute permission
 
 ### Elixir
 
-[Elixir](http://elixir-lang.org/)
+[Elixir](https://elixir-lang.org/)
 
 #### Target Version
 
     $ elixir --version
-    Elixir 1.0.2
+    Erlang/OTP 20 [erts-9.1] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:10] [hipe] [kernel-poll:false]
+
+    Elixir 1.8.0 (compiled with Erlang/OTP 20)
 
 #### Additional Setup on OSX
 
