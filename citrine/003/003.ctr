@@ -1,0 +1,16 @@
+☞ n := 600851475143.
+☞ p := 2.
+
+{
+  (n < (p * p)) true: {
+    True break.
+  }, else: {
+    ((n modulo: p) = 0) true: {
+      n := n / p.
+    }, else: {
+      p add: 1.
+    }.
+  }.
+} while: { ↲ True. }.
+
+✎ write: n, write: '\n'.
