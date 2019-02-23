@@ -8,6 +8,7 @@ An attempt at a [chrestomathy](http://en.wikipedia.org/wiki/Chrestomathy) of sol
 * [C](#c)
 * [C++](#c-1)
 * [C&#35;](#c-2)
+* [Citrine](#citrine)
 * [COBOL](#cobol)
 * [Common Lisp](#common-lisp)
 * [Clojure](#clojure)
@@ -296,6 +297,44 @@ Download and install the [Mono MDK](https://www.mono-project.com/download/stable
 #### Running
 
     $ mono 001.exe
+
+### Citrine
+
+[Citrine Programming Language](https://citrine-lang.org/)
+
+#### Target Version
+
+    $ ctr
+
+    Citrine Programming Language EN/US
+    Written by Gabor de Mooij © copyright 2019, Licensed BSD.
+    0.9
+
+#### Additional Setup on macOS
+
+Clone the Citrine repository.
+
+    $ git clone git@github.com:gabordemooij/citrine.git
+
+Go to the Citrine source directory.
+
+    cd citrine
+
+Open up `mk.sh` in your preferred text editor and edit line 6 so that it looks like this:
+
+    if [ "$OS" = "OpenBSD" -o "$OS" = "FreeBSD" -o "$OS" = "Darwin" ]; then
+
+Build Citrine.
+
+    $ ./mk.sh
+
+Install the resulting binary.
+
+    $ sudo make -f makefile.bsd install
+
+#### Running
+
+    $ ctr 001.ctr
 
 ### COBOL
 

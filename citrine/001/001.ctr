@@ -1,0 +1,9 @@
+☞ total := 0.
+
+{ :i
+  (((i modulo: 3) = 0) or: ((i modulo: 5) = 0)) true: {
+    total := total + i.
+  }.
+} * 1000.
+
+✎ write: total, write: '\n'.
