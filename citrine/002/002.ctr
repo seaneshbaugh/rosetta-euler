@@ -1,0 +1,15 @@
+☞ a := 1.
+☞ b := 1.
+☞ total := 0.
+
+{
+  ☞ c := b.
+  b := a + b.
+  a := c.
+
+  ((b modulo: 2) = 0) true: {
+    total := total + b.
+  }.
+} while: { ↲(b < 4000000). }.
+
+✎ write: total, write: '\n'.
