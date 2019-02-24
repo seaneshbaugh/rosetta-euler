@@ -50,7 +50,7 @@ Initialize all submodules.
 
     $ git submodule update --init --recursive
 
-## Initial Setup on OSX
+## Initial Setup on macOS
 
 Install [Xcode](https://developer.apple.com/xcode/).
 
@@ -87,7 +87,7 @@ All tests are written with [ExUnit](http://elixir-lang.org/docs/stable/ex_unit/E
     GNAT Community 2018 (20180523-73)
     Copyright 1996-2018, Free Software Foundation, Inc.
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 [Download GNAT Community Edition](https://www.adacore.com/download).
 
@@ -151,7 +151,7 @@ Delete the .app file, unmount the .dmg file, and delete it too.
     GNU Scientific Library is not supported.
     PostgreSQL is not supported.
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Install the `algol68g` formula via Homebrew.
 
@@ -170,7 +170,7 @@ Install the `algol68g` formula via Homebrew.
     $ cintsys
     BCPL 32-bit Cintcode System (21 Oct 2015)
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Download the BCPL source code.
 
@@ -232,7 +232,7 @@ Run the make command.
     Thread model: posix
     InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Some solutions require [The GNU Multiple Precision Arithmetic Library](http://gmplib.org/) for big numbers.
 
@@ -262,7 +262,7 @@ Install the `gmp` formula via Homebrew.
     Thread model: posix
     InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 None.
 
@@ -286,7 +286,7 @@ None.
     Microsoft (R) Visual C# Compiler version 2.8.2.62916 (2ad4aabc)
     Copyright (C) Microsoft Corporation. All rights reserved.
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Download and install the [Mono MDK](https://www.mono-project.com/download/stable/).
 
@@ -353,7 +353,7 @@ Install the resulting binary.
     Packaged  Sep 06 2017 18:48:43 UTC
     C version "4.2.1 Compatible Apple LLVM 9.1.0 (clang-902.0.39.2)"
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Install the `gnu-cobol` formula via Homebrew.
 
@@ -387,7 +387,7 @@ Install the `gnu-cobol` formula via Homebrew.
     User language: ENGLISH
     Machine: X86_64 (X86_64) - [-.-.-.-]
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Install the `clisp` formula via Homebrew.
 
@@ -414,7 +414,7 @@ Install the `clisp` formula via Homebrew.
     Clojure 1.10.0
     Java HotSpot(TM) 64-Bit Server VM 1.8.0_77-b03
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Install the `leiningen` formula via Homebrew.
 
@@ -436,7 +436,7 @@ Install the `leiningen` formula via Homebrew.
     LLVM: 6.0.1
     Default target: x86_64-apple-macosx
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Install the `crystal-lang` formula via Homebrew.
 
@@ -460,7 +460,7 @@ Install the `crystal-lang` formula via Homebrew.
     Documentation: https://dlang.org/
     Config file: /usr/local/etc/dmd.conf
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Install the `dmd` formula via Homebrew.
 
@@ -483,7 +483,7 @@ Install the `dmd` formula via Homebrew.
     $ ec -version
     ISE EiffelStudio version 17.01.9.9700 GPL Edition - macosx-x86-64
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Tap the `homebrew/x11` keg.
 
@@ -514,7 +514,7 @@ You may need to chmod the resulting executable so that it has execute permission
 
     Elixir 1.8.0 (compiled with Erlang/OTP 20)
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Install the `erlang` formula via Homebrew.
 
@@ -539,7 +539,7 @@ Install the `elixir` formula via Homebrew.
 
     Eshell V10.2.4  (abort with ^G)
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Install the `erlang` formula via Homebrew.
 
@@ -563,7 +563,7 @@ Install the `erlang` formula via Homebrew.
     This is free software; see the source for copying conditions.  There is NO
     warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Install the `gcc` formula via Homebrew.
 
@@ -591,7 +591,7 @@ Install the `gcc` formula via Homebrew.
     Microsoft (R) F# Compiler version 4.1
     Copyright (c) Microsoft Corporation. All Rights Reserved.
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Download and install the [Mono MDK](https://www.mono-project.com/download/stable/).
 
@@ -612,7 +612,7 @@ Download and install the [Mono MDK](https://www.mono-project.com/download/stable
     $ go version
     go version go1.11.5 darwin/amd64
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Install the `go` formula via Homebrew.
 
@@ -643,7 +643,7 @@ Either open up a new terminal or run the following:
     $ groovy -v
     Groovy Version: 2.5.6 JVM: 1.8.0_77 Vendor: Oracle Corporation OS: Mac OS X
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Install the `groovy` formula via Homebrew.
 
@@ -665,7 +665,7 @@ Install the `groovy` formula via Homebrew.
     $ stack ghc -- --version
     The Glorious Glasgow Haskell Compilation System, version 8.6.3
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Download and install [Stack](https://docs.haskellstack.org/en/stable/README/).
 
@@ -694,7 +694,7 @@ After that you can build as usual.
     $ io --version
     Io Programming Language, v. 20110905
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Io's installer doesn't seem to play nicely with non-system Pythons. If you're using `pyenv` (or anything similar) set the current Python to the OSX system Python.
 
@@ -723,7 +723,7 @@ Reset your Python.
     Java(TM) SE Runtime Environment (build 1.6.0_65-b14-466.1-11M4716)
     Java HotSpot(TM) 64-Bit Server VM (build 20.65-b04-466.1, mixed mode)
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Most likely none.
 
@@ -746,7 +746,7 @@ Most likely none.
     $ node --version
     v0.10.35
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Install the `node` formula via Homebrew.
 
@@ -765,7 +765,7 @@ Install the `node` formula via Homebrew.
     $ julia -v
     julia version 0.3.4
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 The following instructions are from the readme at [staticfloat/homebrew-julia](https://github.com/staticfloat/homebrew-julia). Please verify they are the same before proceeding.
 
@@ -791,7 +791,7 @@ Taken from [k.c](https://github.com/kevinlawler/kona/blob/5daf44308bd8a25c42bbea
 
     //64-bit single-threaded implementation of K3.2.  Version is Kona 3.2.0
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 The following instructions are from the readme at [kevinlawler/kona](https://github.com/kevinlawler/kona). Please verify they are the same before proceeding.
 
@@ -824,7 +824,7 @@ Run the `make install` command.
     $ lua -v
     Lua 5.2.3  Copyright (C) 1994-2013 Lua.org, PUC-Rio
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Install the `lua` formula via Homebrew.
 
@@ -846,7 +846,7 @@ Install the `lua` formula via Homebrew.
 
     active boot switches: -d:release
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Install the `nim` formula via Homebrew.
 
@@ -874,7 +874,7 @@ Install the `nim` formula via Homebrew.
     Thread model: posix
     InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 None.
 
@@ -895,7 +895,7 @@ None.
     $ ocaml -version
     The OCaml toplevel, version 4.02.1
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Install the `ocaml` formula via Homebrew.
 
@@ -915,7 +915,7 @@ Install the `ocaml` formula via Homebrew.
     Free Pascal Compiler version 3.0.0 [2016/02/18] for x86_64
     Copyright (c) 1993-2015 by Florian Klaempfl and others
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Install the `fpc` formula via Homebrew.
 
@@ -949,7 +949,7 @@ Install the `fpc` formula via Homebrew.
     this system using "man perl" or "perldoc perl".  If you have access to the
     Internet, point your browser at http://www.perl.org/, the Perl Home Page.
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 None. This is the default version of Perl on OSX 10.10.
 
@@ -972,7 +972,7 @@ None. This is the default version of Perl on OSX 10.10.
     This is free software; see the source or the file
     named COPYING for copying conditions.
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Install the `gnu-prolog` formula via Homebrew.
 
@@ -1003,7 +1003,7 @@ The same global and local stack size environment variable arguments can be used 
     $ python --version
     Python 2.7.5
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Install the `pyenv` formula via Homebrew.
 
@@ -1034,7 +1034,7 @@ Set the default Python.
     $ ruby -v
     ruby 2.6.1p33 (2019-01-30 revision 66950) [x86_64-darwin17]
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Install GPG2.
 
@@ -1079,7 +1079,7 @@ Set the default Ruby.
     $ rustc --version
     rustc 1.11.0
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Install the `rust` formula via Homebrew.
 
@@ -1102,7 +1102,7 @@ Install the `rust` formula via Homebrew.
     $ scala -version
     Scala code runner version 2.11.1 -- Copyright 2002-2013, LAMP/EPFL
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Install the `scala` formula via Homebrew.
 
@@ -1128,7 +1128,7 @@ Install the `scala` formula via Homebrew.
 
     Moriturus te saluto.
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Install the `mit-scheme` formula via Homebrew.
 
@@ -1147,7 +1147,7 @@ Install the `mit-scheme` formula via Homebrew.
     $ cim --version
     -i686-apple-darwin14.3.0
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Download the Cim source code.
 
@@ -1191,7 +1191,7 @@ Run the make install command.
     Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)
     Target: x86_64-apple-darwin17.7.0
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 None.
 
@@ -1211,7 +1211,7 @@ None.
     Microsoft (R) Visual Basic Compiler version 2.8.2.62916 (2ad4aabc)
     Copyright (C) Microsoft Corporation. All rights reserved.
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 Download and install the [Mono MDK](https://www.mono-project.com/download/stable/).
 
@@ -1237,7 +1237,7 @@ Download and install the [Mono MDK](https://www.mono-project.com/download/stable
     Thread model: posix
     InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
 
-#### Additional Setup on OSX
+#### Additional Setup on macOS
 
 None.
 
