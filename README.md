@@ -636,7 +636,7 @@ Either open up a new terminal or run the following:
 
 ### Groovy
 
-[Groovy](http://groovy.codehaus.org/)
+[Groovy](http://groovy-lang.org/)
 
 #### Target Version
 
