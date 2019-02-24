@@ -15,12 +15,12 @@ defmodule RosettaEuler.SchemeTest do
     name = number |> to_string |> String.pad_leading(3, "0")
 
     "cd scheme/" <> name <> " && " <> "mit-scheme --quiet < " <> name <> ".scm"
-    |> to_char_list
+    |> to_charlist
     |> :os.cmd
     |> to_string
   end
 
-  rosetta_euler_tests 1..9 do
+  rosetta_euler_tests 1..14 do
     @tag test_number: test_number
     test "Scheme #" <> to_string(test_number), %{test_number: test_number} do
       answer = answer_for(test_number) <> "\n\nKill Scheme (y or n)? "
