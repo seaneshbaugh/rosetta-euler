@@ -17,7 +17,7 @@ defmodule RosettaEuler.KTest do
     System.cmd("k", [name <> ".k"], cd: Path.join("k", name))
   end
 
-  rosetta_euler_tests 1..2 do
+  rosetta_euler_tests 1..3 do
     @tag test_number: test_number
     test "K #" <> to_string(test_number), %{test_number: test_number} do
       answer = answer_for(test_number) <> "\n"
