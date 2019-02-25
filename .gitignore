@@ -21,3 +21,4 @@ cabal.sandbox.config
 .crystal
 FSharp.Core.dll
 .stack-work
+.bak
