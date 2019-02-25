@@ -11,21 +11,15 @@ def sieve_of_atkin(limit)
     (1..square_root_of_limit).each do |y|
       n = (4 * x * x) + (y * y)
 
-      if n <= limit && (n % 12 == 1 || n % 12 == 5)
-        sieve[n] = !sieve[n]
-      end
+      sieve[n] = !sieve[n] if n <= limit && (n % 12 == 1 || n % 12 == 5)
 
       n = (3 * x * x) + (y * y)
 
-      if n <= limit && n % 12 == 7
-        sieve[n] = !sieve[n]
-      end
+      sieve[n] = !sieve[n] if n <= limit && n % 12 == 7
 
       n = (3 * x * x) - (y * y)
 
-      if x > y && n <= limit && n % 12 == 11
-        sieve[n] = !sieve[n]
-      end
+      sieve[n] = !sieve[n] if x > y && n <= limit && n % 12 == 11
     end
   end
 
@@ -39,11 +33,11 @@ def sieve_of_atkin(limit)
 
   n = 5
 
-  while n <= square_root_of_limit do
+  while n <= square_root_of_limit
     if sieve[n]
       i = n * n
 
-      while i < limit do
+      while i < limit
         sieve[i] = false
 
         i += n * n
@@ -55,10 +49,8 @@ def sieve_of_atkin(limit)
     n += 2
   end
 
-  while n < limit do
-    if sieve[n]
-      primes << n
-    end
+  while n < limit
+    primes << n if sieve[n]
 
     n += 2
   end
@@ -116,9 +108,10 @@ class Integer
 
     loop do
       break unless i >= 0
-         d = d * d % n
 
-         d = d * a % n if ((b >> i) & 1) > 0
+      d = d * d % n
+
+      d = d * a % n if ((b >> i) & 1) > 0
 
       i -= 1
     end
@@ -126,11 +119,11 @@ class Integer
     d
   end
 
-  # This is based on the Rabin-Miller primality test. It's ugly because doing the modulo division tests in any kind of a loop doubled te running time of the solution.
+  # This is based on the Rabin-Miller primality test. It's ugly because doing the modulo division tests in any kind of a loop doubled the running time of the solution.
   def prime?
     return false if self <= 1
     return true if self == 2
-    return false if self % 2 == 0
+    return false if even?
     return true if self < 9
     return false if self % 3 == 0
     return false if self % 5 == 0
@@ -169,7 +162,7 @@ class Integer
   end
 
   def concat(other)
-    (self.to_s + other.to_s).to_i
+    (to_s + other.to_s).to_i
   end
 end
 
@@ -177,9 +170,7 @@ def make_pairs(primes, a)
   pairs = Set.new
 
   ((a + 1)..(primes.length - 1)).each do |b|
-    if primes[a].concat(primes[b]).prime? && primes[b].concat(primes[a]).prime?
-      pairs.add(primes[b])
-    end
+    pairs.add(primes[b]) if primes[a].concat(primes[b]).prime? && primes[b].concat(primes[a]).prime?
   end
 
   pairs
@@ -187,7 +178,7 @@ end
 
 primes = sieve_of_atkin(30000)
 
-result = 2 ** 64
+result = 2**64
 
 pairs = Array.new(primes.length)
 
@@ -199,7 +190,7 @@ pairs = Array.new(primes.length)
   ((a + 1)..(primes.length - 1)).each do |b|
     break if primes[a] + primes[b] * 4 >= result
 
-    next if !pairs[a].include?(primes[b])
+    next unless pairs[a].include?(primes[b])
 
     pairs[b] = make_pairs(primes, b) if pairs[b].nil?
 
@@ -222,11 +213,11 @@ pairs = Array.new(primes.length)
 
           next if !pairs[a].include?(primes[e]) || !pairs[b].include?(primes[e]) || !pairs[c].include?(primes[e]) || !pairs[d].include?(primes[e])
 
-          if result > primes[a] + primes[b] + primes[c] + primes[d] + primes[e]
-            result = primes[a] + primes[b] + primes[c] + primes[d] + primes[e]
+          next unless result > primes[a] + primes[b] + primes[c] + primes[d] + primes[e]
 
-            break
-          end
+          result = primes[a] + primes[b] + primes[c] + primes[d] + primes[e]
+
+          break
         end
       end
     end
