@@ -1,20 +1,20 @@
 class Card
   attr_accessor :suit, :value
 
-  SUITS = %w(C D H S)
+  SUITS = %w[C D H S].freeze
 
-  VALUES = %w(2 3 4 5 6 7 8 9 T J Q K A)
+  VALUES = %w[2 3 4 5 6 7 8 9 T J Q K A].freeze
 
-  VALUE_MAP = { '2' => 2, '3' => 3, '4' => 4, '5' => 5, '6' => 6, '7' => 7, '8' => 8, '9' => 9, 'T' => 10, 'J' => 11, 'Q' => 12, 'K' => 13, 'A' => 14 }
+  VALUE_MAP = { '2' => 2, '3' => 3, '4' => 4, '5' => 5, '6' => 6, '7' => 7, '8' => 8, '9' => 9, 'T' => 10, 'J' => 11, 'Q' => 12, 'K' => 13, 'A' => 14 }.freeze
 
   def initialize(card_text)
     self.suit = card_text.split('').last.upcase
 
-    raise ArgumentError unless SUITS.include?(self.suit)
+    raise ArgumentError unless SUITS.include?(suit)
 
     self.value = card_text.chop.upcase
 
-    raise ArgumentError unless VALUES.include?(self.value)
+    raise ArgumentError unless VALUES.include?(value)
   end
 
   def to_s(verbose = false)
@@ -31,57 +31,59 @@ class Card
       'J' => 'Jack',
       'Q' => 'Queen',
       'K' => 'King',
-      'A' => 'Ace' }
+      'A' => 'Ace'
+    }
 
     suit_text = {
       'C' => 'Clubs',
       'D' => 'Diamonds',
       'H' => 'Hearts',
-      'S' => 'Spades' }
+      'S' => 'Spades'
+    }
 
     if verbose
-      "#{value_text[self.value]} of #{suit_text[self.suit]}"
+      "#{value_text[value]} of #{suit_text[suit]}"
     else
-      "#{self.value}#{self.suit}"
+      "#{value}#{suit}"
     end
   end
 
   def to_i
-    Card::VALUE_MAP[self.value]
+    Card::VALUE_MAP[value]
   end
 
   def inspect
-    self.to_s
+    to_s
   end
 
   def ==(other)
-    VALUE_MAP[self.value] == VALUE_MAP[other.value]
+    VALUE_MAP[value] == VALUE_MAP[other.value]
   end
 
   def !=(other)
-    VALUE_MAP[self.value] != VALUE_MAP[other.value]
+    VALUE_MAP[value] != VALUE_MAP[other.value]
   end
 
   def >(other)
-    VALUE_MAP[self.value] > VALUE_MAP[other.value]
+    VALUE_MAP[value] > VALUE_MAP[other.value]
   end
 
   def >=(other)
-    VALUE_MAP[self.value] >= VALUE_MAP[other.value]
+    VALUE_MAP[value] >= VALUE_MAP[other.value]
   end
 
   def <(other)
-    VALUE_MAP[self.value] < VALUE_MAP[other.value]
+    VALUE_MAP[value] < VALUE_MAP[other.value]
   end
 
   def <=(other)
-    VALUE_MAP[self.value] <= VALUE_MAP[other.value]
+    VALUE_MAP[value] <= VALUE_MAP[other.value]
   end
 
-  def <=>(other_card)
-    if self < other_card
+  def <=>(other)
+    if self < other
       -1
-    elsif self == other_card
+    elsif self == other
       0
     else
       1
@@ -92,7 +94,7 @@ end
 class Hand
   attr_accessor :cards
 
-  RANK_ORDER = [:royal_flush?, :straight_flush?, :four_of_a_kind?, :full_house?, :flush?, :straight?, :three_of_a_kind?, :two_pairs?, :one_pair?]
+  RANK_ORDER = %i[royal_flush? straight_flush? four_of_a_kind? full_house? flush? straight? three_of_a_kind? two_pairs? one_pair?].freeze
 
   def initialize(cards)
     raise ArgumentError if cards.length != 5
@@ -101,56 +103,56 @@ class Hand
   end
 
   def to_s
-    "[#{self.cards.sort.map { |card| card.to_s }.join(', ')}]"
+    "[#{cards.sort.map(&:to_s).join(', ')}]"
   end
 
   def one_pair?
-    self.cards.group_by { |card| card.value }.map { |value, cards| cards.length }.count(2) == 1
+    cards.group_by(&:value).map { |_value, cards| cards.length }.count(2) == 1
   end
 
   def two_pairs?
-    self.cards.group_by { |card| card.value }.map { |value, cards| cards.length }.count(2) == 2
+    cards.group_by(&:value).map { |_value, cards| cards.length }.count(2) == 2
   end
 
   def three_of_a_kind?
-    self.cards.group_by { |card| card.value }.map { |value, cards| cards.length }.count(3) == 1
+    cards.group_by(&:value).map { |_value, cards| cards.length }.count(3) == 1
   end
 
   def straight?
-    self.cards.sort.map { |card| card.to_i }.each_cons(2).all? { |a, b| a + 1 == b }
+    cards.sort.map(&:to_i).each_cons(2).all? { |a, b| a + 1 == b }
   end
 
   def flush?
-    self.cards.group_by { |card| card.suit }.length == 1
+    cards.group_by(&:suit).length == 1
   end
 
   def full_house?
-    self.three_of_a_kind? && self.one_pair?
+    three_of_a_kind? && one_pair?
   end
 
   def four_of_a_kind?
-    number_of_cards_of_each_value = self.cards.group_by { |card| card.value }.map { |value, cards| cards.length }
+    number_of_cards_of_each_value = cards.group_by(&:value).map { |_value, cards| cards.length }
 
     number_of_cards_of_each_value.count(4) == 1
   end
 
   def straight_flush?
-    self.straight? && self.flush?
+    straight? && flush?
   end
 
   def royal_flush?
-    self.cards.sort.map { |card| card.to_i } == [10, 11, 12, 13, 14] && self.flush?
+    cards.sort.map(&:to_i) == [10, 11, 12, 13, 14] && flush?
   end
 
   def compare_highest_card(other)
-    a = self.cards.map { |card| card.to_i }.sort
+    a = cards.map(&:to_i).sort
 
-    b = other.cards.map { |card| card.to_i }.sort
+    b = other.cards.map(&:to_i).sort
 
     result = nil
 
     loop do
-      break if (!result.nil? && result != 0) || a.length == 0 || b.length == 0
+      break if (!result.nil? && result != 0) || a.empty? || b.empty?
 
       result = a.max <=> b.max
 
@@ -165,13 +167,13 @@ class Hand
   def compare_lowest_set(other, length)
     raise ArgumentError if length < 2 || length > 4
 
-    self.cards.group_by { |card| card.value }.select { |_, v| v.length == length }.map { |_, v| v.first }.min <=> other.cards.group_by { |card| card.value }.select { |_, v| v.length == length }.map { |_, v| v.first }.min
+    cards.group_by(&:value).select { |_, v| v.length == length }.map { |_, v| v.first }.min <=> other.cards.group_by(&:value).select { |_, v| v.length == length }.map { |_, v| v.first }.min
   end
 
   def compare_highest_set(other, length)
     raise ArgumentError if length < 2 || length > 4
 
-    self.cards.group_by { |card| card.value }.select { |_, v| v.length == length }.map { |_, v| v.first }.max <=> other.cards.group_by { |card| card.value }.select { |_, v| v.length == length }.map { |_, v| v.first }.max
+    cards.group_by(&:value).select { |_, v| v.length == length }.map { |_, v| v.first }.max <=> other.cards.group_by(&:value).select { |_, v| v.length == length }.map { |_, v| v.first }.max
   end
 
   def <=>(other)
@@ -180,7 +182,7 @@ class Hand
     other_hand_rank = RANK_ORDER.length
 
     RANK_ORDER.each do |rank_method|
-      break if self.send(rank_method)
+      break if send(rank_method)
 
       this_hand_rank -= 1
     end
@@ -200,47 +202,35 @@ class Hand
 
       case this_hand_rank
       when 0
-        result = self.compare_highest_card(other)
+        result = compare_highest_card(other)
       when 1
-        result = self.compare_highest_set(other, 2)
+        result = compare_highest_set(other, 2)
 
-        if result == 0
-          result = self.compare_highest_card(other)
-        end
+        result = compare_highest_card(other) if result == 0
       when 2
-        result = self.compare_highest_set(other, 2)
+        result = compare_highest_set(other, 2)
 
-        if result == 0
-          result = self.compare_lowest_set(other, 2)
-        end
+        result = compare_lowest_set(other, 2) if result == 0
 
-        if result == 0
-          result = self.compare_highest_card(other)
-        end
+        result = compare_highest_card(other) if result == 0
       when 3
         result = compare_highest_set(other, 3)
 
-        if result == 0
-          result = self.compare_highest_card(other)
-        end
+        result = compare_highest_card(other) if result == 0
       when 4
-        result = self.compare_highest_card(other)
+        result = compare_highest_card(other)
       when 5
-        result = self.compare_highest_card(other)
+        result = compare_highest_card(other)
       when 6
-        result = self.compare_highest_set(other, 3)
+        result = compare_highest_set(other, 3)
 
-        if result == 0
-          result = self.compare_highest_set(other, 2)
-        end
+        result = compare_highest_set(other, 2) if result == 0
       when 7
-        result = self.compare_highest_set(other, 4)
+        result = compare_highest_set(other, 4)
 
-        if result == 0
-          result = self.compare_highest_card(other)
-        end
+        result = compare_highest_card(other) if result == 0
       when 8
-        result = self.compare_highest_card(other)
+        result = compare_highest_card(other)
       else
         result = 0
       end
