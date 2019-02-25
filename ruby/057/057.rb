@@ -1,6 +1,6 @@
 def approximate_square_root_of_two(expansions)
   if expansions > 0
-    Rational(1, 1) + Rational(1 , (Rational(1 + (approximate_square_root_of_two(expansions - 1)))))
+    Rational(1, 1) + Rational(1, Rational(1 + approximate_square_root_of_two(expansions - 1)))
   else
     Rational(1, 1) + Rational(1 / 2)
   end
