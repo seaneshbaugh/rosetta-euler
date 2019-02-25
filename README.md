@@ -692,21 +692,13 @@ After that you can build as usual.
 #### Target Version
 
     $ io --version
-    Io Programming Language, v. 20110905
+    Io Programming Language, v. 20151111
 
 #### Additional Setup on macOS
 
-Io's installer doesn't seem to play nicely with non-system Pythons. If you're using `pyenv` (or anything similar) set the current Python to the OSX system Python.
+Install the `io` formula via Homebrew.
 
-    $ pyenv global system
-
-Install the `io` formula via Homebrew (the `--use-clang` option might not be necessary).
-
-    $ brew install io --use-clang
-
-Reset your Python.
-
-    $ pyenv global 2.7.5
+    $ brew install io
 
 #### Running
 
