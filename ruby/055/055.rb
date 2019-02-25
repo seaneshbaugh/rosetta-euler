@@ -12,7 +12,7 @@ lychrel_numbers = []
       break
     end
 
-    x = x + x.to_s.reverse.to_i
+    x += x.to_s.reverse.to_i
 
     break if x.to_s == x.to_s.reverse
 
