@@ -37,29 +37,23 @@ loop do
 
   delta = pentagon - previous_pentagon
 
-  if !differences.empty? && differences.first < delta
-    differences.delete_at(0)
-  end
+  differences.delete_at(0) if !differences.empty? && differences.first < delta
 
   break if minimal_difference != 0 && differences.empty?
 
   differences.each do |difference|
-    if pentagons.include?(pentagon - difference) && ((2 * pentagon) - difference).pentagonal?
-      minimal_difference = difference
+    next unless pentagons.include?(pentagon - difference) && ((2 * pentagon) - difference).pentagonal?
 
-      while differences.last >= minimal_difference
-        differences.pop
-      end
+    minimal_difference = difference
 
-      break
-    end
+    differences.pop while differences.last >= minimal_difference
+
+    break
   end
 
   pentagons.add(pentagon)
 
-  if minimal_difference == 0
-    differences << pentagon
-  end
+  differences << pentagon if minimal_difference == 0
 
   pentagon_index += 1
 end
