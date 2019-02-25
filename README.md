@@ -1072,18 +1072,18 @@ Set the default Ruby.
 
 ### Rust
 
-[The Rust Programming Language](http://www.rust-lang.org/)
+[The Rust Programming Language](https://www.rust-lang.org/)
 
 #### Target Version
 
     $ rustc --version
-    rustc 1.11.0
+    rustc 1.32.0 (9fda7c223 2019-01-16)
 
 #### Additional Setup on macOS
 
-Install the `rust` formula via Homebrew.
+Install [rustup](https://rustup.rs/).
 
-    $ brew install rust
+    $ curl https://sh.rustup.rs -sSf | sh
 
 #### Building
 

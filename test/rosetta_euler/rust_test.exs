@@ -19,7 +19,7 @@ defmodule RosettaEuler.RustTest do
     toml_file_path = Path.join(path, "Cargo.toml")
 
     if File.exists?(toml_file_path) do
-      {_, 0} = System.cmd("cargo", ["build"], cd: path)
+      {_, 0} = System.cmd("cargo", ["-q", "build"], cd: path)
 
       {pwd, 0} = System.cmd("pwd", [], cd: path)
 
@@ -37,7 +37,7 @@ defmodule RosettaEuler.RustTest do
     end
   end
 
-  rosetta_euler_tests 1..13 do
+  rosetta_euler_tests 1..14 do
     @tag test_number: test_number
     test "Rust #" <> to_string(test_number), %{test_number: test_number} do
       answer = answer_for(test_number) <> "\n"
