@@ -1,12 +1,12 @@
 class Array
   def repeating_key_xor_decrypt(key)
-    self.each_slice(key.length).to_a.map { |s| s.zip(key).map { |a, b| a ^ b } }.flatten
+    each_slice(key.length).to_a.map { |s| s.zip(key).map { |a, b| a ^ b } }.flatten
   end
 end
 
 class String
   def score_character
-    raise ArgumentError if self.length != 1
+    raise ArgumentError if length != 1
 
     alpha_numeric_characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
 
@@ -26,22 +26,22 @@ class String
   end
 
   def score
-    base_score = self.split('').map { |c| c.score_character }.inject(:+)
+    base_score = split('').map(&:score_character).inject(:+)
 
     common_trigrams = [['the', 16], ['and', 15], ['tha', 14], ['ent', 13], ['ing', 12], ['ion', 11], ['tio', 10], ['for', 9], ['nde', 8], ['has', 7], ['nce', 6], ['edt', 5], ['tis', 4], ['oft', 3], ['sth', 2], ['men', 1]]
 
-    trigram_score = common_trigrams.map { |trigram| self.split(trigram.first).length * trigram.last }.inject(:+)
+    trigram_score = common_trigrams.map { |trigram| split(trigram.first).length * trigram.last }.inject(:+)
 
     base_score + trigram_score
   end
 end
 
-contents = File.read(File.expand_path(File.join(__dir__, '..', '..', 'files', 'cipher1.txt'))).split(',').map { |c| c.to_i }
+contents = File.read(File.expand_path(File.join(__dir__, '..', '..', 'files', 'cipher1.txt'))).split(',').map(&:to_i)
 
 decrypted_strings = ('aaa'..'zzz').to_a.map do |key|
-  string = contents.repeating_key_xor_decrypt(key.split('').map { |c| c.ord }).map { |c| c.chr }.join('')
+  string = contents.repeating_key_xor_decrypt(key.split('').map(&:ord)).map(&:chr).join('')
 
   { key: key, string: string, score: string.score }
 end
 
-puts decrypted_strings.max_by { |s| s[:score] }[:string].split('').map { |c| c.ord }.inject(:+)
+puts decrypted_strings.max_by { |s| s[:score] }[:string].split('').map(&:ord).inject(:+)
