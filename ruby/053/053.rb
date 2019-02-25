@@ -1,7 +1,7 @@
 def combinatoric_selection(n, r)
   raise ArgumentError if r > n
 
-  (1..n).inject(:*) / ((1..r).inject(:*) * (n -r > 0 ? (1..(n - r)) : [1]).inject(:*))
+  (1..n).inject(:*) / ((1..r).inject(:*) * (n - r > 0 ? (1..(n - r)) : [1]).inject(:*))
 end
 
 result = 0
