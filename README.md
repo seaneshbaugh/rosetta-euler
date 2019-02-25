@@ -996,12 +996,12 @@ The same global and local stack size environment variable arguments can be used 
 
 ### Python
 
-[Python Programming Language](http://www.python.org/)
+[Python Programming Language](https://www.python.org/)
 
 #### Target Version
 
     $ python --version
-    Python 2.7.5
+    Python 3.7.2
 
 #### Additional Setup on macOS
 
@@ -1013,13 +1013,13 @@ Ensure the following is in your `.bashrc` or `.zshrc`.
 
     if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
-Install Python 2.7.5.
+Install Python 3.7.2.
 
-    $ pyenv install 2.7.5
+    $ pyenv install 3.7.2
 
 Set the default Python.
 
-    $ pyenv global 2.7.5
+    $ pyenv global 3.7.2
 
 #### Running
 

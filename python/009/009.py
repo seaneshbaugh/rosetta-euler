@@ -1,4 +1,5 @@
 from operator import mul
+from functools import reduce
 
 def pythagorean_triple_with_sum(sum):
     if sum < 11:

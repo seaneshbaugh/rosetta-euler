@@ -14,7 +14,7 @@ def prime_factors(n):
         i += 1
 
     if found:
-        factors = [v] + prime_factors(n / v)
+        factors = [v] + prime_factors(n // v)
     else:
         factors = [n]
 

@@ -1,5 +1,6 @@
 import itertools
 from operator import mul
+from functools import reduce
 
 def prime_factors(n):
     found = False
@@ -34,6 +35,6 @@ while number_of_divisors < 500:
 
     triangle_number = sum(range(1, n + 1))
 
-    number_of_divisors = reduce(mul, map(lambda x: len(x) + 1, [list(g) for k, g in itertools.groupby(prime_factors(triangle_number))]))
+    number_of_divisors = reduce(mul, [len(x) + 1 for x in [list(g) for k, g in itertools.groupby(prime_factors(triangle_number))]])
 
 print(triangle_number)

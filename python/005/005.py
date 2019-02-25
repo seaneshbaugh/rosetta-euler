@@ -1,4 +1,5 @@
 from operator import mul
+from functools import reduce
 
 def prime_factors(n):
     found = False
@@ -16,7 +17,7 @@ def prime_factors(n):
         i += 1
 
     if found:
-        factors = [v] + prime_factors(n / v)
+        factors = [v] + prime_factors(n // v)
     else:
         factors = [n]
 
@@ -27,10 +28,9 @@ def overlap(a, b):
         if n in a:
             a.remove(n)
 
-    result = a + b
+    result = sorted(a + b)
 
-    result.sort()
 
     return result
 
-print(reduce(mul, reduce(overlap, map(lambda x: prime_factors(x), range(1, 21)))))
+print(reduce(mul, reduce(overlap, [prime_factors(x) for x in range(1, 21)])))

@@ -22,4 +22,4 @@ for start in range(1, 1000001):
 
     chain_lengths[start] = length
 
-print(map(lambda x: x[0], sorted(chain_lengths.iteritems(), key = operator.itemgetter(1)))[-1:][0])
+print([x[0] for x in sorted(iter(chain_lengths.items()), key = operator.itemgetter(1))][-1:][0])
