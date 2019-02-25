@@ -9,21 +9,15 @@ def sieve_of_atkin(limit)
     (1..square_root_of_limit).each do |y|
       n = (4 * x * x) + (y * y)
 
-      if n <= limit && (n % 12 == 1 || n % 12 == 5)
-        sieve[n] = !sieve[n]
-      end
+      sieve[n] = !sieve[n] if n <= limit && (n % 12 == 1 || n % 12 == 5)
 
       n = (3 * x * x) + (y * y)
 
-      if n <= limit && n % 12 == 7
-        sieve[n] = !sieve[n]
-      end
+      sieve[n] = !sieve[n] if n <= limit && n % 12 == 7
 
       n = (3 * x * x) - (y * y)
 
-      if x > y && n <= limit && n % 12 == 11
-        sieve[n] = !sieve[n]
-      end
+      sieve[n] = !sieve[n] if x > y && n <= limit && n % 12 == 11
     end
   end
 
@@ -37,11 +31,11 @@ def sieve_of_atkin(limit)
 
   n = 5
 
-  while n <= square_root_of_limit do
+  while n <= square_root_of_limit
     if sieve[n]
       i = n * n
 
-      while i < limit do
+      while i < limit
         sieve[i] = false
 
         i += n * n
@@ -53,10 +47,8 @@ def sieve_of_atkin(limit)
     n += 2
   end
 
-  while n < limit do
-    if sieve[n]
-      primes << n
-    end
+  while n < limit
+    primes << n if sieve[n]
 
     n += 2
   end
@@ -69,34 +61,32 @@ result = nil
 upper_limit_guess = 1000000
 
 loop do
-  primes = sieve_of_atkin(upper_limit_guess).map { |prime| prime.to_s }
+  primes = sieve_of_atkin(upper_limit_guess).map(&:to_s)
 
-  primes_with_duplicate_digits = primes.select { |prime| prime.count('0') > 2 || prime.count('1') > 2 || prime.count('2') > 2}
+  primes_with_duplicate_digits = primes.select { |prime| prime.count('0') > 2 || prime.count('1') > 2 || prime.count('2') > 2 }
 
   primes_with_duplicate_digits.each do |prime|
-    if prime.count('0') > 2
-      start = 0
-    elsif prime.count('1') > 2
-      start = 1
-    else
-      start = 2
-    end
+    start = if prime.count('0') > 2
+              0
+            elsif prime.count('1') > 2
+              1
+            else
+              2
+            end
 
     n = 0
 
     (start..9).each do |digit|
       check = prime.gsub(start.to_s, digit.to_s)
 
-      if primes.include?(check)
-        n += 1
-      end
+      n += 1 if primes.include?(check)
     end
 
-    if n >= 8
-      result = prime
+    next unless n >= 8
 
-      break
-    end
+    result = prime
+
+    break
   end
 
   break unless result.nil?
