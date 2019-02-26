@@ -17,7 +17,7 @@ defmodule RosettaEuler.RubyTest do
     System.cmd("ruby", ["ruby/" <> name <> "/" <> name <> ".rb"])
   end
 
-  rosetta_euler_tests 1..62 do
+  rosetta_euler_tests 1..63 do
     @tag test_number: test_number
     test "Ruby #" <> to_string(test_number), %{test_number: test_number} do
       answer = answer_for(test_number) <> "\n"
