@@ -70,7 +70,8 @@ defmodule RosettaEuler.Answers do
       63 => "49",
       64 => "1322",
       65 => "272",
-      66 => "661"
+      66 => "661",
+      67 => "7273"
     }
   end
 end
