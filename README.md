@@ -9,9 +9,9 @@ An attempt at a [chrestomathy](http://en.wikipedia.org/wiki/Chrestomathy) of sol
 * [C++](#c-1)
 * [C&#35;](#c-2)
 * [Citrine](#citrine)
+* [Clojure](#clojure)
 * [COBOL](#cobol)
 * [Common Lisp](#common-lisp)
-* [Clojure](#clojure)
 * [Crystal](#crystal)
 * [D](#d)
 * [Eiffel](#eiffel)
@@ -336,6 +336,33 @@ Install the resulting binary.
 
     $ ctr 001.ctr
 
+### Clojure
+
+[Clojure](https://clojure.org/)
+
+[Leiningen](https://leiningen.org/)
+
+#### Target Version
+
+    $ lein version
+    Leiningen 2.9.4 on Java 11.0.8 OpenJDK 64-Bit Server VM
+
+    $ lein repl
+    nREPL server started on port 64818 on host 127.0.0.1 - nrepl://127.0.0.1:64818
+    REPL-y 0.4.4, nREPL 0.7.0
+    Clojure 1.10.1
+    OpenJDK 64-Bit Server VM 11.0.8+10-LTS
+
+#### Additional Setup on macOS
+
+Install the `leiningen` formula via Homebrew.
+
+    $ brew install leiningen
+
+#### Running
+
+    $ lein run
+
 ### COBOL
 
 [GnuCOBOL](https://open-cobol.sourceforge.io/)
@@ -396,33 +423,6 @@ Install the `clisp` formula via Homebrew.
 #### Running
 
     $ clisp 001.lisp
-
-### Clojure
-
-[Clojure](https://clojure.org/)
-
-[Leiningen](https://leiningen.org/)
-
-#### Target Version
-
-    $ lein version
-    Leiningen 2.9.0 on Java 1.8.0_77 Java HotSpot(TM) 64-Bit Server VM
-
-    $ lein repl
-    nREPL server started on port 52830 on host 127.0.0.1 - nrepl://127.0.0.1:52830
-    REPL-y 0.4.3, nREPL 0.6.0
-    Clojure 1.10.0
-    Java HotSpot(TM) 64-Bit Server VM 1.8.0_77-b03
-
-#### Additional Setup on macOS
-
-Install the `leiningen` formula via Homebrew.
-
-    $ brew install leiningen
-
-#### Running
-
-    $ lein run
 
 ### Crystal
 
