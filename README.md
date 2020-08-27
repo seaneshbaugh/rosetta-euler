@@ -191,10 +191,10 @@ Open up the `Makefile` in your preferred text editor and uncomment lines 190 and
 
 Set the `BCPLROOT`, `PATH`, `BCPLPATH`, and `BCPLHDRS` environment variables. **Note: This step will need to be done every time you intend to use BCPL. Alternatively you can set this in your shell's initialization file.** The below commands assume you're still in the `BCPL/cintcode` directory.
 
-    $ EXPORT BCPLROOT=`pwd`
-    $ EXPORT PATH=$PATH:$BCPLROOT/bin
-    $ EXPORT BCPLPATH=$BCPLROOT/cin
-    $ EXPORT BCPLPATH=$BCPLROOT/g
+    $ export BCPLROOT=`pwd`
+    $ export PATH=$PATH:$BCPLROOT/bin
+    $ export BCPLPATH=$BCPLROOT/cin
+    $ export BCPLPATH=$BCPLROOT/g
 
 Run the make clean command.
 
@@ -227,10 +227,10 @@ Run the make command.
 #### Target Version
 
     $ clang --version
-    Apple LLVM version 10.0.0 (clang-1000.11.45.5)
-    Target: x86_64-apple-darwin17.7.0
+    Apple clang version 11.0.3 (clang-1103.0.32.62)
+    Target: x86_64-apple-darwin19.6.0
     Thread model: posix
-    InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+    InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 
 #### Additional Setup on macOS
 
