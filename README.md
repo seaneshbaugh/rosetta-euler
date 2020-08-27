@@ -349,9 +349,9 @@ Install the resulting binary.
     This is free software; see the source for copying conditions.  There is NO
     warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
     Written by Keisuke Nishida, Roger While, Ron Norman, Simon Sobisch, Edward Hart
-    Built     Jun 15 2018 08:49:34
+    Built     Apr 29 2020 00:06:51
     Packaged  Sep 06 2017 18:48:43 UTC
-    C version "4.2.1 Compatible Apple LLVM 9.1.0 (clang-902.0.39.2)"
+    C version "4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.32.59)"
 
 #### Additional Setup on macOS
 
