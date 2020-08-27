@@ -288,6 +288,8 @@ None.
 
 #### Additional Setup on macOS
 
+Install the `mono-mdk` cask via Homebrew.
+
     $ brew cask install mono-mdk
 
 #### Building
@@ -426,21 +428,21 @@ Install the `clisp` formula via Homebrew.
 
 ### Crystal
 
-[Crystal](http://crystal-lang.org/)
+[Crystal](https://crystal-lang.org/)
 
 #### Target Version
 
     $ crystal --version
-    Crystal 0.27.2 (2019-02-05)
+    Crystal 0.35.1 (2020-06-19)
 
-    LLVM: 6.0.1
+    LLVM: 10.0.0
     Default target: x86_64-apple-macosx
 
 #### Additional Setup on macOS
 
-Install the `crystal-lang` formula via Homebrew.
+Install the `crystal` formula via Homebrew.
 
-    $ brew install crystal-lang
+    $ brew install crystal
 
 #### Running
 
