@@ -480,13 +480,9 @@ Install the `dmd` formula via Homebrew.
 #### Target Version
 
     $ ec -version
-    ISE EiffelStudio version 17.01.9.9700 GPL Edition - macosx-x86-64
+    ISE EiffelStudio version 19.05.10.3187 GPL Edition - macosx-x86-64
 
 #### Additional Setup on macOS
-
-Tap the `homebrew/x11` keg.
-
-    $ brew tap homebrew/x11
 
 Install the `eiffelstudio` formula via Homebrew.
 
