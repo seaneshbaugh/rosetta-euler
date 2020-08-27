@@ -454,13 +454,10 @@ Install the `crystal` formula via Homebrew.
 
 #### Target Version
 
-    $ dmd
-    DMD64 D Compiler v2.084.1
+    $ dmd --version
+    DMD64 D Compiler v2.093.1
 
-    Copyright (C) 1999-2018 by The D Language Foundation, All Rights Reserved written by Walter Bright
-
-    Documentation: https://dlang.org/
-    Config file: /usr/local/etc/dmd.conf
+    Copyright (C) 1999-2020 by The D Language Foundation, All Rights Reserved written by Walter Bright
 
 #### Additional Setup on macOS
 
