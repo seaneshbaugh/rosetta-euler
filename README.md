@@ -283,12 +283,12 @@ None.
 #### Target Version
 
     $ csc
-    Microsoft (R) Visual C# Compiler version 2.8.2.62916 (2ad4aabc)
+    Microsoft (R) Visual C# Compiler version 3.6.0-4.20224.5 (ec77c100)
     Copyright (C) Microsoft Corporation. All rights reserved.
 
 #### Additional Setup on macOS
 
-Download and install the [Mono MDK](https://www.mono-project.com/download/stable/).
+    $ brew cask install mono-mdk
 
 #### Building
 
