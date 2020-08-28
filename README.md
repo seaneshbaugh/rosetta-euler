@@ -607,7 +607,7 @@ Install the `mono-mdk` cask via Homebrew.
 #### Target Version
 
     $ go version
-    go version go1.11.5 darwin/amd64
+    go version go1.15 darwin/amd64
 
 #### Additional Setup on macOS
 
