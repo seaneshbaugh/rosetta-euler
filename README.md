@@ -530,9 +530,9 @@ Install the `elixir` formula via Homebrew.
 #### Target Version
 
     $ erl
-    Erlang/OTP 21 [erts-10.2.4] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1] [hipe]
+    Erlang/OTP 23 [erts-11.0.3] [source] [64-bit] [smp:16:16] [ds:16:16:10] [async-threads:1] [hipe]
 
-    Eshell V10.2.4  (abort with ^G)
+    Eshell V11.0.3  (abort with ^G)
 
 #### Additional Setup on macOS
 
