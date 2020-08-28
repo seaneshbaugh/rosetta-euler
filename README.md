@@ -553,8 +553,8 @@ Install the `erlang` formula via Homebrew.
 #### Target Version
 
     $ gfortran --version
-    GNU Fortran (Homebrew GCC 8.2.0) 8.2.0
-    Copyright (C) 2018 Free Software Foundation, Inc.
+    GNU Fortran (Homebrew GCC 10.2.0) 10.2.0
+    Copyright (C) 2020 Free Software Foundation, Inc.
     This is free software; see the source for copying conditions.  There is NO
     warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
