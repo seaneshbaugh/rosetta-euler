@@ -583,12 +583,14 @@ Install the `gcc` formula via Homebrew.
 #### Target Version
 
     $ fsharpc
-    Microsoft (R) F# Compiler version 4.1
+    Microsoft (R) F# Compiler version 10.2.3 for F# 4.5
     Copyright (c) Microsoft Corporation. All Rights Reserved.
 
 #### Additional Setup on macOS
 
-Download and install the [Mono MDK](https://www.mono-project.com/download/stable/).
+Install the `mono-mdk` cask via Homebrew.
+
+    $ brew cask install mono-mdk
 
 #### Building
 
