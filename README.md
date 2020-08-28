@@ -505,9 +505,9 @@ You may need to chmod the resulting executable so that it has execute permission
 #### Target Version
 
     $ elixir --version
-    Erlang/OTP 20 [erts-9.1] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:10] [hipe] [kernel-poll:false]
+    Erlang/OTP 23 [erts-11.0.3] [source] [64-bit] [smp:16:16] [ds:16:16:10] [async-threads:1] [hipe]
 
-    Elixir 1.8.0 (compiled with Erlang/OTP 20)
+    Elixir 1.10.4 (compiled with Erlang/OTP 21)
 
 #### Additional Setup on macOS
 
