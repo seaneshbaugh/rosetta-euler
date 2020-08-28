@@ -602,7 +602,7 @@ Install the `mono-mdk` cask via Homebrew.
 
 ### Go
 
-[The Go Programming Language](http://golang.org/)
+[The Go Programming Language](https://golang.org/)
 
 #### Target Version
 
@@ -633,12 +633,12 @@ Either open up a new terminal or run the following:
 
 ### Groovy
 
-[Groovy](http://groovy-lang.org/)
+[Groovy](https://groovy-lang.org/)
 
 #### Target Version
 
     $ groovy -v
-    Groovy Version: 2.5.6 JVM: 1.8.0_77 Vendor: Oracle Corporation OS: Mac OS X
+    Groovy Version: 3.0.5 JVM: 14.0.1 Vendor: Oracle Corporation OS: Mac OS X
 
 #### Additional Setup on macOS
 
