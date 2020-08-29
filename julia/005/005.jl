@@ -27,12 +27,8 @@ end
 function remove_first(item, collection)
   index = findfirst(x -> x == item, collection)
 
-  if index != 0
-    left = sub(collection, 1:(index - 1))
-
-    right = sub(collection, (index + 1):length(collection))
-
-    vcat(left, right)
+  if index != nothing
+    deleteat!(collection, index)
   else
     collection
   end
@@ -48,4 +44,4 @@ function overlap(a, b)
   sort(vcat(a_copy, b))
 end
 
-println(prod(reduce(overlap, [], map(i -> prime_factors(i), 1:20))))
+println(prod(reduce(overlap, map(i -> prime_factors(i), 1:20); init=[1])))

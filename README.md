@@ -1,6 +1,6 @@
 # Rosetta Euler
 
-An attempt at a [chrestomathy](http://en.wikipedia.org/wiki/Chrestomathy) of solutions to problems from [Project Euler](http://projecteuler.net/). All included programs print out their result to standard output (when possible and applicable) and exit.
+An attempt at a [chrestomathy](https://en.wikipedia.org/wiki/Chrestomathy) of solutions to problems from [Project Euler](https://projecteuler.net/). All included programs print out their result to standard output (when possible and applicable) and exit.
 
 * [Ada](#ada)
 * [Algol 68](#algol-68)
@@ -56,7 +56,7 @@ Install [Xcode](https://developer.apple.com/xcode/).
 
 Install the Command Line Tools in Xcode (Preferences > Downloads > Install button next to Command Line Tools).
 
-Install [Homebrew](http://brew.sh/).
+Install [Homebrew](https://brew.sh/).
 
 ## Rules
 
@@ -73,7 +73,7 @@ I've imposed a few rules on myself for these problems:
 
 The test suite can be run with `mix test`. Currently only some languages are supported. Eventually every language will have test coverage. For compiled languages the tests will attempt to compile the solution and then run the resulting executable. For interpreted languages (or languages like Elixir where the solutions are written as scripts rather than as complete applications) the tests will attempt to run the solution through the interpreter. This is also a good way of checking ot make sure that your environment is set up correctly.
 
-All tests are written with [ExUnit](http://elixir-lang.org/docs/stable/ex_unit/ExUnit.html) and are located in `test/rosetta_euler`. Each language has a module for its tests. The `rosetta_euler_tests` macro provides an easy way of running a whole series of tests. It expects a range object and a block which contains the test code.
+All tests are written with [ExUnit](https://hexdocs.pm/ex_unit/ExUnit.html) and are located in `test/rosetta_euler`. Each language has a module for its tests. The `rosetta_euler_tests` macro provides an easy way of running a whole series of tests. It expects a range object and a block which contains the test code.
 
 ## Languages
 
@@ -163,7 +163,7 @@ Install the `algol68g` formula via Homebrew.
 
 ### BCPL
 
-[BCPL](http://www.cl.cam.ac.uk/~mr10/BCPL.html)
+[BCPL](https://www.cl.cam.ac.uk/~mr10/BCPL.html)
 
 #### Target Version
 
@@ -174,7 +174,7 @@ Install the `algol68g` formula via Homebrew.
 
 Download the BCPL source code.
 
-    $ wget http://www.cl.cam.ac.uk/users/mr/BCPL/bcpl.tgz
+    $ wget https://www.cl.cam.ac.uk/users/mr/BCPL/bcpl.tgz
 
 Unpack the BCPL source code.
 
@@ -398,7 +398,7 @@ Install the `gnu-cobol` formula via Homebrew.
 
 ### Common Lisp
 
-[GNU CLISP](http://www.clisp.org/)
+[GNU CLISP](https://clisp.sourceforge.io/)
 
 #### Target Version
 
@@ -775,24 +775,18 @@ Run the yarn lint script.
 
 ### Julia
 
-[The Julia Language](http://julialang.org/)
+[The Julia Language](https://julialang.org/)
 
 #### Target Version
 
     $ julia -v
-    julia version 0.3.4
+    julia version 1.5.1
 
 #### Additional Setup on macOS
 
-The following instructions are from the readme at [staticfloat/homebrew-julia](https://github.com/staticfloat/homebrew-julia). Please verify they are the same before proceeding.
+Install the `julia` cask via Homebrew.
 
-Tap the `staticfloat/julia` keg.
-
-    $ brew tap staticfloat/julia
-
-Install the `julia` formula via Homebrew.
-
-    $ brew install julia
+    $ brew cask install julia
 
 #### Running
 
