@@ -91,15 +91,15 @@ All tests are written with [ExUnit](http://elixir-lang.org/docs/stable/ex_unit/E
 
 [Download GNAT Community Edition](https://www.adacore.com/download).
 
-Under "x86 Mac OS X" click "gnat-community-2018-20180523-x86_64-darwin-bin.dmg" to download the .dmg file.
+Under "GNAT Community" click "gnat-2020-20200818-x86_64-darwin-bin.dmg" to download the .dmg file.
 
-Open the .dmg file in Finder and copy "gnat-community-2018-20180523-x86_64-darwin-bin.app" to a directory (it does't matter where).
+Open the .dmg file in Finder and copy "gnat-2020-20200818-x86_64-darwin-bin.app" to a directory (it does't matter where).
 
-Right click the .app file and then click "Open" when prompted by the security dialog.
+Right click the .app file and click "Open" then click "Open" when prompted by the security dialog.
 
 Click "Next".
 
-Select a directory to install GNAT Community. By default it will choose `~/opt/GNAT/2018`. Click "Next".
+Select a directory to install GNAT Community. By default it will choose `~/opt/GNAT/2020`. Click "Next".
 
 Leave all the checkboxes selected and click "Next".
 
@@ -109,9 +109,9 @@ Click "Install"
 
 When the install is finished click "Next" and then click "Finish".
 
-Add `~/opt/GNAT/2018/bin` to your $PATH. For example, in your `~/.bashrc` or `~/.zshrc` add:
+Add `$HOME/opt/GNAT/2020/bin` to your $PATH. For example, in your `~/.bashrc` or `~/.zshrc` add:
 
-    export PATH="$HOME/opt/GNAT/2018/bin:$PATH"
+    export PATH="$HOME/opt/GNAT/2020/bin:$PATH"
 
 Open a new terminal tab/window or reload your `~/.bashrc` or `~/.zshrc`.
 
