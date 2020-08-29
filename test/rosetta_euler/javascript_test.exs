@@ -1,5 +1,5 @@
-Code.require_file "../rosetta_euler_test.exs", __DIR__
-Code.require_file "../support/answers.exs", __DIR__
+Code.require_file("../rosetta_euler_test.exs", __DIR__)
+Code.require_file("../support/answers.exs", __DIR__)
 
 defmodule RosettaEuler.JavaScriptTest do
   use ExUnit.Case, async: true
@@ -17,7 +17,7 @@ defmodule RosettaEuler.JavaScriptTest do
     System.cmd("node", [name <> ".js"], cd: Path.join("javascript", name))
   end
 
-  rosetta_euler_tests 1..16 do
+  rosetta_euler_tests 1..17 do
     @tag test_number: test_number
     test "JavaScript #" <> to_string(test_number), %{test_number: test_number} do
       answer = answer_for(test_number) <> "\n"
