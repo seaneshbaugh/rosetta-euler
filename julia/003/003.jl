@@ -1,27 +1,27 @@
 function prime_factors(n)
-  found = false
+    found = false
 
-  v = 2
+    v = 2
 
-  i = 2
+    i = 2
 
-  while i < n - 1 && !found
-    if mod(n, i) == 0
-      found = true
+    while i < n - 1 && !found
+        if mod(n, i) == 0
+            found = true
 
-      v = i
+            v = i
+        end
+
+        i += 1
     end
 
-    i += 1
-  end
+    if found
+        factors = vcat([v], prime_factors(div(n, v)))
+    else
+        factors = [n]
+    end
 
-  if found
-    factors = vcat([v], prime_factors(div(n, v)))
-  else
-    factors = [n]
-  end
-
-  factors
+    factors
 end
 
 println(maximum(prime_factors(600851475143)))
