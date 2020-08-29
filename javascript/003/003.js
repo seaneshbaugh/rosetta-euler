@@ -1,11 +1,9 @@
 "use strict";
 
 Number.prototype.primeFactors = function() {
-  var v, i;
+  let v = null;
 
-  v = null;
-
-  for (i = 2; i < this - 1; i += 1) {
+  for (let i = 2; i < this - 1; i += 1) {
     if (this % i === 0) {
       v = i;
 

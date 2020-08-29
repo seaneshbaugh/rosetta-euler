@@ -1,13 +1,9 @@
 "use strict";
 
-var i, j, triangleNumber;
-
 Number.prototype.primeFactors = function() {
-  var v, i;
+  let v = null;
 
-  v = null;
-
-  for (i = 2; i < this - 1; i += 1) {
+  for (let i = 2; i < this - 1; i += 1) {
     if (this % i === 0) {
       v = i;
 
@@ -23,27 +19,21 @@ Number.prototype.primeFactors = function() {
 };
 
 Number.prototype.numberOfDivisors = function() {
-  var factorGroups;
+  const factorGroups = {};
 
-  factorGroups = {};
+  this.primeFactors().forEach((primeFactor) => factorGroups[primeFactor] = (factorGroups[primeFactor] || 1) + 1);
 
-  this.primeFactors().forEach(function(primeFactor) {
-    factorGroups[primeFactor] = (factorGroups[primeFactor] || 1) + 1;
-  });
-
-  return Object.keys(factorGroups).reduce(function(previousValue, key) {
-    return previousValue * factorGroups[key];
-  }, 1);
+  return Object.keys(factorGroups).reduce((previousValue, key) => (previousValue * factorGroups[key]), 1);
 };
 
-i = 2;
+let i = 2;
 
-triangleNumber = 1;
+let triangleNumber = 1;
 
 while (triangleNumber.numberOfDivisors() <= 500) {
   triangleNumber = 0;
 
-  for (j = 1; j <= i; j += 1) {
+  for (let j = 1; j <= i; j += 1) {
     triangleNumber += j;
   }
 

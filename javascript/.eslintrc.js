@@ -10,6 +10,14 @@ module.exports = {
   ],
   parser: "babel-eslint",
   rules: {
+    "arrow-body-style": [
+      "error",
+      "as-needed"
+    ],
+    "arrow-parens": [
+      "error",
+      "always"
+    ],
     "brace-style": [
       "error",
       "1tbs"
@@ -47,6 +55,9 @@ module.exports = {
       "error",
       200
     ],
+    "no-confusing-arrow": [
+      "error"
+    ],
     "no-ternary": [
       "error"
     ],
@@ -55,6 +66,9 @@ module.exports = {
       {
         "argsIgnorePattern": "^_"
       }
+    ],
+    "no-var": [
+      "error"
     ],
     "one-var": [
       "error",
@@ -109,6 +123,9 @@ module.exports = {
         "prev": "*",
         "next": "return"
       }
+    ],
+    "prefer-arrow-callback": [
+      "error"
     ],
     "quotes": [
       "error",

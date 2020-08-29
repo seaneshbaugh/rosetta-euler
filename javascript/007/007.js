@@ -1,22 +1,20 @@
 "use strict";
 
-var n;
+const sieveOfAtkin = function(limit) {
+  let primes = [];
 
-function sieveOfAtkin(limit) {
-  var primes, sieve, squareRootOfLimit, x, y, n, i;
+  let sieve = [];
 
-  primes = [];
-
-  sieve = [];
-
-  for (x = 0; x < limit; x += 1) {
+  for (let x = 0; x < limit; x += 1) {
     sieve.push(false);
   }
 
-  squareRootOfLimit = Math.round(Math.sqrt(limit));
+  const squareRootOfLimit = Math.round(Math.sqrt(limit));
 
-  for (x = 1; x <= squareRootOfLimit; x += 1) {
-    for (y = 1; y <= squareRootOfLimit; y += 1) {
+  let n = 0;
+
+  for (let x = 1; x <= squareRootOfLimit; x += 1) {
+    for (let y = 1; y <= squareRootOfLimit; y += 1) {
       n = (4 * x * x) + (y * y);
 
       if (n <= limit && (n % 12 === 1 || n % 12 === 5)) {
@@ -49,7 +47,7 @@ function sieveOfAtkin(limit) {
 
   while (n <= squareRootOfLimit) {
     if (sieve[n]) {
-      i = n * n;
+      let i = n * n;
 
       while (i < limit) {
         sieve[i] = false;
@@ -72,8 +70,8 @@ function sieveOfAtkin(limit) {
   }
 
   return primes;
-}
+};
 
-n = 10001;
+const n = 10001;
 
 console.log(sieveOfAtkin(Math.round(((n * Math.log(n)) + (n * (Math.log(Math.log(n)))))))[n - 1]);
