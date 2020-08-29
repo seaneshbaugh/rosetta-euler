@@ -684,7 +684,7 @@ After that you can build as usual.
 
 ### Io
 
-[Io](http://iolanguage.org/)
+[Io](https://iolanguage.org/)
 
 #### Target Version
 
@@ -703,18 +703,24 @@ Install the `io` formula via Homebrew.
 
 ### Java
 
-[Oracle Technology Network for Java Developers](http://www.oracle.com/technetwork/java/index.html)
+[Oracle Java Technologies](https://www.oracle.com/java/technologies/)
+
+[Amazon Coretto](https://aws.amazon.com/corretto/)
 
 #### Target Version
 
     $ java -version
-    java version "1.6.0_65"
-    Java(TM) SE Runtime Environment (build 1.6.0_65-b14-466.1-11M4716)
-    Java HotSpot(TM) 64-Bit Server VM (build 20.65-b04-466.1, mixed mode)
+    openjdk 11.0.8 2020-07-14 LTS
+    OpenJDK Runtime Environment Corretto-11.0.8.10.1 (build 11.0.8+10-LTS)
+    OpenJDK 64-Bit Server VM Corretto-11.0.8.10.1 (build 11.0.8+10-LTS, mixed mode)
 
 #### Additional Setup on macOS
 
-Most likely none.
+Download [Amazon Coretto](https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/downloads-list.html).
+
+    $ wget https://corretto.aws/downloads/latest/amazon-corretto-11-x64-macos-jdk.pkg
+
+Install Coretto by opening the pkg file and following the instructions.
 
 #### Building
 
