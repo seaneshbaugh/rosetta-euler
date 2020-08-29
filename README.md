@@ -794,33 +794,26 @@ Install the `julia` cask via Homebrew.
 
 ### K
 
+[Kx](https://kx.com/)
+
 [Kona](https://github.com/kevinlawler/kona)
 
 #### Target Version
 
-Taken from [k.c](https://github.com/kevinlawler/kona/blob/5daf44308bd8a25c42bbea5665f480b0be42345d/src/k.c).
+Taken from [k.c](https://github.com/kevinlawler/kona/blob/d178feefe207ef2748bedeb778956b437331f3ee/src/k.c#L1) in Kona source code.
 
     //64-bit single-threaded implementation of K3.2.  Version is Kona 3.2.0
 
+From Homebrew:
+
+    $ brew info kona | head -n 1
+    kona: stable 20200313 (bottled), HEAD
+
 #### Additional Setup on macOS
 
-The following instructions are from the readme at [kevinlawler/kona](https://github.com/kevinlawler/kona). Please verify they are the same before proceeding.
+Install the `kona` formula via Homebrew.
 
-Clone the Kona respository.
-
-    $ git clone https://github.com/kevinlawler/kona.git
-
-Go to the Kona source directory.
-
-    $ cd kona
-
-Run the `make` command.
-
-    $ make
-
-Run the `make install` command.
-
-    $ make install
+    $ brew install kona
 
 #### Running
 
