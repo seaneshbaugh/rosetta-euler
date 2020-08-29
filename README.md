@@ -840,15 +840,16 @@ Install the `lua` formula via Homebrew.
 
 ### Nim
 
-[Nim Programming Language](http://nim-lang.org/)
+[Nim Programming Language](https://nim-lang.org/)
 
 #### Target Version
 
     $ nim --version
-    Nim Compiler Version 0.10.2 (2014-12-29) [MacOSX: amd64]
-    Copyright (c) 2006-2014 by Andreas Rumpf
+    Nim Compiler Version 1.2.6 [MacOSX: amd64]
+    Compiled at 2020-07-31
+    Copyright (c) 2006-2020 by Andreas Rumpf
 
-    active boot switches: -d:release
+    active boot switches: -d:release -d:nimUseLinenoise
 
 #### Additional Setup on macOS
 
