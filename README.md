@@ -821,12 +821,12 @@ Install the `kona` formula via Homebrew.
 
 ### Lua
 
-[The Programming Language Lua](http://www.lua.org/)
+[The Programming Language Lua](https://www.lua.org/)
 
 #### Target Version
 
     $ lua -v
-    Lua 5.2.3  Copyright (C) 1994-2013 Lua.org, PUC-Rio
+    Lua 5.3.5  Copyright (C) 1994-2018 Lua.org, PUC-Rio
 
 #### Additional Setup on macOS
 
