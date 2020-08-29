@@ -732,14 +732,14 @@ Install Coretto by opening the pkg file and following the instructions.
 
 ### JavaScript
 
-[ECMAScript Language Specification](http://www.ecma-international.org/ecma-262/5.1/)
+[ECMAScript Language Specification](https://www.ecma-international.org/ecma-262/)
 
-[node.js](http://nodejs.org/)
+[Node.js](https://nodejs.org/en/)
 
 #### Target Version
 
     $ node --version
-    v0.10.35
+    v14.9.0
 
 #### Additional Setup on macOS
 
