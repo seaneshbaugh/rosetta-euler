@@ -747,9 +747,31 @@ Install the `node` formula via Homebrew.
 
     $ brew install node
 
+Install the `yarn` formula via Homebrew.
+
+    $ brew install yarn
+
+Go to the `javascript` directory.
+
+    $ cd javascript
+
+Install the dependencies.
+
+    $ yarn install
+
 #### Running
 
     $ node 001.js
+
+#### Linting
+
+Go to the `javascript` directory
+
+    $ cd javascript
+
+Run the yarn lint script.
+
+    $ yarn run lint
 
 ### Julia
 

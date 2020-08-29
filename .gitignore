@@ -22,3 +22,5 @@ cabal.sandbox.config
 FSharp.Core.dll
 .stack-work
 *.bak
+node_modules/
+yarn-error.log

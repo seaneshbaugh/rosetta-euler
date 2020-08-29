@@ -1,0 +1,12 @@
+{
+  "name": "rosetta-euler",
+  "version": "0.16.0",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ignore-pattern lib --ignore-pattern node_modules ."
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.7.0"
+  }
+}
