@@ -1006,7 +1006,7 @@ The same global and local stack size environment variable arguments can be used 
 #### Target Version
 
     $ python --version
-    Python 3.7.2
+    Python 3.8.5
 
 #### Additional Setup on macOS
 
@@ -1020,11 +1020,7 @@ Ensure the following is in your `.bashrc` or `.zshrc`.
 
 Install Python 3.7.2.
 
-    $ pyenv install 3.7.2
-
-Set the default Python.
-
-    $ pyenv global 3.7.2
+    $ pyenv install 3.8.5
 
 #### Running
 
