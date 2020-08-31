@@ -916,9 +916,9 @@ Install the `ocaml` formula via Homebrew.
 
 #### Target Version
 
-    $ fpc
-    Free Pascal Compiler version 3.0.0 [2016/02/18] for x86_64
-    Copyright (c) 1993-2015 by Florian Klaempfl and others
+    $ fpc -h | head -n 2
+    Free Pascal Compiler version 3.2.0 [2020/08/17] for x86_64
+    Copyright (c) 1993-2020 by Florian Klaempfl and others
 
 #### Additional Setup on macOS
 
