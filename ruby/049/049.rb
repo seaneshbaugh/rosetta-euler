@@ -64,7 +64,7 @@ end
 
 all_primes = sieve_of_atkin(10000)
 
-primes.select! { |prime| prime.to_s.length == 4 }
+all_primes.select! { |prime| prime.to_s.length == 4 }
 
 groups = all_primes.group_by { |prime| prime.to_s.split('').sort }.select { |_digits, primes| primes.length >= 3 }
 

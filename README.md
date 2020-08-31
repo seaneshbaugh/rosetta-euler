@@ -1033,7 +1033,7 @@ Install Python 3.7.2.
 #### Target Version
 
     $ ruby -v
-    ruby 2.6.1p33 (2019-01-30 revision 66950) [x86_64-darwin17]
+    ruby 2.7.1p83 (2020-03-31 revision a0c7c23c9c) [x86_64-darwin19]
 
 #### Additional Setup on macOS
 
@@ -1045,7 +1045,7 @@ Install [RVM](https://rvm.io/).
 
     $ gpg --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 
-    $ curl -sSL https://get.rvm.io | bash
+    $ \curl -sSL https://get.rvm.io | bash -s stable
 
 Ensure the following is in your `.bashrc` or `.zshrc`.
 
@@ -1059,13 +1059,13 @@ Force RVM to use Homebrew for downloading necessary packages.
 
     $ rvm autolibs homebrew
 
-Install `2.6.1`.
+Install `2.7.1`.
 
     $ rvm install 2.6.1
 
-Set the default Ruby.
+Optionally, set the default Ruby.
 
-    $ rvm --default use 2.6.1
+    $ rvm --default use 2.7.1
 
 #### Running
 

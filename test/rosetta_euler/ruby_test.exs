@@ -1,5 +1,5 @@
-Code.require_file "../rosetta_euler_test.exs", __DIR__
-Code.require_file "../support/answers.exs", __DIR__
+Code.require_file("../rosetta_euler_test.exs", __DIR__)
+Code.require_file("../support/answers.exs", __DIR__)
 
 defmodule RosettaEuler.RubyTest do
   use ExUnit.Case, async: true
@@ -18,7 +18,7 @@ defmodule RosettaEuler.RubyTest do
   end
 
   rosetta_euler_tests 1..68 do
-    @tag test_number: test_number
+    @tag test_number: test_number, timeout: 300_000
     test "Ruby #" <> to_string(test_number), %{test_number: test_number} do
       answer = answer_for(test_number) <> "\n"
 

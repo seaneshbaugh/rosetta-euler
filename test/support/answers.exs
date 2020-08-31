@@ -1,5 +1,5 @@
 defmodule RosettaEuler.Answers do
-  def answer_for(problem) when problem >= 1 and problem <= 59 do
+  def answer_for(problem) when problem >= 1 and problem <= 68 do
     answers()[problem]
   end
 
