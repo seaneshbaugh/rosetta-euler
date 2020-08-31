@@ -969,9 +969,9 @@ None. This is the default version of Perl on OSX 10.10.
 #### Target Version
 
     $ gplc --version
-    Prolog compiler (GNU Prolog) 1.4.4
+    Prolog compiler (GNU Prolog) 1.4.5
     By Daniel Diaz
-    Copyright (C) 1999-2013 Daniel Diaz
+    Copyright (C) 1999-2018 Daniel Diaz
 
     GNU Prolog comes with ABSOLUTELY NO WARRANTY.
     This is free software; see the source or the file
