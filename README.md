@@ -867,7 +867,7 @@ Install the `nim` formula via Homebrew.
 
 ### Objective-C
 
-[Mac Developer Library](http://developer.apple.com/library/mac/navigation/)
+[Programming with Objective-C](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html)
 
 [Clang](https://clang.llvm.org/)
 
@@ -893,12 +893,12 @@ None.
 
 ### OCaml
 
-[OCaml](http://ocaml.org/)
+[OCaml](https://ocaml.org/)
 
 #### Target Version
 
     $ ocaml -version
-    The OCaml toplevel, version 4.02.1
+    The OCaml toplevel, version 4.10.0
 
 #### Additional Setup on macOS
 

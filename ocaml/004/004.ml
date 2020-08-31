@@ -5,10 +5,9 @@ let reverse_string s =
   let r = Bytes.create l in
   let last = l - 1 in
   for i = 0 to last do
-    let j = last - i in
-    Bytes.set r i s.[j];
+    Bytes.unsafe_set r (last - i) (String.unsafe_get s i)
   done;
-  (r)
+  Bytes.unsafe_to_string r
 
 let products = List.concat (List.map (fun x -> List.map (fun y -> x * y) (range 100 999)) (range 1 999))
 
