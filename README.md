@@ -1189,8 +1189,8 @@ Run the make install command.
 #### Target Version
 
     $ swift --version
-    Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)
-    Target: x86_64-apple-darwin17.7.0
+    Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
+    Target: x86_64-apple-darwin19.6.0
 
 #### Additional Setup on macOS
 
