@@ -1,0 +1,19 @@
+name:                euler
+version:             0.1.0.0
+github:              "seaneshbaugh/rosetta-euler"
+license:             MIT
+author:              "Sean Eshbaugh"
+maintainer:          "sean@seaneshbaugh.com"
+copyright:           "2020 Sean Eshbaugh"
+
+dependencies:
+- base >= 4.7 && < 5
+
+executables:
+  euler:
+    main:                euler.hs
+    source-dirs:         .
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N

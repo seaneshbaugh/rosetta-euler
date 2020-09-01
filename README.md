@@ -657,10 +657,10 @@ Install the `groovy` formula via Homebrew.
 #### Target Version
 
     $ stack --version
-    Version 1.9.3, Git revision 40cf7b37526b86d1676da82167ea8758a854953b (6211 commits) x86_64 hpack-0.31.1
+    Version 2.3.3, Git revision cb44d51bed48b723a5deb08c3348c0b3ccfc437e x86_64 hpack-0.33.0
 
     $ stack ghc -- --version
-    The Glorious Glasgow Haskell Compilation System, version 8.6.3
+    The Glorious Glasgow Haskell Compilation System, version 8.10.2
 
 #### Additional Setup on macOS
 
