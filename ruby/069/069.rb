@@ -31,4 +31,4 @@ class Integer
   end
 end
 
-puts (2..1_000_000).map { |n| phi = n.phi; { n: n, phi: phi, n_over_phi: n.to_f / phi.to_f } }.max_by { |r| r[:n_over_phi] }[:n]
+puts (2..1_000_000).map { |n| { n: n, phi: n.phi } }.max_by { |r| r[:n].to_f / r[:phi].to_f }[:n]
