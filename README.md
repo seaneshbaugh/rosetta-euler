@@ -1228,15 +1228,15 @@ Install the `mono-mdk` cask via Homebrew.
 
 ### x86-64 Assembly
 
-[OSX Assembly Reference](https://developer.apple.com/library/mac/documentation/DeveloperTools/Reference/Assembler/000-Introduction/introduction.html)
+[OS X Assembly Reference](https://developer.apple.com/library/mac/documentation/DeveloperTools/Reference/Assembler/000-Introduction/introduction.html)
 
 [Clang](https://clang.llvm.org/)
 
 #### Target Version
 
     $ clang --version
-    Apple LLVM version 10.0.0 (clang-1000.11.45.5)
-    Target: x86_64-apple-darwin17.7.0
+    Apple clang version 11.0.3 (clang-1103.0.32.62)
+    Target: x86_64-apple-darwin19.6.0
     Thread model: posix
     InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
 
