@@ -1078,13 +1078,13 @@ Optionally, set the default Ruby.
 #### Target Version
 
     $ rustc --version
-    rustc 1.32.0 (9fda7c223 2019-01-16)
+    rustc 1.46.0 (04488afe3 2020-08-24)
 
 #### Additional Setup on macOS
 
 Install [rustup](https://rustup.rs/).
 
-    $ curl https://sh.rustup.rs -sSf | sh
+    $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 #### Building
 

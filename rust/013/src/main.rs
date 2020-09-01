@@ -108,7 +108,7 @@ fn main() {
     let mut result: BigInt = FromPrimitive::from_u64(0).unwrap();
 
     for number in numbers.iter() {
-        result = result + BigInt::parse_bytes(*number, 10).unwrap();;
+        result = result + BigInt::parse_bytes(*number, 10).unwrap();
     }
 
     println!("{}", &result.to_str_radix(10)[..10]);
