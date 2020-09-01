@@ -1,5 +1,5 @@
 object Euler {
-  def main(args: Array[String]) {
+  def main(args: Array[String]): Unit = {
     println(primeFactors(600851475143L).max);
   }
 

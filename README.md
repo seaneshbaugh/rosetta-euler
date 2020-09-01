@@ -1096,12 +1096,12 @@ Install [rustup](https://rustup.rs/).
 
 ### Scala
 
-[The Scala Programming Language](http://www.scala-lang.org/)
+[The Scala Programming Language](https://www.scala-lang.org/)
 
 #### Target Version
 
     $ scala -version
-    Scala code runner version 2.11.1 -- Copyright 2002-2013, LAMP/EPFL
+    Scala code runner version 2.13.3 -- Copyright 2002-2020, LAMP/EPFL and Lightbend, Inc.
 
 #### Additional Setup on macOS
 

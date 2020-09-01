@@ -1,5 +1,5 @@
 object Euler {
-  def main(args: Array[String]) {
+  def main(args: Array[String]): Unit = {
     println((1 until 21).map(x => primeFactors(x)).reduceLeft((x, y) => overlap(x, y)).reduceLeft((x, y) => x * y))
   }
 
