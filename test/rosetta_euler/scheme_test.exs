@@ -1,5 +1,5 @@
-Code.require_file "../rosetta_euler_test.exs", __DIR__
-Code.require_file "../support/answers.exs", __DIR__
+Code.require_file("../rosetta_euler_test.exs", __DIR__)
+Code.require_file("../support/answers.exs", __DIR__)
 
 defmodule RosettaEuler.SchemeTest do
   use ExUnit.Case, async: true
@@ -14,16 +14,16 @@ defmodule RosettaEuler.SchemeTest do
   def run_scheme_solution(number) do
     name = number |> to_string |> String.pad_leading(3, "0")
 
-    "cd scheme/" <> name <> " && " <> "mit-scheme --quiet < " <> name <> ".scm"
+    ("cd scheme/" <> name <> " && " <> "mit-scheme --quiet < " <> name <> ".scm")
     |> to_charlist
-    |> :os.cmd
+    |> :os.cmd()
     |> to_string
   end
 
-  rosetta_euler_tests 1..14 do
+  rosetta_euler_tests 1..13 do
     @tag test_number: test_number
     test "Scheme #" <> to_string(test_number), %{test_number: test_number} do
-      answer = answer_for(test_number) <> "\n\nKill Scheme (y or n)? "
+      answer = answer_for(test_number)
 
       ^answer = run_scheme_solution(test_number)
     end

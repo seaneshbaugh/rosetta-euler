@@ -1121,19 +1121,19 @@ Install the `scala` formula via Homebrew.
 
     $ scheme --version
     MIT/GNU Scheme microcode 15.3
-    Copyright (C) 2014 Massachusetts Institute of Technology
+    Copyright (C) 2019 Massachusetts Institute of Technology
     This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-    Image saved on Tuesday September 19, 2017 at 9:59:25 PM
-      Release 9.2 || Microcode 15.3 || Runtime 15.7 || SF 4.41 || LIAR/C 4.118 || Edwin 3.116
+    Image saved on Thursday June 4, 2020 at 1:04:36 PM
+    Release 10.1.11 || Microcode 15.3 || Runtime 15.7 || SF 4.41 || LIAR/x86-64 4.118
 
-    Moriturus te saluto.
+    Pulvis et umbra sumus.
 
 #### Additional Setup on macOS
 
 Install the `mit-scheme` formula via Homebrew.
 
-    $ brew install homebrew/x11/mit-scheme
+    $ brew install mit-scheme
 
 #### Running
 
